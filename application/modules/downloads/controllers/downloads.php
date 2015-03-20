@@ -1,15 +1,13 @@
 <?php
-class Downloads extends Admin_Controller{
-	
+class Downloads extends Public_Controller{
 	function __construct(){
 		parent::__construct();
 	}
 	
 	function inc_home()
 	{
-		$download = new Download();
-		$this->load->view('inc_home',$data);
+		$data['rs'] = new Category();
+		$this->load->view('inc_home');
 	}
 }
-
 ?>
