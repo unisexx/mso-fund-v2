@@ -30,7 +30,7 @@ class Infos extends Admin_Controller
                 if($rs->id){
                     $rs->delete_file($rs->id,'uploads/info','image');
                 }
-                $_POST['image'] = $rs->upload($_FILES['image'],'uploads/info/');
+                $_POST['image'] = $rs->upload($_FILES['image'],'uploads/info/',139,96);
             }
 			if(!$id)$_POST['user_id'] = $this->session->userdata('id');
 			if(!$id)$_POST['status'] = "approve";

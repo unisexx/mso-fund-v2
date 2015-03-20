@@ -8,7 +8,7 @@ class Public_Controller extends Master_Controller
 		header('Content-type: text/html; charset=UTF-8');
 		$this->template->title('งานบริหารกองทุน สำนักงานปลัดกระทรวงการพัฒนาสังคมและความมั่นคงของมนุษย์.');
 		$this->template->set_theme('fundv2');
-    	$this->template->set_layout('layout');
+    	$this->template->set_layout('blank');
 		
 		// Set js
 		$this->lang->load('admin');

@@ -5,7 +5,7 @@
 <!-- Optional theme -->
 <link rel="stylesheet" href="themes/fundv2/css/bootstrap-theme.min.css">
 <link rel="stylesheet" href="themes/fundv2/css/topmenu.css">
-<link rel="stylesheet" href="themes/fundv2/css/calendar.css">
+<!-- <link rel="stylesheet" href="themes/fundv2/css/calendar.css"> -->
    <script src="themes/fundv2/js/jquery-latest.min.js" type="text/javascript"></script>
    <script src="themes/fundv2/js/script.js"></script>
 <script type="text/javascript">

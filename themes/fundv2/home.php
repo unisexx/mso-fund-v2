@@ -7,53 +7,7 @@
 <?include('_inc.php')?>
 </head>
 <body>
-	<div class="row" id="bgtop">
-    	 <div id="top">
-           <img src="themes/fundv2/images/user.png" width="13" height="14" style="margin-bottom:3px;"/>&nbsp;
-           <span id="userlogin"><a href="#">เข้าสู่ระบบ</a></span> 
-           <img src="themes/fundv2/images/line-user.jpg" width="2" height="42"> 
-           <span id="userregis"><a href="#">สมัครสมาชิก</a></span>
-            <div id="icon">
-            	<a href="#"><img src="themes/fundv2/images/facebook.png" width="14" height="16" title="Facebook" style="margin-right:12px;"></a>
-            				<img src="themes/fundv2/images/line-user.jpg" width="2" height="42">
-                <a href="#"><img src="themes/fundv2/images/twitter.png" width="18" height="12" title="Twitter" style="margin-left:12px; margin-right:12px;"></a>
-                			<img src="themes/fundv2/images/line-user.jpg" width="2" height="42">
-            </div>
-           <input name="searchbox" id="searchbox" maxlength="50" value="ค้นหา..." type="text" />
-         </div>
-    </div>
-    
-    <div class="clearfix">&nbsp;</div>
-     
-<div id="wrap">
-    	<div id="bgArt">&nbsp;</div>
-        <div id="logo">&nbsp;</div>   
-       		<div class="clearfix">&nbsp;</div>
-        	<div id='cssmenu'>
-                <ul>
-                   <li><a href='#'>หน้าแรก</a></li>
-                   <li class='active has-sub'><a href='#'><span>เกี่ยวกับ กบท.</span></a>
-                      <ul>
-                         <li><a href='#'><span>เกี่ยวกับกองทุน</span></a>
-                         <li><a href='#'><span>โครงสร้างหน่วยงาน</span></a></li>
-                         <li><a href='#'><span>การดำเนินงานตามนโยบาย</span></a></li>
-                         <li class='last'><a href='#'><span>กฎหมาย/คำสั่งที่เกี่ยวข้อง</span></a></li>
-                      </ul>
-				   </li>
-                   <li class='active has-sub'><a href='#'>ข้อมูลข่าวสาร</a>
-                      <ul>
-                         <li><a href='#'>ข่าวประชาสัมพันธ์</a>
-                         <li><a href='#'>ข่าวจัดซื้อจัดจ้าง</a></li>
-                         <li class='last'><a href='#'>ข่าวประกาศรับสมัครงาน</a></li>
-                      </ul>
-                   </li>
-                   <li><a href='#'>ดาวน์โหลดแบบฟอร์ม</a></li>
-                   <li><a href='#'>พ.ร.บ./กฎหมาย/ระเบียบ</a></li>
-                   <li><a href='#'>ติดต่อสอบถาม</a></li>
-                   <li class='last'><a href='#'>ปฏิทินกิจกรรม</a></li>
-                </ul>
-            </div>            
- 			<div class="clearfix">&nbsp;</div>
+<?include('_header.php')?>
     		
 <!------------------------------------------------------------END Header and TopMenu----------------------------------------------------------->           
 	<div id="wraphilight">
@@ -103,30 +57,9 @@
         </div>
         <div class="clearfix">&nbsp;</div>
         <!---------------------------------------------END News------------------------------------------>
-		<div id="porcument">
-        	<div class="porcumenttitle">ข่าวจัดซื้อจัดจ้าง <span><a href="#" class="viewall">ดูทั้งหมด</a></span></div>
-             <p class="newporcument">
-                <img src="themes/fundv2/images/porcument-pic01.jpg" width="139" height="96" class="img-porcument">
-                <a href="#">ประกวดราคาจ้างบำรุงรักษาระบบเครือข่ายคอมพิวเตอร์และอุปกรณ์ ของ
-    สำนักงานพัฒนาสังคมและความมั่นคงของมนุษย์จังหวัด ๗๖ จังหวัด ประจำ
-    ปีงบประมาณ ๒๕๕๘ ด้วยวิธีการทางอิเล็กทรอนิกส์</a><br />
-                <span class="date-porcument">09 ก.ย. 2557</span>
-            </p>
-               <p class="newporcument2">
-               <img src="themes/fundv2/images/porcument-nopic.jpg" width="139" height="96" class="img-porcument">
-               <a href="#">ประกวดราคาจ้างบำรุงรักษาซ่อมแซมแก้ไขเครื่องคอมพิวเตอร์แม่ข่าย ระบบ
-    ฐานข้อมูล ระบบเครือข่ายคอมพิวเตอร์และอุปกรณ์ ประจำปีงบประมาณ 
-    ๒๕๕๘ ด้วยวิธีการทางอิเล็กทรอนิกส์</a><br />
-                <span class="date-porcument">09 ก.ย. 2557</span>
-            </p>
-               <p class="newporcument">
-               <img src="themes/fundv2/images/porcument-pic02.jpg" width="139" height="96" class="img-porcument">
-               <a href="#">ประกาศสำนักงานปลัดกระทรวงการพัฒนาสังคมและความมั่นคงของมนุษย์ 
-เรื่อง สอบราคาจ้างเหมาบริการทำความสะอาดภายในสถาบันพระประชาบดี</a><br />
-                <span class="date-porcument">08 ก.ย. 2557</span>
-            </p>
-        </div>
-
+        
+        <?=modules::run('infos/inc_home_1'); ?>
+		
         <!---------------------------------------------END Porcument------------------------------------------>
     
         
@@ -147,22 +80,7 @@
       <div class="clearfix">&nbsp;</div>
         <!---------------------------------------------END VDO------------------------------------------>
         
-        <div id="job">
-        	<div class="jobtitle">ข่าวประกาศรับสมัครงาน<span><a href="#" class="viewall">ดูทั้งหมด</a></span></div>
-            <ul>
-            	<li><a href="#">ประกาศจังหวัดสกลนคร เรื่อง รับสมัครบุคคลเพื่อเลือกสรรเป็นพนัก
-งานกองทุนส่งเสริมการพัฒนาคุณภาพชีวิตคนพิการ (ตำแหน่ง นักสัง-
-คมสงเคราะห์)</a> <span class="date-porcument">09 ก.ย. 2557</span></li>
-				<li><a href="#">ประกาศจังหวัดนครปฐม เรื่องรับสมัครบุคคลเพื่อเลือกสรรเป็นพนักงาน
-กองทุนส่งเสริมและพัฒนาคุณภาพชีวิตคนพิการ</a> <span class="date-porcument">05 ก.ย. 2557</span></li>
-                <li><a href="#">ประกาศกองบริหารกองทุน เรื่อง แจ้งรายชื่อผ่านการประเมินสมรรถนะ
-ครั้งที่ 1 และมีสิทธิ์เข้ารับการประเมินสมรรถนะครั้งที่ 2 เพื่อเลือกสรร
-บุคคลบรรจุเป็นพนักงานกองทุนส่งเสริมการจัดสวัสดิการสังคมและ
-กองทุนคุ้มครองเด็ก</a> <span class="date-porcument">05 ก.ย. 2557</span></li>
-                <li><a href="#">จ้างเหมาบุคลากรเพื่อปฏิบัติงานหน้าที่รับโทรศัพท์จำนวน 15 อัตรา 
-ปฏิบัติงานประจำศูนย์ช่วยเหลือสังคม</a> <span class="date-porcument">28 ส.ค. 2557</span></li>
-            </ul>
-        </div>
+        <?=modules::run('infos/inc_home_2'); ?>
         
     </div>
 <!------------------------------------------------------------END Col2----------------------------------------------------------->  
@@ -512,62 +430,7 @@
      </div> 
      <!-------------------------------------------------------END Col4-------------------------------------------------------->
      
-</div>
-<!-------------------------------------------------------END wrap-------------------------------------------------------->  
 
-<div class="clearfix">&nbsp;</div>
-	<div id="footer">
-    	<div id="text-footer">
-          <div id="textAddress">
-              <a href="#"><img src="themes/fundv2/images/map.jpg" width="123" height="123" class="map"></a> 
-    		  <div class="text-namefooter">งานบริหารกองทุน</div>
-              <div class="text-namefooter2">สำนักปลัดกระทรวงการพัฒนาสังคมและความมั่นคงของมนุษย์</div>
-              <p><img src="themes/fundv2/images/icon-location.png" width="20" height="25" /> อาคาร ซี.พี. ทาวเวอร์ 3 อาคาร A ชั้น 6 เลขที่ 34 ถ.พญาไท<br>
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;แขวงทุ่งพญาไท เขตราชเทวี กรุงเทพมหานคร 10400<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;โทรศัพท์ 0 2202 9024 -35, โทรสาร 0 2202 9034 -35, E-mail : <a href="mailto:fad@m-society.go.th" target="_blank">fad@m-society.go.th</a></p>
-              <div class="btn-social"> <a href="#"><img src="themes/fundv2/images/btn-fb.png" width="173" height="35" /></a> <a href="#"><img src="themes/fundv2/images/btn-tw.png" width="173" height="35" style="margin-left:20px;"></a>
-              </div>
-		    
-          </div>
-            
-            <div id="stat">
-        		<div class="title-stat">จำนวนผู้เข้าเยี่ยมชมเว็บไซต์</div>
-                <table width="200">
-                  <tr>
-                    <td width="102">วันนี้	</td>
-                    <td width="86">900</td>
-                  </tr>
-                  <tr>
-                    <td>เดือนนี้</td>
-                    <td>123456</td>
-                  </tr>
-                  <tr>
-                    <td> ปีนี้</td>
-                    <td>4500000</td>
-                  </tr>
-                  <tr>
-                    <td>รวมทั้งหมด	</td>
-                    <td>456789012</td>
-                  </tr>
-                  <tr>
-                    <td>เริ่มนับตั้งแต่วันที่  </td>
-                    <td>5 / 02 / 2557</td>
-                  </tr>
-                  <tr>
-                    <td>&nbsp;</td>
-                    <td>&nbsp;</td>
-                  </tr>
-                </table>   
-                <a href="#" class="link-stat">ดูสถิติอย่างละเอียดทั้งหมด</a> 
-        	</div>
-            <div class="clearfix">&nbsp;</div>
-          <div class="copy">Copyright © 2014 www.envocc.org &nbsp;&nbsp;&nbsp;All Rights Reserved. </div>
-            <div id="back-top"><a href="#wrap"><img src="themes/fundv2/images/a-top.png" width="79" height="39"></a></div>
-        </div>
-    </div>
-
-   <!-------------------END FOOTER--------------------->
-    
-   
+<?include('_footer.php')?>   
 </body>
 </html>
