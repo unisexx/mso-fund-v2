@@ -230,7 +230,7 @@
 					</a>
 
 					<ul class="user-menu pull-right dropdown-menu dropdown-yellow dropdown-caret dropdown-closer">
-						<li>
+						<!-- <li>
 							<a href="#">
 								<i class="icon-cog"></i>
 								Settings
@@ -244,7 +244,7 @@
 							</a>
 						</li>
 
-						<li class="divider"></li>
+						<li class="divider"></li> -->
 
 						<li>
 							<a href="users/admin/auth/logout" onclick="return confirm('คุณต้องการออกจากระบบ?')" >

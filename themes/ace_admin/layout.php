@@ -59,7 +59,7 @@
 			<?php include_once('_menu.php');?>
 			<div class="main-content">
 				<?php echo $template['body']; ?>
-				<?php include_once('_setting.php');?>
+				<?php // include_once('_setting.php');?>
 			</div><!--/.main-content-->
 		</div><!--/.main-container-->
 		
