@@ -11,7 +11,7 @@
               <p><img src="themes/fundv2/images/icon-location.png" width="20" height="25" /> อาคาร ซี.พี. ทาวเวอร์ 3 อาคาร A ชั้น 6 เลขที่ 34 ถ.พญาไท<br>
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;แขวงทุ่งพญาไท เขตราชเทวี กรุงเทพมหานคร 10400<br>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;โทรศัพท์ 0 2202 9024 -35, โทรสาร 0 2202 9034 -35, E-mail : <a href="mailto:fad@m-society.go.th" target="_blank">fad@m-society.go.th</a></p>
-              <div class="btn-social"> <a href="#"><img src="themes/fundv2/images/btn-fb.png" width="173" height="35" /></a> <a href="#"><img src="themes/fundv2/images/btn-tw.png" width="173" height="35" style="margin-left:20px;"></a>
+              <div class="btn-social"> <a href="#"><img src="themes/fundv2/images/btn-fb2.png" width="125" height="35" /></a> <a href="#"><img src="themes/fundv2/images/btn-tw2.png" width="125" height="35" style="margin-left:20px;"></a>
               </div>
 		    
           </div>
