@@ -14,4 +14,5 @@
 		</div>
 	<?endforeach;?>
 <br clear="all">
+<?=$rs->pagination();?>
 </div>

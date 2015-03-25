@@ -31,6 +31,12 @@
 	<!--#sidebar-shortcuts-->
 
 	<ul class="nav nav-list">
+		<li <?=@$this->uri->segment(1) == 'hilights'?'class="active"':'';?>>
+			<a href="hilights/admin/hilights">
+				<i class="fa fa-file-image-o"></i>
+				<span class="menu-text"> ไฮไลท์ </span>
+			</a>
+		</li>
 		<li <?=@$_GET['module'] == 'เกี่ยวกับ กบท.'?'class="active open"':'';?>>
 			<a href="#" class="dropdown-toggle">
 				<i class="fa fa-users"></i>
@@ -289,59 +295,59 @@
 			</ul>
 		</li>
 		
-		<li <?=@$_GET['module'] == 'กองทุนส่งเสริมการจัดการสวัสดิการ'?'class="active open"':'';?>>
+		<li <?=@$_GET['module'] == 'กองทุนส่งเสริมการจัดการสวัสดิการสังคม'?'class="active open"':'';?>>
 			<a href="#" class="dropdown-toggle">
 				<i class="icon-star"></i>
-				<span class="menu-text"> กองทุนส่งเสริมการจัดการสวัสดิการ </span>
+				<span class="menu-text"> กองทุนส่งเสริมการจัดการสวัสดิการสังคม </span>
 
 				<b class="arrow icon-angle-down"></b>
 			</a>
 
 			<ul class="submenu">
-				<li <?=@$_GET['module'] == 'กองทุนส่งเสริมการจัดการสวัสดิการ' && @$_GET['category'] == 'เกี่ยวกับกองทุน'?'class="active open"':'';?>>
-					<a href="contents/admin/contents/form?module=กองทุนส่งเสริมการจัดการสวัสดิการ&category=เกี่ยวกับกองทุน">
+				<li <?=@$_GET['module'] == 'กองทุนส่งเสริมการจัดการสวัสดิการสังคม' && @$_GET['category'] == 'เกี่ยวกับกองทุน'?'class="active open"':'';?>>
+					<a href="contents/admin/contents/form?module=กองทุนส่งเสริมการจัดการสวัสดิการสังคม&category=เกี่ยวกับกองทุน">
 						<i class="icon-double-angle-right"></i>
 						เกี่ยวกับกองทุน
 					</a>
 				</li>
 
-				<li <?=@$_GET['module'] == 'กองทุนส่งเสริมการจัดการสวัสดิการ' && @$_GET['category'] == 'การขอรับเงินสนับสนุน'?'class="active open"':'';?>>
-					<a href="contents/admin/contents/form?module=กองทุนส่งเสริมการจัดการสวัสดิการ&category=การขอรับเงินสนับสนุน">
+				<li <?=@$_GET['module'] == 'กองทุนส่งเสริมการจัดการสวัสดิการสังคม' && @$_GET['category'] == 'การขอรับเงินสนับสนุน'?'class="active open"':'';?>>
+					<a href="contents/admin/contents/form?module=กองทุนส่งเสริมการจัดการสวัสดิการสังคม&category=การขอรับเงินสนับสนุน">
 						<i class="icon-double-angle-right"></i>
 						การขอรับเงินสนับสนุน
 					</a>
 				</li>
 				
-				<li <?=@$_GET['module'] == 'กองทุนส่งเสริมการจัดการสวัสดิการ' && @$_GET['category'] == 'เกณฑ์การพิจารณา'?'class="active open"':'';?>>
-					<a href="contents/admin/contents/form?module=กองทุนส่งเสริมการจัดการสวัสดิการ&category=เกณฑ์การพิจารณา">
+				<li <?=@$_GET['module'] == 'กองทุนส่งเสริมการจัดการสวัสดิการสังคม' && @$_GET['category'] == 'เกณฑ์การพิจารณา'?'class="active open"':'';?>>
+					<a href="contents/admin/contents/form?module=กองทุนส่งเสริมการจัดการสวัสดิการสังคม&category=เกณฑ์การพิจารณา">
 						<i class="icon-double-angle-right"></i>
 						เกณฑ์การพิจารณา
 					</a>
 				</li>
 				
-				<li <?=@$_GET['module'] == 'กองทุนส่งเสริมการจัดการสวัสดิการ' && @$_GET['category'] == 'แบบฟอร์มที่เกี่ยวกับกองทุน (ดาวน์โหลดแบบฟอร์ม)'?'class="active open"':'';?>>
-					<a href="contents/admin/contents/form?module=กองทุนส่งเสริมการจัดการสวัสดิการ&category=แบบฟอร์มที่เกี่ยวกับกองทุน (ดาวน์โหลดแบบฟอร์ม)">
+				<li <?=@$_GET['module'] == 'กองทุนส่งเสริมการจัดการสวัสดิการสังคม' && @$_GET['category'] == 'แบบฟอร์มที่เกี่ยวกับกองทุน (ดาวน์โหลดแบบฟอร์ม)'?'class="active open"':'';?>>
+					<a href="contents/admin/contents/form?module=กองทุนส่งเสริมการจัดการสวัสดิการสังคม&category=แบบฟอร์มที่เกี่ยวกับกองทุน (ดาวน์โหลดแบบฟอร์ม)">
 						<i class="icon-double-angle-right"></i>
 						แบบฟอร์มที่เกี่ยวกับกองทุน (ดาวน์โหลดแบบฟอร์ม)
 					</a>
 				</li>
 				
-				<li <?=@$_GET['module'] == 'กองทุนส่งเสริมการจัดการสวัสดิการ' && @$_GET['category'] == 'ระเบียบและประกาศที่เกี่ยวข้อง'?'class="active open"':'';?>>
-					<a href="contents/admin/contents/form?module=กองทุนส่งเสริมการจัดการสวัสดิการ&category=ระเบียบและประกาศที่เกี่ยวข้อง">
+				<li <?=@$_GET['module'] == 'กองทุนส่งเสริมการจัดการสวัสดิการสังคม' && @$_GET['category'] == 'ระเบียบและประกาศที่เกี่ยวข้อง'?'class="active open"':'';?>>
+					<a href="contents/admin/contents/form?module=กองทุนส่งเสริมการจัดการสวัสดิการสังคม&category=ระเบียบและประกาศที่เกี่ยวข้อง">
 						<i class="icon-double-angle-right"></i>
 						ระเบียบและประกาศที่เกี่ยวข้อง
 					</a>
 				</li>
 				
-				<li <?=@$_GET['module'] == 'กองทุนส่งเสริมการจัดการสวัสดิการ' && @$_GET['category'] == 'การเงินและการบริหารงบประมาณ'?'class="active open"':'';?>>
-					<a href="contents/admin/contents/form?module=กองทุนส่งเสริมการจัดการสวัสดิการ&category=การเงินและการบริหารงบประมาณ">
+				<li <?=@$_GET['module'] == 'กองทุนส่งเสริมการจัดการสวัสดิการสังคม' && @$_GET['category'] == 'การเงินและการบริหารงบประมาณ'?'class="active open"':'';?>>
+					<a href="contents/admin/contents/form?module=กองทุนส่งเสริมการจัดการสวัสดิการสังคม&category=การเงินและการบริหารงบประมาณ">
 						<i class="icon-double-angle-right"></i>
 						การเงินและการบริหารงบประมาณ
 					</a>
 				</li>
 				
-				<li <?=@$_GET['module'] == 'กองทุนส่งเสริมการจัดการสวัสดิการ' && @$_GET['category'] == 'ผลการดำเนินงานกองทุน'?'class="active open"':'';?>>
-					<a href="contents/admin/contents/form?module=กองทุนส่งเสริมการจัดการสวัสดิการ&category=ผลการดำเนินงานกองทุน">
+				<li <?=@$_GET['module'] == 'กองทุนส่งเสริมการจัดการสวัสดิการสังคม' && @$_GET['category'] == 'ผลการดำเนินงานกองทุน'?'class="active open"':'';?>>
+					<a href="contents/admin/contents/form?module=กองทุนส่งเสริมการจัดการสวัสดิการสังคม&category=ผลการดำเนินงานกองทุน">
 						<i class="icon-double-angle-right"></i>
 						ผลการดำเนินงานกองทุน
 					</a>

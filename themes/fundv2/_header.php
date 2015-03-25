@@ -41,9 +41,9 @@
                  <li class='last'><a href='infos/lists?module=ข่าวประกาศรับสมัครงาน'>ข่าวประกาศรับสมัครงาน</a></li>
               </ul>
            </li>
-           <li><a href='#'>ดาวน์โหลดแบบฟอร์ม</a></li>
-           <li><a href='#'>พ.ร.บ./กฎหมาย/ระเบียบ</a></li>
-           <li><a href='#'>ติดต่อสอบถาม</a></li>
+           <li><a href='downloads/lists'>ดาวน์โหลดแบบฟอร์ม</a></li>
+           <li><a href='contents/act?module=พรบ.%20กฏหมาย%20ระเบียบ%20ข้อบังคับ%20มติ%20ครม.%20และหนังสือเวียน'>พ.ร.บ./กฎหมาย/ระเบียบ</a></li>
+           <li><a href='contents/view?module=เกี่ยวกับ%20กบท.&category=ติดต่อ%20กบท.'>ติดต่อสอบถาม</a></li>
            <li class='last'><a href='#'>ปฏิทินกิจกรรม</a></li>
         </ul>
     </div>            

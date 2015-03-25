@@ -8,7 +8,7 @@
 				<i class="icon-angle-right arrow-icon"></i>
 			</span>
 		</li>
-		<li class="active">ภาพกิจกรรม/วิดีโอ</li>
+		<li class="active">ฟอร์ม</li>
 	</ul><!--.breadcrumb-->
 
 	<div class="nav-search" id="nav-search">
@@ -24,7 +24,7 @@
 <div class="page-content">
 	<div class="page-header position-relative">
 		<h1>
-			วิดีโอ
+			ไฮไลท์
 			<!-- <small>
 				<i class="icon-double-angle-right"></i>
 				<?=@$_GET['category']?>
@@ -35,40 +35,53 @@
 	<div class="row-fluid">
 		<div class="span12">
 			<!--PAGE CONTENT BEGINS-->
-				<form class="form-horizontal" method="post" action="vdos/admin/vdos/save/<?php echo $rs->id ?>" enctype="multipart/form-data">
+				<form class="form-horizontal" method="post" action="hilights/admin/hilights/save/<?php echo $rs->id ?>" enctype="multipart/form-data">
 					
 					<div class="control-group">
-			            <label class="control-label" for="id-input-file-1">ภาพประกอบ</label>
+			            <label class="control-label" for="id-input-file-1">ภาพไฮไลท์</label>
 			            <div class="controls">
 			                <?php if($rs->image):?>
-			                <img class="img" style="width:158px;" src="<?php echo (is_file('uploads/vdo/'.$rs->image))? 'uploads/vdo/'.$rs->image : 'media/images/webboard/noavatar.gif' ?>"  /> <br><br>
+			                <img class="img" style="width:300px;" src="<?php echo (is_file('uploads/hilight/'.$rs->image))? 'uploads/hilight/'.$rs->image : 'media/images/webboard/noavatar.gif' ?>"  /> <br><br>
 			                <?php endif;?>
 			                <div class="input-xxlarge" style="width:544px;">
 			                    <input type="file" id="id-input-file-1" name="image"/>
 			                </div>
 			            </div>
 			        </div>
+			        
+			        <div class="control-group">
+						<label class="control-label">ลิ้งค์ไปยัง</label>
+						<div class="controls">
+							<input class="input-xxlarge" type="text" name="url" value="<?php echo $rs->url?>" placeholder="http://www.m-society.go.th"/>
+						</div>
+					</div>
 					
-					<div class="control-group">
+					<!-- <div class="control-group">
 						<label class="control-label">หัวข้อ</label>
 						<div class="controls">
 							<input class="input-xxlarge" type="text" name="title" value="<?php echo $rs->title?>"/>
 						</div>
-					</div>
+					</div> -->
 					
-					<div class="control-group">
-						<label class="control-label">Youtube URL</label>
-						<div class="controls">
-							<input class="input-xxlarge" type="text" name="url" value="<?php echo $rs->url?>"/>
-							<div class="show_vid" style="margin-top:10px;"></div>
-						</div>
-					</div>
+					<!-- <div class="control-group">
+			            <label class="control-label" for="form-field-9">รายละเอียด</label>
+			            <div class="controls">
+			                <textarea class="input-xxlarge" rows="5" id="form-field-9" name="detail"><?php echo $rs->detail?></textarea>
+			            </div>
+			        </div> -->
 					
 					<!-- <div class="control-group">
 						<label class="control-label">ไฟล์แนบ</label>
 						<div class="controls">
 							<input class="input-xxlarge" type="text" name="files" value="<?php echo $rs->files?>"/>
 							<input class="btn btn-mini btn-info" type="button" name="browse" value="เลือกไฟล์" onclick="browser($(this).prev(),'file')" />
+						</div>
+					</div> -->
+					
+					<!-- <div class="control-group">
+						<label class="control-label">หมวดหมู่</label>
+						<div class="controls">
+							<?php// echo form_dropdown('category_id',$rs->category->get_option(),$rs->category_id,'');?>
 						</div>
 					</div> -->
 					
@@ -108,31 +121,6 @@ $(function() {
 		//blacklist:'exe|php'
 		//onchange:''
 		//
-	});
-	
-	
-	// YOUTUBE show vid from url
-	var text = $('input[name=url]').val();
-	if(text != null){
-	    $.get('vdos/admin/vdos/ajax_show_vid',{
-	    	'url' : text
-	    },function(data){
-	    	$('.show_vid').html(data);
-	    });
-	}
-	    
-	$('input[name=url]').on('paste', function () {
-	  var element = this;
-	  setTimeout(function () {
-	    var text = $(element).val();
-	    console.log(text);
-	    // do something with text
-	    $.get('vdos/admin/vdos/ajax_show_vid',{
-	    	'url' : text
-	    },function(data){
-	    	$('.show_vid').html(data);
-	    });
-	  }, 100);
 	});
 });
 </script>

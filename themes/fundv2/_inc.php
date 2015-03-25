@@ -7,6 +7,7 @@
 <link rel="stylesheet" href="themes/fundv2/css/topmenu.css">
 <!-- <link rel="stylesheet" href="themes/fundv2/css/calendar.css"> -->
    <script src="themes/fundv2/js/jquery-latest.min.js" type="text/javascript"></script>
+   <script src="media/bootstrap-3.3.4/js/bootstrap.js" type="text/javascript"></script>
    <script src="themes/fundv2/js/script.js"></script>
 <script type="text/javascript">
 $(document).ready(function() {

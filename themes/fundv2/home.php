@@ -11,7 +11,8 @@
     		
 <!------------------------------------------------------------END Header and TopMenu----------------------------------------------------------->           
 	<div id="wraphilight">
-    	<div id="highlight">
+		<?=modules::run('hilights/inc_home'); ?>
+    	<!-- <div id="highlight">
             <ul>
               <li><a href="#"><img src="themes/fundv2/images/highlight-pic01.jpg" width="698" height="249" /></a></li>
             </ul>
@@ -23,12 +24,12 @@
                         <li><a href="#">&nbsp;</a></li>
                     </ol>
                 </div>
-        </div>
+        </div> -->
         <div id="menuright">
         	<ul>
-            	<li class="menuright01"><a href="#">&nbsp;</a></li>
-                <li class="menuright02"><a href="#">&nbsp;</a></li>
-                <li class="menuright03"><a href="#">&nbsp;</a></li>
+            	<a href="contents/fund?module=กองทุนเพื่อการป้องกันและปราบปรามการค้ามนุษย์"><li class="menuright01">&nbsp;</li></a>
+                <a href="contents/fund?module=กองทุนส่งเสริมการจัดการสวัสดิการสังคม"><li class="menuright02">&nbsp;</li></a>
+                <a href="contents/fund?module=กองทุนคุ้มครองเด็ก"><li class="menuright03">&nbsp;</li></a>
             </ul>
         </div>
     </div>  
@@ -68,15 +69,7 @@
     <div id="col2"> 
     	<a href="#"><img src="themes/fundv2/images/banner01.png" width="436" height="149" class="banner01"/></a>
         <br>
-      <div id="vdo">
-       	<div class="vdotitle">ข่าวกิจกรรม / วีดีโอ<span><a href="#" class="viewall">ดูทั้งหมด</a></span></div>
-          <div id="vdolist">
-          	  <div class="vdoplay"><a href="#">&nbsp;</a></div>
-          	  <a href="#"><img src="themes/fundv2/images/vdo-pic01.jpg" width="158" height="116" class="imgvdo"></a>
-              <a href="#" class="linkvdo">การประชุมคณะกรรมการบริหารกองทุน<br>ส่งเสริมและคณะอนุกรรมการพิจารณา<br>กรั่นกรอง <br> 
-              <img src="themes/fundv2/images/icon-film.png" width="14" height="15" style="margin-top:5px;"></a>
-         </div>
-      </div>
+        <?=modules::run('vdos/inc_home');?>
       <div class="clearfix">&nbsp;</div>
         <!---------------------------------------------END VDO------------------------------------------>
         
@@ -163,7 +156,7 @@
          </table>
          </div>
          <!-------------------END Calendar---------------------> 
-   	    <a href="#"><img src="themes/fundv2/images/banner-weblink.jpg" width="287" height="137" /></a>
+   	    <a href="weblinks/lists"><img src="themes/fundv2/images/banner-weblink.jpg" width="287" height="137" /></a>
         <a href="#"><img src="themes/fundv2/images/banner-contract.jpg" width="287" height="96" style="margin-top:25px;"></a>
         
      </div> 

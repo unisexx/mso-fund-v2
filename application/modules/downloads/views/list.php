@@ -17,7 +17,7 @@
                         <th width="400">เรื่อง</th>
                         <th width="148" style="text-align:center;">จำนวนดาวน์โหลด</th>
   					  </tr>
-  					  <?foreach($row->download->order_by('id desc')->get(10) as $item):?>
+  					  <?foreach($row->download->order_by('id desc')->get() as $item):?>
   					  <tr>
                         <td class="tb1-date"><?=DB2Date($item->created)?></td>
                         <td valign="top"><a href="downloads/download/<?=$item->id?>"><?=$item->title?></a></td>
@@ -25,7 +25,7 @@
                       </tr>
   					  <?endforeach;?>
   				</table>
-            	<div class="viewall-tb1"><a href="downloads/lists">ดูทั้งหมด</a></div>
+            	<!-- <div class="viewall-tb1"><a href="#">ดูทั้งหมด</a></div> -->
             	</div>
         		<?endforeach;?>
             </div>

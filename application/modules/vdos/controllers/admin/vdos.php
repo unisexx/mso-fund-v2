@@ -30,6 +30,14 @@ class Vdos extends Admin_Controller{
 		{
 			$rs = new Vdo($id);
 			
+			if($_FILES['image']['name'])
+			{
+				if($rs->id){
+					$rs->delete_file($rs->id,'uploads/vdo/','image');
+				}
+				$_POST['image'] = $rs->upload($_FILES['image'],'uploads/vdo/',158,116);
+			}
+			
 			if(!$id)$_POST['user_id'] = $this->session->userdata('id');
 			$_POST['status'] = "approve";
 			$rs->from_array($_POST);
