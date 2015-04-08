@@ -12,7 +12,7 @@ class Contents extends Admin_Controller
 		$data['contents'] = new Content();
         if(@$_GET['title'])$data['books']->where("title like '%".$_GET['title']."%'");
         if(@$_GET['category_id'])$data['books']->where('category_id',$_GET['category_id']);
-		$data['contents']->order_by('orderlist','asc')->order_by('id','desc')->get_page();
+		$data['contents']->order_by('orderlist','asc')->order_by('id','desc')->get();
 		$this->template->append_metadata(js_checkbox('approve'));
 		$this->template->build('admin/index',$data);
 	}

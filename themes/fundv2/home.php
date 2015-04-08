@@ -40,22 +40,8 @@
     </div>
 <!------------------------------------------------------------END Marquee-----------------------------------------------------------> 
 <div id="col1">
-    	<div id="news">
-        	<div class="newstitle">ข่าวประชาสัมพันธ์ <span><a href="#" class="viewall">ดูทั้งหมด</a></span></div>
-               <p class="p-news"><img src="themes/fundv2/images/news-pic01.jpg" width="158" height="110" class="img-pr-news"><br>
-                    <a href="#">กระทรวง พม. สนับสนุนเงินอุดหนุนฯ ประจำปีงบประมาณ 2557</a></p>
-               <p class="p-news"><img src="themes/fundv2/images/news-pic02.jpg" width="158" height="110" class="img-pr-news"><br>
-          			<a href="#">หลักเกณฑ์ แนวทาง การให้เงินอุดหนุนแก่องค์การสวัสดิการสังคม...</a></p>
-               <p class="p-news2"><img src="themes/fundv2/images/news-pic03.jpg" width="158" height="110" class="img-pr-news"><br>
-                    <a href="#">เอกสารประกอบการขอรับเงินอุดหนุนจากกระทรวงการพัฒนา...</a></p>
-    
-               <p class="p-news"><img src="themes/fundv2/images/news-pic04.jpg" width="158" height="110" class="img-pr-news"><br>
-                    <a href="#">ผต.ประธานเปิดการประชุมเชิงปฏิบัติการพัฒนาประสิทธิภาพ...</a></p>
-               <p class="p-news"><img src="themes/fundv2/images/news-pic05.jpg" width="158" height="110" class="img-pr-news"><br>
-                    <a href="#">ปพม.ประชุมร่วมกันบประธานสภาสังคมสงเคราะห์แห่งประเทศไทย</a></p>
-               <p class="p-news2"><img src="themes/fundv2/images/news-pic06.jpg" width="158" height="110" class="img-pr-news"><br>
-                    <a href="#">ปพม.ประธานในพิธีมอบเครื่องราชอิสริยาภรณ์อันเป็นที่ส... </a></p>
-        </div>
+		<?=modules::run('infos/inc_home_3'); ?>
+    	
         <div class="clearfix">&nbsp;</div>
         <!---------------------------------------------END News------------------------------------------>
         

@@ -11,7 +11,7 @@ class Galleries extends Admin_Controller{
 		$data['categories'] = new Category($id);
 		$galleries = new Gallery();
 		if(@$_POST['category_id'])$id=$_POST['category_id'];
-		$data['galleries'] = $galleries->where('category_id',$id)->order_by('orderlist','asc')->get_page();
+		$data['galleries'] = $galleries->where('category_id',$id)->order_by('orderlist','asc')->get();
 		$this->template->build('admin/gallery_index',$data);
 	}
 	

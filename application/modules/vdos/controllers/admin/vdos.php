@@ -11,7 +11,7 @@ class Vdos extends Admin_Controller{
 		$vdo = new Vdo();
 		if(@$_GET['search'])$vdo->where("title like '%".$_GET['search']."%'");
 		if(@$_GET['category_id'])$vdo->where("category_id = ".$_GET['category_id']);
-		$data['rs'] = $vdo->order_by('id','desc')->get_page();
+		$data['rs'] = $vdo->order_by('id','desc')->get();
 		$this->template->append_metadata(js_lightbox());
 		$this->template->append_metadata(js_checkbox('approve'));
 		$this->template->build('admin/index',$data);

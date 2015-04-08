@@ -38,25 +38,47 @@
 | the active record class
 */
 
-$active_group = 'default';
+$active_group = 'mso';
 $active_record = TRUE;
 
 
-$db['default']['hostname'] = 'localhost';
-$db['default']['username'] = 'root';
-$db['default']['password'] = '1234';
-$db['default']['database'] = 'fundv2';
-$db['default']['dbdriver'] = 'mysql';
-$db['default']['dbprefix'] = '';
-$db['default']['pconnect'] = TRUE;
-$db['default']['db_debug'] = TRUE;
-$db['default']['cache_on'] = FALSE;
-$db['default']['cachedir'] = '';
-$db['default']['char_set'] = 'utf8';
-$db['default']['dbcollat'] = 'utf8_general_ci';
-$db['default']['swap_pre'] = '';
-$db['default']['autoinit'] = TRUE;
-$db['default']['stricton'] = FALSE;
+// $db['default']['hostname'] = 'localhost';
+// $db['default']['username'] = 'root';
+// $db['default']['password'] = '1234';
+// $db['default']['database'] = 'fundv2';
+
+$db['fd']['hostname'] = 'mysql1.favouritehosting.com';
+$db['fd']['username'] = 'c1fundv2';
+$db['fd']['password'] = 'Y9KWyzq8mi';
+$db['fd']['database'] = 'c1fundv2';
+$db['fd']['dbdriver'] = 'mysql';
+$db['fd']['dbprefix'] = '';
+$db['fd']['pconnect'] = TRUE;
+$db['fd']['db_debug'] = TRUE;
+$db['fd']['cache_on'] = FALSE;
+$db['fd']['cachedir'] = '';
+$db['fd']['char_set'] = 'utf8';
+$db['fd']['dbcollat'] = 'utf8_general_ci';
+$db['fd']['swap_pre'] = '';
+$db['fd']['autoinit'] = TRUE;
+$db['fd']['stricton'] = FALSE;
+
+
+$db['mso']['hostname'] = 'localhost';
+$db['mso']['username'] = 'root';
+$db['mso']['password'] = 'S^69XY<Kzp';
+$db['mso']['database'] = 'fund01';
+$db['mso']['dbdriver'] = 'mysql';
+$db['mso']['dbprefix'] = '';
+$db['mso']['pconnect'] = TRUE;
+$db['mso']['db_debug'] = TRUE;
+$db['mso']['cache_on'] = FALSE;
+$db['mso']['cachedir'] = '';
+$db['mso']['char_set'] = 'utf8';
+$db['mso']['dbcollat'] = 'utf8_general_ci';
+$db['mso']['swap_pre'] = '';
+$db['mso']['autoinit'] = TRUE;
+$db['mso']['stricton'] = FALSE;
 
 
 /* End of file database.php */

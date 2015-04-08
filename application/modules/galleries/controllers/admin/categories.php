@@ -12,7 +12,7 @@ class categories extends Admin_Controller
 		if(!empty($_POST['search']))$categories->where("name like '%".$_POST['search']."%'");
 		if(@$_GET['status'])$categories->where('status',$_GET['status']);
 		
-		$data['categories'] = $categories->where("module = 'galleries' and parents <> 0")->order_by('id','desc')->get_page();
+		$data['categories'] = $categories->where("module = 'galleries' and parents <> 0")->order_by('id','desc')->get();
 		$this->template->append_metadata(js_lightbox());
 		$this->template->append_metadata(js_checkbox('approve'));
 		$this->template->build('admin/category_index',$data);

@@ -8,7 +8,7 @@ class Infos extends Public_Controller
 	
 	function lists(){
 		$data['rs'] = new Info();
-		$data['rs']->where('module = "'.$_GET['module'].'" and status="approve"')->get_page();
+		$data['rs']->where('module = "'.$_GET['module'].'" and status="approve"')->order_by('id desc')->get_page();
 		$this->template->build('list',$data);
 	}
 	
@@ -27,6 +27,12 @@ class Infos extends Public_Controller
 		$data['rs'] = new Info();
 		$data['rs']->where('module = "ข่าวประกาศรับสมัครงาน" and status="approve"')->order_by('id desc')->get(4);
 		$this->load->view('inc_home_2',$data);
+	}
+	
+	function inc_home_3(){
+		$data['rs'] = new Info();
+		$data['rs']->where('module = "ข่าวประชาสัมพันธ์" and status="approve"')->order_by('id desc')->get(6);
+		$this->load->view('inc_home_3',$data);
 	}
 }
 ?>

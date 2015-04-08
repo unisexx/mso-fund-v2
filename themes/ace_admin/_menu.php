@@ -83,7 +83,7 @@
 			</ul>
 		</li>
 		
-		<li <?=@$_GET['module'] == 'ข่าวจัดซื้อจัดจ้าง' || @$_GET['module'] == 'ข่าวประกาศรับสมัครงาน' ?'class="active open"':'';?>>
+		<li <?=@$_GET['module'] == 'ข่าวประชาสัมพันธ์' || @$_GET['module'] == 'ข่าวจัดซื้อจัดจ้าง' || @$_GET['module'] == 'ข่าวประกาศรับสมัครงาน' ?'class="active open"':'';?>>
 			<a href="#" class="dropdown-toggle">
 				<i class="fa fa-file-text-o"></i>
 				<span class="menu-text"> ข้อมูลข่าวสาร </span>
@@ -92,8 +92,8 @@
 			</a>
 
 			<ul class="submenu">
-				<li>
-					<a href="form-elements.html">
+				<li <?=@$_GET['module'] == 'ข่าวประชาสัมพันธ์'?'class="active open"':'';?>>
+					<a href="infos/admin/infos?module=ข่าวประชาสัมพันธ์">
 						<i class="icon-double-angle-right"></i>
 						ข่าวประชาสัมพันธ์<br>(Auto feed from Intranet)
 					</a>
@@ -122,8 +122,8 @@
 			</a>
 		</li>
 		
-		<li>
-			<a href="index.html">
+		<li <?=@$this->uri->segment(1) == 'calendars'?'class="active open"':'';?>>
+			<a href="calendars/admin/calendars">
 				<i class="fa fa-calendar"></i>
 				<span class="menu-text"> ปฎิทินกิจกรรม (Auto feed from Intranet) </span>
 			</a>
@@ -162,7 +162,7 @@
 		</li>
 		
 		<li>
-			<a href="index.html">
+			<a href="contents/admin/contents/form?module=สนทนา ถาม - ตอบ&category=สนทนา ถาม - ตอบ">
 				<i class="fa fa-question"></i>
 				<span class="menu-text"> สนทนา ถาม - ตอบ </span>
 			</a>

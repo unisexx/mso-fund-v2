@@ -143,7 +143,7 @@ p { word-break: break-all;}
 			
 				/* -----------contentTab1	--------------- */
 				.tb1 th {font-size:12px; font-weight:bold; background-color:#fee7f2; padding:2px;}
-				.tb1 td {border-bottom:1px solid #e4e4e3; line-height:40px;}
+				.tb1 td {border-bottom:1px solid #e4e4e3; line-height:40px; vertical-align: top;}
 				.tb1 td a {color:black;}
 				.tb1 td a:hover {color:#051fa4;}
 				.tb1-date{font-size:12px; padding-left:6px; background-image: url(../images/bt1date.png); background-repeat:no-repeat; background-position:0px 4px;}

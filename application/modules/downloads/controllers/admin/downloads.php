@@ -11,7 +11,7 @@ class Downloads extends Admin_Controller{
 		$download = new Download();
 		if(@$_GET['search'])$download->where("title like '%".$_GET['search']."%'");
 		if(@$_GET['category_id'])$download->where("category_id = ".$_GET['category_id']);
-		$data['rs'] = $download->order_by('id','desc')->get_page();
+		$data['rs'] = $download->order_by('id','desc')->get();
 		$this->template->append_metadata(js_checkbox('approve'));
 		$this->template->build('admin/index',$data);
 	}

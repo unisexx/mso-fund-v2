@@ -19,7 +19,7 @@ if ( ! function_exists('mysql_to_th'))
 
 		if($time)
 		{
-				$r .= ' - '.date('H', $datetime).':'.date('i', $datetime);
+				$r .= ' - '.date('H', $datetime).':'.date('i', $datetime).' น.';
 		}
 	
 		return $r;
@@ -30,11 +30,22 @@ function DB2Date($Dt){
 	if(($Dt!=NULL)&&($Dt != '0000-00-00')){
 		@list($date,$time) = explode(" ",$Dt);
 		list($y,$m,$d) = explode("-",$date);
-		return $d."/".$m."/".($y+543);
+		return $d."/".$m."/".($y);
 	}else{
 		$Dt = "";
 		return $Dt; 
 	}
+}
+
+function DB2Date_th($Dt){ 
+    if(($Dt!=NULL)&&($Dt != '0000-00-00')){
+        @list($date,$time) = explode(" ",$Dt);
+        list($y,$m,$d) = explode("-",$date);
+        return $d."/".$m."/".($y+543);
+    }else{
+        $Dt = "";
+        return $Dt; 
+    }
 }
 
 function Date2DB($Dt){
@@ -108,9 +119,4 @@ if ( ! function_exists('mysql_to_relative'))
 	
 	//Usage :
 	//echo timeDiff("2002-04-16 10:00:00","2002-03-16 18:56:32");
-	
-	function datetime2date($datetime){
-	    $date = explode(" ", $datetime);
-        return $date[0];
-	}
 ?>

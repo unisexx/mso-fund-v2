@@ -21,7 +21,7 @@ class Downloads extends Public_Controller{
 		$rs = new Download($id);
 		$rs->counter();
 		$this->load->helper('download');
-		$data = file_get_contents($rs->files);
+		$data = file_get_contents(urldecode($rs->files));
 		$name = basename($rs->files);
 		force_download($name, $data); 
 	}

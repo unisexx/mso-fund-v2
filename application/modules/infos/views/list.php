@@ -5,7 +5,11 @@
 		<div class="media col-lg-6">
 		  <div class="media-left media-middle">
 		    <a href="infos/view/<?=$row->id?>">
-		      <img class="media-object" src="uploads/info/<?=$row->image?>" width="139" height="96">
+		      <?if($row->url == ""):?>
+		      	<img class="media-object" src="uploads/info/<?=$row->image?>" width="139" height="96">
+		      <?else:?>
+		      	<img class="media-object" src="<?=$row->image?>" width="139" height="96">
+		      <?endif;?>
 		    </a>
 		  </div>
 		  <div class="media-body">

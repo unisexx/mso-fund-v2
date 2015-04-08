@@ -7,7 +7,7 @@ Class Hilights extends Admin_Controller{
 	
 	function index(){
 		$highlight = new Hilight();
-		$data['rs'] = $highlight->order_by('id','desc')->get_page();
+		$data['rs'] = $highlight->order_by('id','desc')->get();
 		$this->template->append_metadata(js_checkbox('approve'));
 		$this->template->build('admin/hilight_index',$data);
 	}
