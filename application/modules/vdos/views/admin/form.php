@@ -60,7 +60,7 @@
 					<div class="control-group">
 						<label class="control-label">Youtube URL</label>
 						<div class="controls">
-							<input class="input-xxlarge" type="text" name="url" value="<?php echo $rs->url?>"/>
+							<input class="input-xxlarge" type="text" name="url" value="<?php echo $rs->url?>"/> วิดีโอขนาด 560x315 px
 							<div class="show_vid" style="margin-top:10px;"></div>
 						</div>
 					</div>

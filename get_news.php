@@ -10,6 +10,7 @@ $db->Connect($_config['server'],$_config['username'],$_config['password'],$_conf
 $db->Execute('SET character_set_results=utf8');
 $db->Execute('SET collation_connection=utf8_unicode_ci');
 $db->Execute('SET NAMES utf8');
+// $db->debug = true;
 
 $links = get_link();
 print_r($links);

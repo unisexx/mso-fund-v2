@@ -36,7 +36,7 @@
     <div class="clearfix">&nbsp;</div>
 <!------------------------------------------------------------END HighLight----------------------------------------------------------->  
   	<div id="marquee">
-    	<marquee  align="middle" scrollamount="5" scrolldelay="91" onmouseover="this.stop();" onmouseout="this.start();">" ยินดีต้อนรับสู่กองบริหารกองทุน สำนักงานปลัดกระทรวงการพัฒนาสังคมและความมั่นคงของมนุษย์, กระทรวงการพัฒนาสังคมและความมั่นคงของมนุษย์..." สนับสนุนเงินอุดหนุนให้แก่องค์การสวัสดิการสังคมภาคเอกชนประจำปีงบประมาณ 2557 "</marquee>
+    	<marquee  align="middle" scrollamount="5" scrolldelay="91" onmouseover="this.stop();" onmouseout="this.start();"><?=modules::run('contents/inc_home_maquee'); ?></marquee>
     </div>
 <!------------------------------------------------------------END Marquee-----------------------------------------------------------> 
 <div id="col1">

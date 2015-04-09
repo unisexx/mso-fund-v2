@@ -56,8 +56,9 @@
 							<th width="70">แสดง</th>
 							<th>หัวข้อ</th>
 							<!-- <th><a class="btn btn-mini iframe" href="categories/admin/categories/downloads?iframe=true&width=90%&height=90%">หมวดหมู่</a></th> -->
-							<th width="90">
+							<th width="105">
 								<a class="btn btn-mini btn-info" href="infos/admin/infos/form?module=<?=$_GET['module']?>">เพิ่มรายการ</a>
+								<a href="/get_news.php" target="_blank"><i class="fa fa-rss-square fa-2x" style="color:orange; vertical-align: middle;"></i></a>
 							</th>
 						</tr>
 					</thead>
@@ -71,7 +72,7 @@
 									<span class="lbl"></span>
 								</label>
 							</td>
-							<td><?=$row->title?></td>
+							<td><?=$row->title?> <?=($row->url != "")?'<a href="http://intranet.m-society.go.th/'.$row->url.'" target="_blank"><i class="fa fa-rss" style="color:orange;"></i></a>':'';?></td>
 							<!-- <td><?=$row->category->name?></td> -->
 							<td class="td-actions">
 								<div class="hidden-phone visible-desktop action-buttons">

@@ -106,10 +106,10 @@
 $(document).ready(function(){
 	$('#id-input-file-3').ace_file_input({
 		style:'well',
-		btn_choose:'Drop files here or click to choose',
+		btn_choose:'คลิกที่นี่เพื่ออัพโหลดภาพกิจกรรม',
 		btn_change:null,
 		no_icon:'icon-cloud-upload',
-		droppable:true,
+		droppable:false,
 		thumbnail:'small'
 		//,icon_remove:null//set null, to hide remove/reset button
 		/**,before_change:function(files, dropped) {
@@ -131,8 +131,8 @@ $(document).ready(function(){
 		}
 	
 	}).on('change', function(){
-		//console.log($(this).data('ace_input_files'));
-		//console.log($(this).data('ace_input_method'));
+		console.log($(this).data('ace_input_files'));
+		console.log($(this).data('ace_input_method'));
 	});
 	
 	
@@ -184,7 +184,7 @@ $(document).ready(function(){
 	var btn_choose
 	var no_icon
 	
-	btn_choose = "Drop images here or click to choose";
+	btn_choose = "คลิกเพื่ออัพโหลดภาพกิจกรรม";
 	no_icon = "icon-picture";
 	before_change = function(files, dropped) {
 		var allowed_files = [];

@@ -36,7 +36,7 @@
 		   </li>
            <li class='active has-sub'><a href='#'>ข้อมูลข่าวสาร</a>
               <ul>
-                 <li><a href='#'>ข่าวประชาสัมพันธ์</a>
+                 <li><a href='infos/lists?module=ข่าวประชาสัมพันธ์'>ข่าวประชาสัมพันธ์</a>
                  <li><a href='infos/lists?module=ข่าวจัดซื้อจัดจ้าง'>ข่าวจัดซื้อจัดจ้าง</a></li>
                  <li class='last'><a href='infos/lists?module=ข่าวประกาศรับสมัครงาน'>ข่าวประกาศรับสมัครงาน</a></li>
               </ul>

@@ -37,6 +37,14 @@
 				<span class="menu-text"> ไฮไลท์ </span>
 			</a>
 		</li>
+		
+		<li <?=@$_GET['module'] == 'อักษรวิ่ง' && @$_GET['category'] == 'อักษรวิ่ง'?'class="active"':'';?>>
+			<a href="contents/admin/contents/form?module=อักษรวิ่ง&category=อักษรวิ่ง">
+				<i class="fa fa-text-width"></i>
+				<span class="menu-text"> อักษรวิ่ง </span>
+			</a>
+		</li>
+		
 		<li <?=@$_GET['module'] == 'เกี่ยวกับ กบท.'?'class="active open"':'';?>>
 			<a href="#" class="dropdown-toggle">
 				<i class="fa fa-users"></i>

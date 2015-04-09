@@ -23,7 +23,8 @@ class Galleries extends Admin_Controller{
 	}
 	
 	function save($id=false)
-	{	
+	{
+		// print_r($_FILES['filesToUpload']);	
 		if($_POST)
 		{
 			fix_file($_FILES['filesToUpload']);

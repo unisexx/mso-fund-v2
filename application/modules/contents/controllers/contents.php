@@ -19,5 +19,11 @@ class Contents extends Public_Controller
 	function act(){
 		$this->template->build('act');
 	}
+	
+	function inc_home_maquee(){
+		$data['rs'] = new Content();
+		$data['rs']->where('module = "อักษรวิ่ง" and category = "อักษรวิ่ง"')->get(1);
+		echo strip_tags($data['rs']->detail);
+	}
 }
 ?>
