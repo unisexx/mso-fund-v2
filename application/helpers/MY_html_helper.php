@@ -198,4 +198,18 @@ function remove_dir($dir)
     } 
 } 
 
+
+function dbConvert(&$value,$key = null,$output='UTF-8')
+{
+	$encode = array('UTF-8'=>'TIS-620','TIS-620'=>'UTF-8');
+	if(is_array($value)||is_object($value))
+	{
+		$value = array_change_key_case($value);
+		array_walk($value,'dbConvert',$output);
+	}
+	else
+	{
+		@$value = iconv($encode[$output],$output,$value);
+	}
+}
 ?>

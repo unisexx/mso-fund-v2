@@ -38,11 +38,11 @@
 | the active record class
 */
 
-$active_group = 'local';
+$active_group = 'mso';
 $active_record = TRUE;
 
 
-$db['local']['hostname'] = 'localhost';
+$db['local']['hostname'] = '192.168.1.153';
 $db['local']['username'] = 'root';
 $db['local']['password'] = '1234';
 $db['local']['database'] = 'fundv2';
@@ -90,7 +90,6 @@ $db['mso']['dbcollat'] = 'utf8_general_ci';
 $db['mso']['swap_pre'] = '';
 $db['mso']['autoinit'] = TRUE;
 $db['mso']['stricton'] = FALSE;
-
 
 /* End of file database.php */
 /* Location: ./application/config/database.php */
