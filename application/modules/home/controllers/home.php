@@ -52,5 +52,16 @@ class Home extends Public_Controller {
 	function under_construction(){
 		$this->template->build('under_contruction');
 	}
+	
+	public function testdb()
+	{
+		$this->load->library('adodb');
+		$row = $this->ado->pageexecute('SELECT * FROM ACT_PROVINCE', 10, 1);
+		foreach($row as $item)
+		{
+			dbConvert($item);
+			echo $item['province_name'].'<br />';
+		}
+	}
 }
 ?>

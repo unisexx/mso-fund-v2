@@ -20,7 +20,6 @@ $db->debug = true;
 $rs = $db->Execute("select * from act_province order by province_code asc");
 
 // print_r($rs);
-
 foreach($rs as $row){
 	echo $row['PROVINCE_NAME']."<br>";
 }
