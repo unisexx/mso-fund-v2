@@ -1,7 +1,6 @@
 <?php
 putenv("NLS_LANG=AMERICAN_AMERICA.TH8TISASCII");
 include('application/helpers/MY_url_helper.php');
-include('media/simpledom/simple_html_dom.php');
 include('adodb/adodb.inc.php');
 
 $_config['dbdriver'] = 'oci8';
