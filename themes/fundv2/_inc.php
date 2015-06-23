@@ -6,6 +6,8 @@
 <link rel="stylesheet" href="themes/fundv2/css/bootstrap-theme.min.css">
 <link rel="stylesheet" href="themes/fundv2/css/topmenu.css">
 <link rel="stylesheet" href="media/font-awesome-4.3.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="media/css/pagination.css">
+<link rel="stylesheet" href="media/css/img.css">
 <!-- <link rel="stylesheet" href="themes/fundv2/css/calendar.css"> -->
    <script src="themes/fundv2/js/jquery-latest.min.js" type="text/javascript"></script>
    <script src="media/bootstrap-3.3.4/js/bootstrap.js" type="text/javascript"></script>

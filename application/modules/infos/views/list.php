@@ -1,5 +1,5 @@
 <div id="title-blank"><?=$_GET['module']?></div>
-<div id="breadcrumb"><a href="#">หน้าแรก</a> > <span class="b1"><?=$_GET['module']?></span></div>
+<div id="breadcrumb"><a href="home/index">หน้าแรก</a> > <span class="b1"><?=$_GET['module']?></span></div>
 <div id="page">
 	<?foreach($rs as $row):?>
 		<div class="media col-lg-6">

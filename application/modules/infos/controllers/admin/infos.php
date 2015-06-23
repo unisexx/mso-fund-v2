@@ -1,5 +1,5 @@
 <?php
-class Infos extends Admin_Controller
+class Infos extends Admin_mso_Controller
 {
 	
 	function __construct()
@@ -9,16 +9,48 @@ class Infos extends Admin_Controller
 	
 	function index()
 	{
-		$data['rs'] = new Info();
-		$data['rs']->where('module = "'.$_GET['module'].'"')->order_by('id','desc')->get();
-		$this->template->append_metadata(js_checkbox('approve'));
-		$this->template->build('admin/index',$data);
+		
+		if($_GET['module']!='mso'){
+				
+			$data['rs'] = new Info();
+			$data['rs']->where('module = "'.$_GET['module'].'"')->order_by('id','desc')->get();
+			$this->template->append_metadata(js_checkbox('approve'));
+			$this->template->build('admin/index',$data);
+			
+		}else{
+				
+			include('themes/fundv2/odbc_connect.php');
+			
+			$this->load->helper('html');
+			
+			$data['rs'] = $db->Execute("select * from WEB_NEWS ORDER BY ID DESC");
+			
+			$this->template->append_metadata(js_checkbox('approve'));
+			$this->template->build('admin/index_mso',$data);
+			
+		}
+		
+
 	}
 	
 	function form($id=FALSE)
 	{
-		$data['rs'] = new Info($id);
-		$this->template->build('admin/form',$data);
+		if($_GET['module']!='mso'){
+			
+			$data['rs'] = new Info($id);
+			$this->template->build('admin/form',$data);
+		
+		}else{
+			
+			include('themes/fundv2/odbc_connect.php');
+			
+			$this->load->helper('html');
+			
+			$data['rs'] = $db->Execute("select * from WEB_NEWS WHERE ID=".$id);
+			
+			$this->template->build('admin/form_mso',$data);
+			
+		}
 	}
 	
 	function save($id=false){

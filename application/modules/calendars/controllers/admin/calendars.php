@@ -1,5 +1,5 @@
 <?php
-class Calendars extends Admin_Controller
+class Calendars extends Admin_mso_Controller
 {
 	function __construct()
 	{
@@ -8,7 +8,19 @@ class Calendars extends Admin_Controller
 	
 	function index()
 	{
-		$this->template->build('admin/calendar_index');
+		//$this->template->build('admin/calendar_index');
+			include('themes/fundv2/odbc_connect.php');
+			
+			$this->load->helper('html');
+			
+			
+			$data['rs'] = $db->Execute("select * from INTRANET_ACTCALENDAR ORDER BY ID DESC");
+			
+			$data['rs_type'] = $db->Execute("select * from INTRANET_ACTCALENDAR_TYPE ORDER BY ID DESC");
+			$data['rs_acc'] = $db->Execute("select * from INTRANET_ACTCALENDAR_ACCESSORY ORDER BY ID DESC");
+			
+			$this->template->build('admin/index_mso',$data);
+		
 	}
 	
 	function index2(){
@@ -42,8 +54,17 @@ class Calendars extends Admin_Controller
 	
 	function form($id = FALSE)
 	{
-		$data['calendar'] = New Calendar($id);
-		$this->template->build('admin/calendar_form',$data);
+		
+		
+			include('themes/fundv2/odbc_connect.php');
+			
+			$this->load->helper('html');
+			
+			
+			$data['rs'] = $db->Execute("select * from INTRANET_ACTCALENDAR WHERE ID=".$id);
+			
+			$this->template->build('admin/form_mso',$data);	
+		
 	}
     
     function save($id = FALSE)

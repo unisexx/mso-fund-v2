@@ -1,5 +1,5 @@
 <div id="vdo">
- <div class="vdotitle">ข่าวกิจกรรม / วีดีโอ<span><a href="vdos/lists" class="viewall">ดูทั้งหมด</a></span></div>
+ <div class="vdotitle">ประมวลภาพกิจกรรม / วีดีโอ<span><a href="vdos/lists" class="viewall">ดูทั้งหมด</a></span></div>
   <div id="vdolist">
   	  <div class="vdoplay"><a href="vdos/view/<?=$rs->id?>">&nbsp;</a></div>
   	  <a href="vdos/view/<?=$rs->id?>"><img src="uploads/vdo/<?=$rs->image?>" width="158" height="116" class="imgvdo"></a>

@@ -25,7 +25,7 @@
 	<div class="clearfix">&nbsp;</div>
 	<div id='cssmenu'>
         <ul>
-           <li><a href=''>หน้าแรก</a></li>
+           <li><a href='home/index'>หน้าแรก</a></li>
            <li class='active has-sub'><a href='#'><span>เกี่ยวกับ กบท.</span></a>
               <ul>
                  <li><a href='contents/view?module=เกี่ยวกับ%20กบท.&category=เกี่ยวกับกองทุน'><span>เกี่ยวกับกองทุน</span></a>
@@ -44,7 +44,7 @@
            <li><a href='downloads/lists'>ดาวน์โหลดแบบฟอร์ม</a></li>
            <li><a href='contents/act?module=พรบ.%20กฏหมาย%20ระเบียบ%20ข้อบังคับ%20มติ%20ครม.%20และหนังสือเวียน'>พ.ร.บ./กฎหมาย/ระเบียบ</a></li>
            <li><a href='contents/view?module=เกี่ยวกับ%20กบท.&category=ติดต่อ%20กบท.'>ติดต่อสอบถาม</a></li>
-           <li class='last'><a href='#'>ปฏิทินกิจกรรม</a></li>
+           <li class='last'><a href='calendars/calendar_mso'>ปฏิทินกิจกรรม</a></li>
         </ul>
     </div>            
 	<div class="clearfix">&nbsp;</div>

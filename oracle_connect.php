@@ -4,9 +4,14 @@ include('application/helpers/MY_url_helper.php');
 include('adodb/adodb.inc.php');
 
 $_config['dbdriver'] = 'oci8';
-$_config['server'] = '10.20.50.12';
-$_config['username'] = 'boffice';
-$_config['password'] = 'bo2557';
+// $_config['server'] = '10.20.50.12';
+// $_config['username'] = 'boffice';
+// $_config['password'] = 'bo2557';
+// $_config['database'] = 'BOFFICE';
+
+$_config['server'] = 'localhost';
+$_config['username'] = 'BOFFICE';
+$_config['password'] = '1234';
 $_config['database'] = 'BOFFICE';
 
 

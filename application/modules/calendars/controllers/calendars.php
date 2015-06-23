@@ -88,5 +88,75 @@ class Calendars extends Public_Controller
 		$data['calendars']->where("start <= '".$date."' and end >= '".$date."'")->get();
 		$this->template->build('calendar_day_view',$data);
 	}
+
+	function calendar_inc(){
+		
+		$data['rs'] = new Calendar();
+		//$data['rs']->where('module = "ข่าวประกาศรับสมัครงาน" and status="approve"')->order_by('id desc')->get(4);
+		
+		$this->load->view('calendar_inc',$data);
+	}
+	
+	function calendar_mso(){
+		
+		
+		include('themes/fundv2/odbc_connect.php');
+		$this->load->helper('html');
+		
+		if(@$_GET['searchDate'])
+		{
+			$data['rs'] = $db->Execute("select * from INTRANET_ACTCALENDAR WHERE CREATEDATE = '".$_GET['searchDate']."' ORDER BY ID DESC");
+		
+		}
+		else if(@$_GET['actcalendar_type_id'])
+		{
+			$data['rs'] = $db->Execute("select * from INTRANET_ACTCALENDAR WHERE ACTCALENDAR_TYPE_ID = '".$_GET['actcalendar_type_id']."' ORDER BY ID DESC");
+		
+		}
+		else
+		{
+			$data['rs'] = $db->Execute("select * from INTRANET_ACTCALENDAR ORDER BY ID DESC");
+			
+		}
+		
+		$data['rs_type'] = $db->Execute("select * from INTRANET_ACTCALENDAR_TYPE ORDER BY ID DESC");
+		$data['rs_acc'] = $db->Execute("select * from INTRANET_ACTCALENDAR_ACCESSORY ORDER BY ID DESC");
+		
+		$this->template->build('calendar_mso',$data);
+		
+		
+	}
+
+	function calendar_mso2(){
+		
+		
+		include('themes/fundv2/odbc_connect.php');
+		$this->load->helper('html');
+		
+
+		$data['rs'] = $db->Execute("select * from INTRANET_ACTCALENDAR ORDER BY ID DESC");
+			
+		$data['rs_type'] = $db->Execute("select * from INTRANET_ACTCALENDAR_TYPE ORDER BY ID DESC");
+		
+		$data['rs_acc'] = $db->Execute("select * from INTRANET_ACTCALENDAR_ACCESSORY ORDER BY ID DESC");
+		
+		$this->load->view('calendars_mso2',$data);
+		
+		
+	}
+	
+	function calendar_mso_detail($id=false){
+		
+		
+		include('themes/fundv2/odbc_connect.php');
+		$this->load->helper('html');
+		
+		$data['rs'] = $db->Execute("select * from INTRANET_ACTCALENDAR WHERE ID = ".$id);
+		
+		$this->template->build('calendar_mso_detail',$data);
+		
+		
+	}
+	
 }
 ?>

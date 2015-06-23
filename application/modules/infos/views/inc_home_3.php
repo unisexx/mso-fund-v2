@@ -8,6 +8,6 @@
 		   		<img src="<?=$row->image?>" width="158" height="110" class="img-pr-news">
 		   	<?endif;?>
 		   <br>
-	       <a href="infos/view/<?=$row->id?>"><?=$row->title?></a></p>
+	       <a href="infos/view_mso/<?=$row->id?>"><?=$row->title?></a></p>
        <?endforeach;?>
 </div>

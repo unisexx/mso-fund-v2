@@ -6,10 +6,125 @@ class Home extends Public_Controller {
 		parent::__construct();	
 	}
 	
-	function index()
+	function index($seYear=FALSE,$seMonth=FALSE)
 	{
 		$this->template->set_layout('home');
-		$this->template->build('index');
+
+
+		include('themes/fundv2/odbc_connect.php');
+		$this->load->helper('html');
+		
+		if(@$seMonth)
+		{
+			//$m=date('m');
+			$m=$seMonth;	
+			
+		}else{
+			$m=date('m');
+		}
+		
+		$data[1] = 'calendars/calendar_mso_detail/1';
+		//$m='01';
+		
+		$rs = $db->Execute("select * from INTRANET_ACTCALENDAR ORDER BY ID DESC");
+			
+						
+		foreach($rs as $row)
+		{
+	
+			dbConvert($row);
+				
+			$bg = "#77c705";
+	
+			$cat_type = $row['actcalendar_type_id'];
+			$s_date = $row['startdate'];
+			
+			$calendar_id = $row['id'];
+			$calendar_title = $row['title'];
+			
+			$sd = explode(" ", $s_date); 
+			$sd1 = explode("-", $sd[0]); 
+			
+			
+	
+				
+				if($sd1[1]==$m)
+				{
+				
+					$data[$sd1[2]] = 'calendars/calendar_mso_detail/'.$calendar_id;
+				  		
+				}
+				
+			
+
+		}
+		
+	
+	$prefs = array (
+       'show_next_prev'  => TRUE,
+       'next_prev_url'   => 'home/index/'
+    );
+	
+	$prefs['template'] = '
+   {table_open} <table class="cal" width="100%">{/table_open}
+
+   {heading_row_start}<tr>{/heading_row_start}
+
+      {heading_previous_cell}<td>
+   
+   <div class="cal-pre"><a href="{previous_url}">&nbsp;</a></div>
+   
+   </td>{/heading_previous_cell}
+   
+      {heading_next_cell}<td>
+   
+    <div class="cal-next"><a href="{next_url}">&nbsp;</a></div>
+   
+   </td>{/heading_next_cell}
+   
+   {heading_title_cell}
+   
+   <td colspan="7" align="center">
+   
+     <div class="cal-month">{heading}</div>
+   
+   </td>
+   
+   {/heading_title_cell}
+   
+
+
+   {heading_row_end}</tr>{/heading_row_end}
+
+   {week_row_start}<tr>{/week_row_start}
+   {week_day_cell}<th>{week_day}</th>{/week_day_cell}
+   {week_row_end}</tr>{/week_row_end}
+
+   {cal_row_start}<tr>{/cal_row_start}
+   {cal_cell_start}<td>{/cal_cell_start}
+
+   {cal_cell_content}<a href="{content}">{day}</a>{/cal_cell_content}
+   {cal_cell_content_today}<div class="today"><a href="{content}">{day}</a></div>{/cal_cell_content_today}
+
+   {cal_cell_no_content}{day}{/cal_cell_no_content}
+   {cal_cell_no_content_today}<div class="today">{day}</div>{/cal_cell_no_content_today}
+
+   {cal_cell_blank}&nbsp;{/cal_cell_blank}
+
+   {cal_cell_end}</td>{/cal_cell_end}
+   {cal_row_end}</tr>{/cal_row_end}
+
+   {table_close}</table>{/table_close}';
+	
+	
+	
+	
+		$this->load->library('calendar', $prefs);
+		
+	$vars['rs_calendar'] = $this->calendar->generate($this->uri->segment(3), $this->uri->segment(4), $data);
+	
+		
+		$this->template->build('index', $vars);
 	}
 	
 	function intro(){
@@ -57,11 +172,16 @@ class Home extends Public_Controller {
 	{
 		$this->load->library('adodb');
 		$row = $this->ado->pageexecute('SELECT * FROM ACT_PROVINCE', 10, 1);
+		//dbConvert($row);
 		foreach($row as $item)
 		{
 			dbConvert($item);
 			echo $item['province_name'].'<br />';
 		}
+	}
+	
+	function how_to(){
+		$this->template->build('how_to');
 	}
 }
 ?>

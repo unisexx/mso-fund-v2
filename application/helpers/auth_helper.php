@@ -6,6 +6,7 @@ function login($username,$password)
 	$CI =& get_instance();
 	$user = new User();
 	$user->where(array('username'=>$username,'password'=>$password))->get();
+	// $user->check_last_query();
 	if($user->exists())
 	{
 		$CI->session->set_userdata('id',$user->id);

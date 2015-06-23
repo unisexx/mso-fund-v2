@@ -70,77 +70,9 @@
      </div>
 	 <!-------------------------------------------------------END Col3-------------------------------------------------------->  
      <div id="col4">
-       <div id="calendar">
-       	   <div class="calendartitle">ปฏิทินกิจกรรม</div>
-           <div class="cal-arrow"><div class="cal-pre"><a href="#">&nbsp;</a></div><div class="cal-next"><a href="#">&nbsp;</a></div></div>
-           <div class="clearfix">&nbsp;</div>
-           <div class="cal-month">มีนาคม 2558</div>
-   		   <table class="cal" width="100%">
-                  <tr>
-                    <th>จ</th>
-                    <th>อ</th>
-                    <th>พ</th>
-                    <th>พฤ</th>
-                    <th>ศ</th>
-                    <th>ส</th>
-                    <th>อา</th>
-                  </tr>
-                  <tr>
-                    <td class="other-date">23</td>
-                    <td class="other-date">24</td>
-                    <td class="other-date">25</td>
-                    <td class="other-date">26</td>
-                    <td class="other-date">27</td>
-                    <td class="other-date">28</td>
-                    <td>1</td>
-                  </tr>
-                  <tr>
-                    <td>2</td>
-                    <td>3</td>
-                    <td>4</td>
-                    <td>5</td>
-                    <td>6</td>
-                    <td>7</td>
-                    <td>8</td>
-                  </tr>
-                  <tr>
-                    <td>9</td>
-                    <td>10</td>
-                    <td>11</td>
-                    <td>12</td>
-                    <td>13</td>
-                    <td>14</td>
-                    <td>15</td>
-                  </tr>
-                  <tr>
-                    <td>16</td>
-                    <td>17</td>
-                    <td>18</td>
-                    <td>19</td>
-                    <td>20</td>
-                    <td>21</td>
-                    <td>22</td>
-                  </tr>
-                  <tr>
-                    <td>23</td>
-                    <td>24</td>
-                    <td>25</td>
-                    <td>26</td>
-                    <td>27</td>
-                    <td>28</td>
-                    <td>29</td>
-                  </tr>
-                  <tr>
-                    <td>30</td>
-                    <td>31</td>
-                    <td class="other-date">1</td>
-                    <td class="other-date">2</td>
-                    <td class="other-date">3</td>
-                    <td class="other-date">4</td>
-                    <td class="other-date">5</td>
-                  </tr>
-         </table>
-         </div>
+
+         <?php include('_calendar.php')?>
+         
          <!-------------------END Calendar---------------------> 
    	    <a href="weblinks/lists"><img src="themes/fundv2/images/banner-weblink.jpg" width="287" height="137" /></a>
         <a href="#"><img src="themes/fundv2/images/banner-contract.jpg" width="287" height="96" style="margin-top:25px;"></a>
@@ -149,6 +81,7 @@
      <!-------------------------------------------------------END Col4-------------------------------------------------------->
      
 
-<?include('_footer.php')?>   
+<?=modules::run('log/statvisits'); ?>	 
+
 </body>
 </html>

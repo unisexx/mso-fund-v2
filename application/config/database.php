@@ -38,11 +38,11 @@
 | the active record class
 */
 
-$active_group = 'mso';
+$active_group = 'local';
 $active_record = TRUE;
 
 
-$db['local']['hostname'] = '192.168.1.153';
+$db['local']['hostname'] = 'localhost';
 $db['local']['username'] = 'root';
 $db['local']['password'] = '1234';
 $db['local']['database'] = 'fundv2';
@@ -90,6 +90,23 @@ $db['mso']['dbcollat'] = 'utf8_general_ci';
 $db['mso']['swap_pre'] = '';
 $db['mso']['autoinit'] = TRUE;
 $db['mso']['stricton'] = FALSE;
+
+
+$db['adodb']['hostname'] = '10.20.50.12';
+$db['adodb']['username'] = 'boffice';
+$db['adodb']['password'] = 'bo2557';
+$db['adodb']['database'] = 'BOFFICE';
+$db['adodb']['dbdriver'] = 'oci8po';
+$db['adodb']['dbprefix'] = '';
+$db['adodb']['pconnect'] = TRUE;
+$db['adodb']['db_debug'] = TRUE;
+$db['adodb']['cache_on'] = FALSE;
+$db['adodb']['cachedir'] = '';
+$db['adodb']['char_set'] = 'utf8';
+$db['adodb']['dbcollat'] = 'utf8_unicode_ci';
+$db['adodb']['swap_pre'] = '';
+$db['adodb']['autoinit'] = TRUE;
+$db['adodb']['stricton'] = FALSE;
 
 /* End of file database.php */
 /* Location: ./application/config/database.php */
