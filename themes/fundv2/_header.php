@@ -26,14 +26,14 @@
 	<div id='cssmenu'>
         <ul>
            <li><a href='home/index'>หน้าแรก</a></li>
-           <li class='active has-sub'><a href='#'><span>เกี่ยวกับ กบท.</span></a>
+           <!-- <li class='active has-sub'><a href='#'><span>เกี่ยวกับ กบท.</span></a>
               <ul>
                  <li><a href='contents/view?module=เกี่ยวกับ%20กบท.&category=เกี่ยวกับกองทุน'><span>เกี่ยวกับกองทุน</span></a>
                  <li><a href='contents/view?module=เกี่ยวกับ%20กบท.&category=โครงสร้างหน่วยงาน'><span>โครงสร้างหน่วยงาน</span></a></li>
                  <li><a href='contents/view?module=เกี่ยวกับ%20กบท.&category=การดำเนินงานตามนโยบาย'><span>การดำเนินงานตามนโยบาย</span></a></li>
                  <li class='last'><a href='contents/view?module=เกี่ยวกับ%20กบท.&category=กฏหมาย/คำสั่งที่เกี่ยวข้อง'><span>กฎหมาย/คำสั่งที่เกี่ยวข้อง</span></a></li>
               </ul>
-		   </li>
+		   </li> -->
            <li class='active has-sub'><a href='#'>ข้อมูลข่าวสาร</a>
               <ul>
                  <li><a href='infos/lists?module=ข่าวประชาสัมพันธ์'>ข่าวประชาสัมพันธ์</a>
@@ -42,8 +42,8 @@
               </ul>
            </li>
            <li><a href='downloads/lists'>ดาวน์โหลดแบบฟอร์ม</a></li>
-           <li><a href='contents/act?module=พรบ.%20กฏหมาย%20ระเบียบ%20ข้อบังคับ%20มติ%20ครม.%20และหนังสือเวียน'>พ.ร.บ./กฎหมาย/ระเบียบ</a></li>
-           <li><a href='contents/view?module=เกี่ยวกับ%20กบท.&category=ติดต่อ%20กบท.'>ติดต่อสอบถาม</a></li>
+           <!-- <li><a href='contents/act?module=พรบ.%20กฏหมาย%20ระเบียบ%20ข้อบังคับ%20มติ%20ครม.%20และหนังสือเวียน'>พ.ร.บ./กฎหมาย/ระเบียบ</a></li> -->
+           <li><a href='contents/view?module=เกี่ยวกับ%20กบท.&category=ติดต่อสอบถาม'>ติดต่อสอบถาม</a></li>
            <li class='last'><a href='calendars/calendar_mso'>ปฏิทินกิจกรรม</a></li>
         </ul>
     </div>            

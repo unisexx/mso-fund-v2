@@ -101,10 +101,10 @@
 					</a>
 				</li>
 				
-				<li <?=@$_GET['module'] == 'เกี่ยวกับ กบท.' && @$_GET['category'] == 'ติดต่อ กบท.'?'class="active open"':'';?>>
-					<a href="contents/admin/contents/form?module=เกี่ยวกับ กบท.&category=ติดต่อ กบท.">
+				<li <?=@$_GET['module'] == 'เกี่ยวกับ กบท.' && @$_GET['category'] == 'ติดต่อสอบถาม'?'class="active open"':'';?>>
+					<a href="contents/admin/contents/form?module=เกี่ยวกับ กบท.&category=ติดต่อสอบถาม">
 						<i class="icon-double-angle-right"></i>
-						ติดต่อ กบท.
+						ติดต่อสอบถาม
 					</a>
 				</li>
 			</ul>
@@ -112,7 +112,7 @@
 		<?endif;?>
 		
 		<?if(permission('news','full')):?>
-		<li <?=@$_GET['module'] == 'mso' || @$_GET['module'] == 'ข่าวจัดซื้อจัดจ้าง' || @$_GET['module'] == 'ข่าวประกาศรับสมัครงาน' ?'class="active open"':'';?>>
+		<li <?=@$_GET['module'] == 'mso' || @$_GET['module'] == 'ข่าวประชาสัมพันธ์' || @$_GET['module'] == 'ข่าวจัดซื้อจัดจ้าง' || @$_GET['module'] == 'ข่าวประกาศรับสมัครงาน' ?'class="active open"':'';?>>
 			<a href="#" class="dropdown-toggle">
 				<i class="fa fa-file-text-o"></i>
 				<span class="menu-text"> ข้อมูลข่าวสาร </span>
@@ -125,6 +125,13 @@
 					<a href="infos/admin/infos?module=mso">
 						<i class="icon-double-angle-right"></i>
 						ข่าวประชาสัมพันธ์<br>(Auto feed from Intranet)
+					</a>
+				</li>
+				
+				<li <?=@$_GET['module'] == 'ข่าวประชาสัมพันธ์'?'class="active open"':'';?>>
+					<a href="infos/admin/infos?module=ข่าวประชาสัมพันธ์">
+						<i class="icon-double-angle-right"></i>
+						ข่าวประชาสัมพันธ์
 					</a>
 				</li>
 

@@ -8,20 +8,19 @@ class Infos extends Public_Controller
 	
 	function lists(){
 		
-		if(@$_GET['module']!="ข่าวประชาสัมพันธ์"){
+		// if(@$_GET['module']!="ข่าวประชาสัมพันธ์"){
 			
 			$data['rs'] = new Info();
 			$data['rs']->where('module = "'.$_GET['module'].'" and status="approve"')->order_by('id desc')->get_page();
 			$this->template->build('list',$data);
-		}
-		else {
-				
-			include('themes/fundv2/odbc_connect.php');
-			$this->load->helper('html');
-			$data['rs'] = $db->Execute("select * from WEB_NEWS ORDER BY ID DESC");
-			
-			$this->template->build('list_news_mso',$data);
-		}
+		// }else {
+// 				
+			// include('themes/fundv2/odbc_connect.php');
+			// $this->load->helper('html');
+			// $data['rs'] = $db->Execute("select * from WEB_NEWS ORDER BY ID DESC");
+// 			
+			// $this->template->build('list_news_mso',$data);
+		// }
 
 		
 
@@ -57,20 +56,21 @@ class Infos extends Public_Controller
 	}
 	
 	function inc_home_3(){
-		//$data['rs'] = new Info();
-		//$data['rs']->where('module = "ข่าวประชาสัมพันธ์" and status="approve"')->order_by('id desc')->get(6);
+		$data['rs'] = new Info();
+		$data['rs']->where('module = "ข่าวประชาสัมพันธ์" and status="approve"')->order_by('id desc')->get(6);
+		// $data['rs']->check_last_query();
 		
 		//$this->load->library('adodb');
 		//$data['rs'] = $this->ado->pageexecute('SELECT * FROM WEB_NEWS ', 6, 1);
 		
-		include('themes/fundv2/odbc_connect.php');
-		$this->load->helper('html');
+		// include('themes/fundv2/odbc_connect.php');
+		// $this->load->helper('html');
+// 		
+		// $data['rs'] = $db->Execute("select * from WEB_NEWS WHERE ROWNUM <=6 ORDER BY ID DESC");
+// 		
+		// $this->load->view('inc_news_mso',$data);
 		
-		$data['rs'] = $db->Execute("select * from WEB_NEWS WHERE ROWNUM <=6 ORDER BY ID DESC");
-		
-		$this->load->view('inc_news_mso',$data);
-		
-		//$this->load->view('inc_home_3');
+		$this->load->view('inc_home_3',$data);
 	}
 	
 	

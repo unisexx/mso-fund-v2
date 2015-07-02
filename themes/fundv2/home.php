@@ -27,9 +27,9 @@
         </div> -->
         <div id="menuright">
         	<ul>
-            	<a href="contents/fund?module=กองทุนเพื่อการป้องกันและปราบปรามการค้ามนุษย์"><li class="menuright01">&nbsp;</li></a>
-                <a href="contents/fund?module=กองทุนส่งเสริมการจัดการสวัสดิการสังคม"><li class="menuright02">&nbsp;</li></a>
-                <a href="contents/fund?module=กองทุนคุ้มครองเด็ก"><li class="menuright03">&nbsp;</li></a>
+            	<a href="contents/fund_more2?module=กองทุนเพื่อการป้องกันและปราบปรามการค้ามนุษย์"><li class="menuright01">&nbsp;</li></a>
+                <a href="contents/fund_more3?module=กองทุนส่งเสริมการจัดการสวัสดิการสังคม"><li class="menuright02">&nbsp;</li></a>
+                <a href="contents/fund_more1?module=กองทุนคุ้มครองเด็ก"><li class="menuright03">&nbsp;</li></a>
             </ul>
         </div>
     </div>  

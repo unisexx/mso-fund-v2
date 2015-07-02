@@ -198,6 +198,29 @@ p { word-break: break-all;}
 	.b1{color:#3697be;}
 
 
+/*FUND*/
+
+	#page-colleft{width:22%; float:left; }
+	#page-colright{width:734px; height:742px; float:right;background-image: url(../images/banner-fund/zbudjet_line.png); background-repeat:no-repeat; text-align:center; position:relative;}
+		#title-page-colleft{font-size:16px; font-weight:bold; color:white; background-color:#43b8f7; text-align:center; padding:5px;}
+			#page-colleft ul {list-style:none; padding:0; margin:0;}
+			#page-colleft ul li{border-bottom:1px dashed #c5c3c3; color:black; padding:4px;}
+			#page-colleft ul li a{ color:black;}
+			#page-colleft ul li a:hover{ text-decoration:none; color:#23527c;}
+		#title-page-colleft-2{font-size:16px; font-weight:bold; color:white; background-color:#43b8f7; text-align:center; padding:5px;}
+			#colleft-2 ul {list-style:none; padding:0; margin:0;}
+			#colleft-2 ul li{border-bottom:1px dashed #c5c3c3; color:black; padding-left:20px; padding-top:6px;padding-bottom:6px; background-image: url(../images/banner-fund/icon-paper.png); background-repeat:no-repeat; background-position:2px 10px; }
+			#colleft-2 ul li a{ color:black;}
+			#colleft-2 ul li a:hover{ text-decoration:none; color:#23527c;}
+
+			#budjet1_banner1{position:absolute; top:35px;  left:48px;}
+			#budjet1_banner2{position:absolute; top:35px;  left:380px;}
+			#budjet1_banner3{position:absolute; top:285px;  left:48px;}
+			#budjet1_banner4{position:absolute; top:305px;  left:380px;}
+			#budjet1_banner5{position:absolute; top:550px;  left:45px;}
+			#budjet1_banner6{position:absolute; top:560px;  left:370px;}
+			
+
 /* Dear Custom Css */
 #page > h1{font-size:30px !important;}
 

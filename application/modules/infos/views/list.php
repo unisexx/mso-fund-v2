@@ -13,7 +13,7 @@
 		    </a>
 		  </div>
 		  <div class="media-body">
-		    <h4 class="media-heading"><?=$row->title?></h4>
+		    <h3 style="font-size: 14px; margin-top: 0px; line-height: 1.5;"><?=$row->title?></h3>
 		  </div>
 		</div>
 	<?endforeach;?>

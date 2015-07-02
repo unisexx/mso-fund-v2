@@ -7,11 +7,10 @@
           <div id="textAddress">
               <a href="#"><img src="themes/fundv2/images/map.jpg" width="123" height="123" class="map"></a> 
     		  <div class="text-namefooter">งานบริหารกองทุน</div>
-              <div class="text-namefooter2">สำนักปลัดกระทรวงการพัฒนาสังคมและความมั่นคงของมนุษย์</div>
-              <p><img src="themes/fundv2/images/icon-location.png" width="20" height="25" /> อาคาร ซี.พี. ทาวเวอร์ 3 อาคาร A ชั้น 6 เลขที่ 34 ถ.พญาไท<br>
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;แขวงทุ่งพญาไท เขตราชเทวี กรุงเทพมหานคร 10400<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;โทรศัพท์ 0 2202 9024 -35, โทรสาร 0 2202 9034 -35, E-mail : <a href="mailto:fad@m-society.go.th" target="_blank">fad@m-society.go.th</a></p>
-              <div class="btn-social"> <a href="#"><img src="themes/fundv2/images/btn-fb2.png" width="125" height="35" /></a> <a href="#"><img src="themes/fundv2/images/btn-tw2.png" width="125" height="35" style="margin-left:20px;"></a>
+              <div class="text-namefooter2">กระทรวงการพัฒนาสังคมและความมั่นคงของมนุษย์</div>
+              <p><img src="themes/fundv2/images/icon-location.png" width="20" height="25" /> เลขที่ 1034 ถนนกรุงเกษม แขวงมหานาค เขตป้อมปรามศัรูพ่าย กรุงเทพมหานคร 10100<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;โทรศัพท์ 02-202-9001-9, โทรสาร 02-202-9010</p>
+              <div class="btn-social"> <a href="http://www.facebook.com/Msociety.go.th" target="_blank"><img src="themes/fundv2/images/btn-fb2.png" width="125" height="35" /></a> <a href="https://goo.gl/9uF1ZT" target="_blank"><img src="themes/fundv2/images/icon-youtube.png" width="125" height="35" style="margin-left:20px;"></a>
               </div>
 		    
           </div>
@@ -47,7 +46,7 @@
             <a href="log/lists" class="link-stat">ดูสถิติอย่างละเอียดทั้งหมด</a> 
     	</div>
         <div class="clearfix">&nbsp;</div>
-      <div class="copy">Copyright © 2014 www.envocc.org &nbsp;&nbsp;&nbsp;All Rights Reserved. </div>
+      <div class="copy">Copyright © 2014 www.fund.m-society.go.th &nbsp;&nbsp;&nbsp;All Rights Reserved. </div>
         <div id="back-top"><a href="#wrap"><img src="themes/fundv2/images/a-top.png" width="79" height="39"></a></div>
     </div>
 </div>

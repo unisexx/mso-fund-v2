@@ -96,5 +96,36 @@ class Infos extends Admin_mso_Controller
         }
 
     }
+	
+	
+	function get_new(){
+		include('themes/fundv2/odbc_connect.php');
+		$this->load->helper('html');
+		$rs = $db->Execute("select * from WEB_NEWS ORDER BY ID DESC");
+		// echo "<pre>";
+		// print_r($rs);
+		// echo "</pre>";
+		
+		foreach($rs as $row){
+			// หาไอดีซ้ำใน db
+			$info = new Info();
+			$info->where('intranet_id = '.$row['ID'])->get();
+			if($info->id == ""){
+				$_POST['module'] = 'ข่าวประชาสัมพันธ์';
+				$_POST['slug'] = clean_url(iconv('TIS-620','UTF-8', $row['TITLE']));
+				$_POST['title'] = iconv('TIS-620','UTF-8', $row['TITLE']);
+				$_POST['detail'] = iconv('TIS-620','UTF-8', $row['DETAIL']);
+				$_POST['image'] = 'http://intranet.m-society.go.th/upload/newsletters/'.$row['IMG_TITLE'];
+				$_POST['intranet_id'] = $row['ID'];
+				
+				$rs = new Info();
+	            $rs->from_array($_POST);
+	            $rs->save();
+				
+				echo 'intranet_news id '.$_POST['intranet_id'].' is insert <br>';
+			}
+		}
+	}
+	
 }
 ?>

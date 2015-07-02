@@ -16,6 +16,18 @@ class Contents extends Public_Controller
 		$this->template->build('fund');
 	}
 	
+	function fund_more1(){
+		$this->template->build('fund_more1');
+	}
+	
+	function fund_more2(){
+		$this->template->build('fund_more2');
+	}
+	
+	function fund_more3(){
+		$this->template->build('fund_more3');
+	}
+	
 	function act(){
 		$this->template->build('act');
 	}
