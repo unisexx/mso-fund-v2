@@ -64,8 +64,8 @@ class Infos extends Public_Controller
 		//$data['rs'] = $this->ado->pageexecute('SELECT * FROM WEB_NEWS ', 6, 1);
 		
 		// include('themes/fundv2/odbc_connect.php');
-		// $this->load->helper('html');
 // 		
+		// $this->load->helper('html');
 		// $data['rs'] = $db->Execute("select * from WEB_NEWS WHERE ROWNUM <=6 ORDER BY ID DESC");
 // 		
 		// $this->load->view('inc_news_mso',$data);

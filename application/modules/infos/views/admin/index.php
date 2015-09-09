@@ -23,23 +23,7 @@
 </div>
 
 <div class="page-content">
-	<!-- <div class="page-header position-relative">
-		<h1>
-			ภาพกิจกรรม
-			<small>
-				<i class="icon-double-angle-right"></i>
-				ดาวน์โหลดแบบฟอร์ม &amp; Dynamic Tables
-			</small>
-		</h1>
-	</div> -->
-	<!--/.page-header-->
-	
-	
-	
-	
-	
-	
-	
+
 	<div class="row-fluid">
 		<div class="span12">
 			<!--PAGE CONTENT BEGINS-->
@@ -48,6 +32,40 @@
 				<!-- <h3 class="header smaller lighter blue">jQuery dataTables</h3> -->
 				<div class="table-header">
 					<?=$_GET['module']?>
+                    
+                    <br><br>
+                      <?php if(@$_GET['module'] == 'ข่าวประชาสัมพันธ์'){ ?>      
+        			<span style="font-weight:normal; color: #FFF;"> * </span>
+					<span>
+                    
+                    	<a href="infos/admin/infos/get_intranet_data?module=<?=$_GET['module']?>" style="font-weight:normal; color:#FFF;">
+                    		นำเข้าข้อมูลจาก Intranet 
+                            
+                            <i class="fa fa-rss-square fa-2x" style="color:orange; vertical-align: middle;">
+                            </i>  
+                             
+                        </a>
+                        
+                        	&nbsp; &nbsp; &nbsp;
+                            
+                            <?php 
+								if(@$get_intranet == 'mso'){
+								
+								if(@$count_news_mso == 0)
+								{ 
+									echo "ยังไ่ม่มีข้อมูลใหม่ update !!";
+								}
+								else
+								{
+									  echo "update ข้อมูลเรียบร้อยแล้ว จำนวน : ".$count_news_mso." เรคคอร์ด";
+								}
+													}
+							?>
+                    
+                    </span>
+                    
+                    <?php } ?>
+                    
 				</div>
 
 				<table id="sample-table-2" class="table table-striped table-bordered table-hover">
@@ -58,7 +76,7 @@
 							<!-- <th><a class="btn btn-mini iframe" href="categories/admin/categories/downloads?iframe=true&width=90%&height=90%">หมวดหมู่</a></th> -->
 							<th width="105">
 								<a class="btn btn-mini btn-info" href="infos/admin/infos/form?module=<?=$_GET['module']?>">เพิ่มรายการ</a>
-								<a href="infos/admin/infos/get_new" target="_blank"><i class="fa fa-rss-square fa-2x" style="color:orange; vertical-align: middle;"></i></a>
+								<!--<a href="infos/admin/infos/get_new" target="_blank"><i class="fa fa-rss-square fa-2x" style="color:orange; vertical-align: middle;"></i></a>-->
 							</th>
 						</tr>
 					</thead>

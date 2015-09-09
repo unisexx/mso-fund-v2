@@ -4,10 +4,14 @@
 	<h1><?=$rs->title?></h1>
 	
 	
-		<br>
+		<!-- <br> -->
 		
-		<img src="uploads/info/<?php echo $rs->image; ?>" width="158" height="110" class="img-pr-news">
-		
+              <?php //if($rs->slug == 'mso'){ ?>
+              <!-- <img src="http://intranet.m-society.go.th/upload/newsletters/<?=$rs->image?>" width="158" height="110" class="img-pr-news"> -->
+              <?php //}else{ ?>
+              <!-- <img src="uploads/info/<?=$rs->image?>" width="158" height="110" class="img-pr-news"> -->
+              <?php //} ?>
+        
 		<br>
 	
 	<?=$rs->detail?>

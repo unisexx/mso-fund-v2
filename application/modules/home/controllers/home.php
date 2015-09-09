@@ -10,13 +10,18 @@ class Home extends Public_Controller {
 	{
 		$this->template->set_layout('home');
 
-
-		include('themes/fundv2/odbc_connect.php');
-		$this->load->helper('html');
+		if($seMonth == '')$seMonth = date('m');
+		if($seYear == '')$seYear = date('Y');
 		
-		if(@$seMonth)
+		
+		$data['seYear'] = $seYear;
+		$data['seMonth'] = $seMonth;
+	
+		
+		$this->template->build('index', $data);
+	
+/*		if(@$seMonth)
 		{
-			//$m=date('m');
 			$m=$seMonth;	
 			
 		}else{
@@ -24,23 +29,22 @@ class Home extends Public_Controller {
 		}
 		
 		$data[1] = 'calendars/calendar_mso_detail/1';
-		//$m='01';
 		
-		$rs = $db->Execute("select * from INTRANET_ACTCALENDAR ORDER BY ID DESC");
-			
+		
+		$rs = new Content_calendar();
+		$rs->order_by('id desc')->get();	
 						
 		foreach($rs as $row)
 		{
 	
-			dbConvert($row);
 				
 			$bg = "#77c705";
 	
-			$cat_type = $row['actcalendar_type_id'];
-			$s_date = $row['startdate'];
+			$cat_type = 1;
+			$s_date = $row->start_date;
 			
-			$calendar_id = $row['id'];
-			$calendar_title = $row['title'];
+			$calendar_id = $row->id;
+			$calendar_title = $row->title;
 			
 			$sd = explode(" ", $s_date); 
 			$sd1 = explode("-", $sd[0]); 
@@ -125,7 +129,98 @@ class Home extends Public_Controller {
 	
 		
 		$this->template->build('index', $vars);
+*/		
+	
+		
 	}
+	
+	function show_calendar($seYear=FALSE,$seMonth=FALSE)
+	{
+		
+			
+		$m=$seMonth;	
+		
+		$data = array();
+		
+		$vars['seYear'] = $seYear;
+		$vars['seMonth'] = $seMonth;
+		
+		$vars['seYear2'] = $seYear;
+		$vars['seMonth2'] = $seMonth;
+		
+		$rs = new content_calendar();
+		
+		$rs->order_by('id desc')->get();
+			
+						
+		foreach($rs as $row)
+		{
+	
+	
+				
+			$bg = "#77c705";
+	
+			$cat_type = $row->module;
+			$s_date = $row->start_date;
+			
+			$calendar_id = $row->id;
+			$calendar_title = $row->title;
+			
+			$sd = explode(" ", $s_date); 
+			$sd1 = explode("-", $sd[0]); 
+				
+			if($sd1[1]==$m)
+			{
+			
+				$data[$sd1[2]] = 'calendars/calendar_mso_detail/'.$calendar_id;
+					
+			}
+				
+			
+
+		}
+		
+		
+	if(count($data)==0)$data[1] = 'calendars/calendar_mso_detail/1';		
+	
+	$prefs = array (
+       'show_next_prev'  => FALSE,
+       'next_prev_url'   => 'calendars/index/'
+    );
+	
+	$prefs['template'] = '
+   {table_open} <table class="cal" width="100%">{/table_open}
+
+   {week_row_start}<tr>{/week_row_start}
+   {week_day_cell}<th>{week_day}</th>{/week_day_cell}
+   {week_row_end}</tr>{/week_row_end}
+
+   {cal_row_start}<tr>{/cal_row_start}
+   {cal_cell_start}<td>{/cal_cell_start}
+
+   {cal_cell_content}<a href="{content}">{day}</a>{/cal_cell_content}
+   {cal_cell_content_today}<div class="today"><a href="{content}">{day}</a></div>{/cal_cell_content_today}
+
+   {cal_cell_no_content}{day}{/cal_cell_no_content}
+   {cal_cell_no_content_today}<div class="today">{day}</div>{/cal_cell_no_content_today}
+
+   {cal_cell_blank}&nbsp;{/cal_cell_blank}
+
+   {cal_cell_end}</td>{/cal_cell_end}
+   {cal_row_end}</tr>{/cal_row_end}
+
+   {table_close}</table>{/table_close}';
+	
+	
+	
+	
+		$this->load->library('calendar', $prefs);
+		
+		$vars['rs_calendar'] = $this->calendar->generate($this->uri->segment(3), $this->uri->segment(4), $data);
+			
+		$this->load->view('calendar_data', $vars);	
+	}
+	
 	
 	function intro(){
 		$this->load->view('intro');

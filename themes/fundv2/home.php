@@ -5,6 +5,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title><?php echo $template['title']; ?></title> 
 <?include('_inc.php')?>
+<?php echo $template['metadata']; ?>
 </head>
 <body>
 <?include('_header.php')?>
@@ -71,7 +72,24 @@
 	 <!-------------------------------------------------------END Col3-------------------------------------------------------->  
      <div id="col4">
 
-         <?php include('_calendar.php')?>
+         <?php //include('_calendar.php')?>
+         
+        <div id="showData"></div>
+        
+        <script type="text/javascript">
+            $(function(){
+                
+                
+                var jMonth = '<?php echo $seMonth; ?>';
+                var jYear = '<?php echo $seYear; ?>';
+                
+                $("#showData").load("<?php echo base_url()?>home/show_calendar/"+jYear+"/"+jMonth);
+        
+        
+                
+            });
+        </script>
+         
          
          <!-------------------END Calendar---------------------> 
    	    <a href="weblinks/lists"><img src="themes/fundv2/images/banner-weblink.jpg" width="287" height="137" /></a>

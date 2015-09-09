@@ -963,6 +963,7 @@
     </tr>
     <?php endforeach;?>
     </table>
+    
   	
 
   </div>
@@ -1442,3 +1443,4 @@ $(function() {
 </script>
 
 
+</div>

@@ -7,6 +7,7 @@ if($rs->module == 'เกี่ยวกับ กบท.'){
 ?>
 
 <div id="title-blank"><?=$_GET['category']?></div>
+<div style="clear:both; margin-bottom:25px;" ></div>
 <div id="breadcrumb"><a href="#"><?=$module?></a> > <span class="b1"><?=$_GET['category']?></span></div>
 <div id="page">
 	<?=$rs->detail?>

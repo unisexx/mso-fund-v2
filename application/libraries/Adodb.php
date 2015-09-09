@@ -6,30 +6,46 @@
 class Adodb {
 
 	function __construct(){
+		
+		// $config['hostname'] = '27.254.33.52';
+		$config['hostname'] = 'localhost';
+		$config['username'] = 'BOFFICE';
+		$config['password'] = '1234';
+		$config['database'] = 'BOFFICE';
+		$config['dbdriver'] = 'oci8po';
+		$config['dbprefix'] = '';
+		$config['pconnect'] = TRUE;
+		$config['db_debug'] = TRUE;
+		$config['cache_on'] = FALSE;
+		$config['cachedir'] = '';
+		$config['char_set'] = 'utf8';
+		$config['dbcollat'] = 'utf8_unicode_ci';
+		$config['swap_pre'] = '';
+		$config['autoinit'] = TRUE;
+		$config['stricton'] = FALSE;
+
 		$this->obj =& get_instance();
-		$db = $this->obj->config->load('adodb', TRUE);
-		$this->obj->adoConf = $db['adodb'];
        	
-       	if ($this->obj->adoConf['cache_on'] && is_dir(APPPATH.$this->obj->adoConf['cachedir'])){
+       	if ($config['cache_on'] && is_dir(APPPATH.$config['cachedir'])){
 			GLOBAL $ADODB_CACHE_DIR;
-			$ADODB_CACHE_DIR = APPPATH.$this->obj->adoConf['cachedir'];
+			$ADODB_CACHE_DIR = APPPATH.$config['cachedir'];
 		} 
 		 
        	require_once(dirname(__FILE__).'/adodb/adodb.inc.php');
-		$this->obj->ado =& NewADOConnection($this->obj->adoConf['dbdriver']);
+		$this->obj->ado =& NewADOConnection($config['dbdriver']);
 
-		if (@$this->obj->adoConf['db_debug']) { @$this->conn->debug = true; }
+		if (@$config['db_debug']) { @$this->conn->debug = true; }
 
 		$this->obj->ado->Connect(
-			$this->obj->adoConf['hostname'],
-			$this->obj->adoConf['username'],
-			$this->obj->adoConf['password'],
-			$this->obj->adoConf['database']
+			$config['hostname'],
+			$config['username'],
+			$config['password'],
+			$config['database']
 		);
-		if ($this->obj->adoConf['char_set'] && $this->obj->adoConf['dbcollat']){
-  			$this->obj->ado->Execute('SET character_set_results='.$this->obj->adoConf['char_set']);
-			$this->obj->ado->Execute('SET collation_connection='.$this->obj->adoConf['dbcollat']);
-			$this->obj->ado->Execute('SET NAMES '.$this->obj->adoConf['char_set']);
+		if ($config['char_set'] && $config['dbcollat']){
+  			$this->obj->ado->Execute('SET character_set_results='.$config['char_set']);
+			$this->obj->ado->Execute('SET collation_connection='.$config['dbcollat']);
+			$this->obj->ado->Execute('SET NAMES '.$config['char_set']);
 		}
 		$this->obj->ado->SetFetchMode(ADODB_FETCH_ASSOC);
 		return true;

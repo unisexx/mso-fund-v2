@@ -69,7 +69,20 @@
 						<label class="control-label">รายละเอียด</label>
 	
 						<div class="controls">
-							<textarea name="detail" class="full tinymce"><?php echo $content->detail?></textarea>
+            <textarea id="detail" name="detail">
+            	<?php echo $content->detail?>
+            </textarea>
+            
+             
+            <script type="text/javascript" src="media/ckeditor/ckeditor.js"></script>
+            <script type="text/javascript" src="media/cke_config.js"></script>		
+            <script type="text/javascript">
+			
+            var editorObj=CKEDITOR.replace( 'detail',cke_config); 
+			
+			
+
+            </script>
 						</div>
 					</div>
 					
@@ -98,7 +111,7 @@
 <script type="text/javascript" src="media/tiny_mce/tiny_mce.js"></script>
 <script type="text/javascript" src="media/tiny_mce/config.js"></script>
 <script type="text/javascript">
-tiny('detail');
+//tiny('detail');
 $(function() {
 	$('#id-input-file-1 , #id-input-file-2').ace_file_input({
 		no_file:'ไม่มีไฟล์แนบ...',

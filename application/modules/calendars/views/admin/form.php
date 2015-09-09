@@ -49,18 +49,57 @@
 			                </div>
 			            </div>
 			        </div>
-					
+					<div class="control-group">
+			            <label class="control-label" for="id-input-file-1">ไฟล์แนบ</label>
+			            <div class="controls">
+                        
+			                <?php if($rs->url):?>
+                            
+                            <a href="uploads/calendar/<?php echo $rs->url; ?>" target="_blank">
+							
+							<?php echo $rs->url; ?>
+                            
+                            </a>
+                            
+                            <br><br>
+                            
+			                <?php endif;?>
+                            
+			                <div class="input-xxlarge" style="width:544px;">
+			                    <input type="file" id="id-input-file-2" name="url"/>
+			                </div>
+                            
+			            </div>
+			        </div>
 					<div class="control-group">
 						<label class="control-label">หัวข้อ</label>
 						<div class="controls">
 							<input class="input-xxlarge" type="text" name="title" value="<?php echo $rs->title?>"/>
 						</div>
 					</div>
-					
+					                    <div class="control-group">
+						<label class="control-label">สถานที่</label>
+						<div class="controls">
+							<input class="input-xxlarge" type="text" name="place" value="<?php echo $rs->place?>"/>
+						</div>
+					</div>
 					<div class="control-group">
 			            <label class="control-label" for="form-field-9">รายละเอียด</label>
 			            <div class="controls">
-			                <textarea class="input-xxlarge" rows="5" id="form-field-9" name="detail"><?php echo $rs->detail?></textarea>
+            <textarea id="detail" name="detail">
+            	<?php echo $rs->detail?>
+            </textarea>
+            
+             
+            <script type="text/javascript" src="media/ckeditor/ckeditor.js"></script>
+            <script type="text/javascript" src="media/cke_config.js"></script>		
+            <script type="text/javascript">
+			
+            var editorObj=CKEDITOR.replace( 'detail',cke_config); 
+			
+			
+
+            </script>
 			            </div>
 			        </div>
 					
@@ -87,9 +126,7 @@
 						</button>
 
 						&nbsp; &nbsp; &nbsp;
-						<button class="btn btn-large" type="reset">
-							<i class="icon-undo bigger-110"></i>รีเซ็ต
-						</button>
+		<a class="btn btn-large" href="calendars/admin/calendars?module=อบรม" >กลับ</a>
 					</div>
 				
 				</form>

@@ -5,6 +5,8 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title><?php echo $template['title']; ?></title> 
 <?include('_inc.php')?>
+<?php echo $template['metadata']; ?>
+<?//=js_notify();?>
 </head>
 <body>
 <?include('_header.php')?>
@@ -15,7 +17,6 @@
 </div>
 
 <!-------------------------------------------------------END Content-------------------------------------------------------->  
-     
 <?=modules::run('log/statvisits'); ?>  
 </body>
 </html>

@@ -5,7 +5,45 @@
   <div id="page-colleft">
 	<div id="title-page-colleft">เกี่ยวกับกองทุน</div>
       <ul>
-       	  <li><img src="themes/fundv2/images/banner-fund/icon-megaphone.png" width="22" height="22" /> <a target="_blank" href="contents/view?module=กองทุนเพื่อการป้องกันและปราบปรามการค้ามนุษย์&category=เกี่ยวกับกองทุน">เกี่ยวกับกองทุนเพื่อการป้องกันและปราบปรามการค้ามนุษย์</a></li>
+      
+       	  <li>
+          
+          <img src="themes/fundv2/images/banner-fund/icon-megaphone.png" width="22" height="22" />
+          
+           <a target="_blank" href="contents/view?module=กองทุนเพื่อการป้องกันและปราบปรามการค้ามนุษย์&category=เกี่ยวกับกองทุน">
+           
+           เกี่ยวกับกองทุนเพื่อการป้องกันและปราบปรามการค้ามนุษย์
+           
+           </a>
+           
+          </li>
+          
+          <li>
+          
+          <img src="themes/fundv2/images/banner-fund/icon-megaphone.png" width="22" height="22" />
+          
+           <a target="_blank" href="contents/view?module=กองทุนเพื่อการป้องกันและปราบปรามการค้ามนุษย์&category=โครงสร้างการบริหารกองทุนเพื่อการป้องกันและปราบปรามการค้ามนุษย์">
+           
+           โครงสร้างการบริหารกองทุนเพื่อการป้องกันและปราบปรามการค้ามนุษย์
+           
+           </a>
+           
+          </li>
+          
+           <li>
+          
+          <img src="themes/fundv2/images/banner-fund/icon-megaphone.png" width="22" height="22" />
+          
+           <a href="uploads/pdf/mso_data_00.pdf" target="_blank">
+           
+           แผ่นพับประชาสัมพันธ์กองทุนเพื่อการป้องกันและปราบปรามการค้ามนุษย์
+           
+           </a>
+           
+          </li>
+          
+          
+          
       </ul>
 <br><br>
           <div id="title-page-colleft-2">ข่าวกองทุนเพื่อการป้องกันและปราบปรามการค้ามนุษย์</div>

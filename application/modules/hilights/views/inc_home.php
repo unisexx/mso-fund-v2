@@ -33,11 +33,9 @@
 <div id="highlight" class="carousel slide" data-ride="carousel">
   <!-- Indicators -->
   <ol class="carousel-indicators">
-    <li data-target="#highlight" data-slide-to="0" class="active"></li>
-    <li data-target="#highlight" data-slide-to="1"></li>
-    <li data-target="#highlight" data-slide-to="2"></li>
-    <li data-target="#highlight" data-slide-to="3"></li>
-    <li data-target="#highlight" data-slide-to="4"></li>
+      <? foreach($rs as $key=>$item):?>
+    <li data-target="#highlight" data-slide-to="<?=$key;?>"  <?=$key==0?'class="active"':'';?>></li>
+     <? endforeach;?>
   </ol>
 
   <!-- Wrapper for slides -->

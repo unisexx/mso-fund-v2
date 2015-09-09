@@ -67,7 +67,20 @@
 					<div class="control-group">
 			            <label class="control-label" for="form-field-9">รายละเอียด</label>
 			            <div class="controls">
-			                <textarea class="input-xxlarge" rows="5" id="form-field-9" name="detail"><?php echo $row['detail'];?></textarea>
+            <textarea id="detail" name="detail">
+            	<?php echo $rs->detail?>
+            </textarea>
+            
+             
+            <script type="text/javascript" src="media/ckeditor/ckeditor.js"></script>
+            <script type="text/javascript" src="media/cke_config.js"></script>		
+            <script type="text/javascript">
+			
+            var editorObj=CKEDITOR.replace( 'detail',cke_config); 
+			
+			
+
+            </script>
 			            </div>
 			        </div>
 					
@@ -84,8 +97,8 @@
 						</button>
 						-->
 						
-						&nbsp; &nbsp; &nbsp;
-						<a class="btn btn-large" onclick="history.go(-1);" >กลับ</a>
+                        &nbsp; &nbsp; &nbsp;
+						<a class="btn btn-large" href="infos/admin/infos?module=<?=@$_GET['module']?>" >กลับ</a>
 
 					</div>
 				
@@ -102,7 +115,7 @@
 <script type="text/javascript" src="media/tiny_mce/tiny_mce.js"></script>
 <script type="text/javascript" src="media/tiny_mce/config.js"></script>
 <script type="text/javascript">
-tiny('detail');
+//tiny('detail');
 $(function() {
 	$('#id-input-file-1 , #id-input-file-2').ace_file_input({
 		no_file:'ไม่มีไฟล์แนบ...',

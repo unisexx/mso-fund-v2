@@ -1,12 +1,4 @@
-	<?php 
-	
-		$this->load->helper('html'); 
-		
-		foreach($rs as $row)
-		{
-			
-			dbConvert($row);
-	?>
+
  <style>
  	
  	.txt_title{
@@ -24,24 +16,36 @@
 		> 
 		<span class="b1"><a href="calendars/calendar_mso">ปฏิทินกิจกรรม</a></span> 
 		> 
-		<span class="b1"><a href="calendars/calendar_mso?actcalendar_type_id=<?=$row['actcalendar_type_id']?>"><?=$row['title']?></a></span>
+		<span class="b1"><a href="calendars/calendar_mso?actcalendar_type_id=1"><?=$rs->title?></a></span>
 		
 		</div>
 		
 		<div style="clear::both; margin-bottom:10px;"></div>
 		
-		<div id="title-blank"><?=$row['title']?></div>
+		<div id="title-blank"><?=$rs->title?></div>
 		
 	    <div id="page">
 	
         	<p>
 			
-				<h3 class="txt_title">ชื่องาน :<?=$row['title']?></h3><br />
-                <p><span class="txt_title">สถานที่ :</span><?=$row['location']?></p><br /> 
-				<p><span class="txt_title">วัน เวลา :</span><?=mysql_to_th($row['startdate'])?> ถึง  <?=mysql_to_th($row['enddate'])?></p><br /> 
-				<p><span class="txt_title">รายละเอียด :</span><?=$row['detail']?></p><br /> 
-				<p><span class="txt_title">เจ้าของงาน(ชื่อหน่วยงาน) :</span><?=$row['department_id']?></p><br /> 
-				<p><span class="txt_title">ผู้สร้างรายการ :</span><?=$row['createby']?></p><br />  
+				<h3 class="txt_title">ชื่องาน :<?=$rs->title?></h3><br />
+                <p><span class="txt_title">สถานที่ :</span><?=$rs->place?></p><br /> 
+				<p><span class="txt_title">วัน เวลา :</span><?=mysql_to_th($rs->start_date)?> ถึง  <?=mysql_to_th($rs->end_date)?></p><br /> 
+				<p><span class="txt_title">รายละเอียด :</span><?=$rs->detail?></p><br /> 
+				<p><span class="txt_title">เจ้าของงาน(ชื่อหน่วยงาน) :</span>
+                
+                				<?php
+				
+				$uname = 'Admin';
+				$uid = $rs->user_id;
+				$users = new User($uid);
+				$uname = $users->name;
+				
+				echo $uname;
+				
+				?>
+                </p><br /> 
+				<p><span class="txt_title">ผู้สร้างรายการ :</span><?=$uname?></p><br />  
 
 				<br />
 				<br />
@@ -78,7 +82,17 @@
                   			
                               <tr>
                                 <td width="100%" style="padding-left:6px;">
+                                 <?php if($rs->image){ ?>
+                                
+                                <img class="img" style="width:300px;" src="uploads/calendar/<?php echo $rs->image; ?>"  />
+                                
+                                 <br><br>
+                             
+			                    <?php }else{ ?>
+                            
                                 	<p>ไม่มีภาพกิจกรรม</p>
+                                    
+                                <?php } ?>  
                                 </td>
 	      					  </tr>
 
@@ -95,7 +109,20 @@
                            	
                               <tr>
                                 <td width="100%" style="padding-left:6px;">
+                                <?php if($rs->url){ ?>
+                                
+                                <a href="uploads/calendar/<?php echo $rs->url; ?>" target="_blank"  />
+                                ดาวน์โหลด : <?php echo $rs->url; ?>
+                                
+                                </a>
+                                
+                                 <br><br>
+                             
+			                    <?php }else{ ?>
+                            
                                 	<p>ไม่มีไฟล์แนบ</p>
+                                    
+                                <?php } ?>  
                                 </td>
 	      					  </tr>
 
@@ -119,4 +146,3 @@
 			
         </div>
         
-<?php } ?>

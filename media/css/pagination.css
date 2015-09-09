@@ -1,14 +1,15 @@
-body .pagination span,.pagination a{padding:5px;}
+body .pagination span,.pagination a{padding:10px;}
 
 body div.pagination{
+	  list-style: none;
     text-align:center !important;
-    float: right;margin-top: 20px;margin-bottom: 30px;
+    float: right;margin-top: 5px;margin-bottom: 5px;
     position: relative;
 }
 
 body div.pagination a,div.pagination span{
-    margin:0 2px;
-    padding:0 8px;
+       margin: 1px 2px;
+    padding:3px 6px;
     -webkit-border-radius:3px;
     -moz-border-radius:3px;
     color:#444444 !important;
@@ -29,4 +30,26 @@ body div.pagination span.current,div.pagination a:hover{
     border: 1px solid #feead2;
 }
 
+
 .pagination_data{color: #9a9a9a;font-size: 11px;position:absolute;left: -450px;top: 6px;}
+
+
+body div.pagination ul
+ {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+ }
+body div.pagination li
+ {
+    display: inline; 
+}
+
+body div.pagination ul li.active a   
+{
+   
+    color:#FFFFFF !important;
+    background:url(images/active_button.png) repeat-x bottom left !important;
+    border: 1px solid #feead2;
+}

@@ -33,6 +33,18 @@
 					
 					ปฎิทินกิจกรรม (Auto feed from Intranet)
                     
+                    <br><br>
+                            
+        			<span style="font-weight:normal; color: #FFF;"> * </span>
+					<span>
+                    
+                    	<a href="calendars/admin/calendars/get_intranet_data?module=<?=$_GET['module']?>" style="font-weight:normal; color:#FFF;">
+                    		นำเข้าข้อมูลจาก Intranet    
+                            
+                        </a>
+                    
+                    </span>
+                    
 				</div>
 
 				<table id="sample-table-2" class="table table-striped table-bordered table-hover">
@@ -42,7 +54,7 @@
 							<th>หัวข้อ</th>
 							<!-- <th><a class="btn btn-mini iframe" href="categories/admin/categories/downloads?iframe=true&width=90%&height=90%">หมวดหมู่</a></th> -->
 							<th>วัน เวลา </th>
-							<th>ผู้สร้างรายการ</th>
+							
 							<th width="90">
 							
 							</th>
@@ -52,28 +64,29 @@
 					<tbody>
 						<?php 
 						
-						$this->load->helper('html'); 
+						//$this->load->helper('html'); 
 						
 						foreach($rs as $row): 
 							
-						dbConvert($row);
+						//dbConvert($row);
 						
 						 ?>
 						<tr>
 						
-							<td><?=$row['title']?></td>
-							<!-- <td><?=$row->category->name?></td> -->
+							<td><?=$row->title?></td>
 						
-							<td><?=mysql_to_th($row['startdate'])?> ถึง  <?=mysql_to_th($row['enddate'])?></td>
-							<td><?=$row['createby']?></td>
+							<td><?=mysql_to_th($row->start_date)?> ถึง  <?=mysql_to_th($row->end_date)?></td>
+							
 							<td class="td-actions">
 								<div class="hidden-phone visible-desktop action-buttons">
 									
-									<a class="green" href="calendars/admin/calendars/form/<?php echo $row['id']; ?>">
+									<a class="green" href="calendars/admin/calendars/form/<?php echo $row->id; ?>?module=<?=$_GET['module']?>">
 										<i class="icon-pencil bigger-130"></i>
 									</a>
 
-					
+									<a class="red" href="calendars/admin/calendars/delete/<?php echo $row->id?>?module=<?=$_GET['module']?>" onclick="return confirm('<?php echo lang('notice_confirm_delete');?>')">
+										<i class="icon-trash bigger-130"></i>
+									</a>
 								</div>
 
 

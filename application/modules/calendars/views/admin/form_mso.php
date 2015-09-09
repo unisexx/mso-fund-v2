@@ -1,12 +1,12 @@
 <?php
 	
-	$this->load->helper('html'); 
+	//$this->load->helper('html'); 
 	
 	foreach($rs as $row)
 	{
 		
 	
-	dbConvert($row);
+	//dbConvert($row);
 							
 ?>
 
@@ -43,34 +43,59 @@
 	<div class="row-fluid">
 		<div class="span12">
 			<!--PAGE CONTENT BEGINS-->
-				<form class="form-horizontal" method="post" action="calendar/admin/calendar/save/<?php echo $row['id']; ?>" enctype="multipart/form-data" id="frmForm">
-					<!--
+				<form class="form-horizontal" method="post" action="calendar/admin/calendar/save/<?php echo $row->id; ?>" enctype="multipart/form-data" id="frmForm">
 					<div class="control-group">
 			            <label class="control-label" for="id-input-file-1">ภาพประกอบ</label>
 			            <div class="controls">
-			                <?php if($rs->image):?>
-			                <img class="img" style="width:100px;" src="<?php echo (is_file('uploads/calendar/'.$rs->image))? 'uploads/calendar/'.$rs->image : 'media/images/webboard/noavatar.gif' ?>"  /> <br><br>
+			                <?php if($row->image):?>
+			                <img class="img" style="width:100px;" src="<?php echo (is_file('uploads/info/'.$row->image))? 'uploads/info/'.$row->image : 'media/images/webboard/noavatar.gif' ?>"  /> <br><br>
 			                <?php endif;?>
 			                <div class="input-xxlarge" style="width:544px;">
 			                    <input type="file" id="id-input-file-1" name="image"/>
 			                </div>
 			            </div>
 			        </div>
-					-->
+					<div class="control-group">
+			            <label class="control-label" for="id-input-file-1">ไฟล์แนบ</label>
+			            <div class="controls">
+                        
+			                <?php if($row->url):?>
+                            
+                            <a href="uploads/calendar/<?php echo $row->url; ?>" target="_blank">
+							
+							<?php echo $row->url; ?>
+                            
+                            </a>
+                            
+                            <br><br>
+                            
+			                <?php endif;?>
+                            
+			                <div class="input-xxlarge" style="width:544px;">
+			                    <input type="file" id="id-input-file-2" name="url"/>
+			                </div>
+                            
+			            </div>
+			        </div>
 					<div class="control-group">
 						<label class="control-label">หัวข้อ</label>
 						<div class="controls">
-							<input class="input-xxlarge" type="text" name="title" value="<?php echo $row['title'];?>"/>
+							<input class="input-xxlarge" type="text" name="title" value="<?php echo $row->title; ?>"/>
 						</div>
 					</div>
-                    
+                   <div class="control-group">
+						<label class="control-label">สถานที่</label>
+						<div class="controls">
+							<input class="input-xxlarge" type="text" name="place" value="<?php echo $row->place?>"/>
+						</div>
+					</div>
                     <?php
 						 
 						 $sdate=date('Y-m-d H:i:s');
 						 $edate=date('Y-m-d H:i:s');
 						 
-						 if($row['startdate']!=""){$sdate=$row['startdate'];}
-						 if($row['enddate']!=""){$edate=$row['enddate'];}
+						 if($row->start_date!=""){$sdate=$row->start_date;}
+						 if($row->end_date!=""){$edate=$row->end_date;}
 						 
 						 $sd = explode(" ", $sdate);
 						 $sd_date = $sd[0]; 
@@ -100,7 +125,20 @@
 					<div class="control-group">
 			            <label class="control-label" for="form-field-9">รายละเอียด</label>
 			            <div class="controls">
-			                <textarea class="input-xxlarge" rows="5" id="form-field-9" name="detail"><?php echo $row['detail']?></textarea>
+            <textarea id="detail" name="detail">
+            	<?php echo $row->detail?>
+            </textarea>
+            
+             
+            <script type="text/javascript" src="media/ckeditor/ckeditor.js"></script>
+            <script type="text/javascript" src="media/cke_config.js"></script>		
+            <script type="text/javascript">
+			
+            var editorObj=CKEDITOR.replace( 'detail',cke_config); 
+			
+			
+
+            </script>
 			            </div>
 			        </div>
 				
@@ -110,18 +148,17 @@
                     
 						<?php echo form_referer() ?>
 						
-						<!--
+						
 						<input type="hidden" name="module" value="<?=$module?>">
-                        <input type="hidden" name="category" value="<?=$category?>">
+                        <!--<input type="hidden" name="category" value="<?=$category?>">-->
                     
                        
 						<button class="btn btn-large btn-info" type="submit">
 							<i class="icon-ok bigger-110"></i>บันทึก
 						</button>
-   						-->
    						
-						&nbsp; &nbsp; &nbsp;
-						<a class="btn btn-large" onclick="history.go(-1);" >กลับ</a>
+   						
+	<a class="btn btn-large" href="calendars/admin/calendars?module=อบรม" >กลับ</a>
 						
 					</div>
 				
@@ -142,7 +179,7 @@
 
 
 <script type="text/javascript">
-tiny('detail');
+//tiny('detail');
 $(function() {
 	$('#id-input-file-1 , #id-input-file-2').ace_file_input({
 		no_file:'ไม่มีไฟล์แนบ...',

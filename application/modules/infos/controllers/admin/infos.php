@@ -10,14 +10,16 @@ class Infos extends Admin_mso_Controller
 	function index()
 	{
 		
-		if($_GET['module']!='mso'){
+		//if($_GET['module']!='mso'){
 				
 			$data['rs'] = new Info();
 			$data['rs']->where('module = "'.$_GET['module'].'"')->order_by('id','desc')->get();
 			$this->template->append_metadata(js_checkbox('approve'));
+			
+			
 			$this->template->build('admin/index',$data);
 			
-		}else{
+/*		}else{
 				
 			include('themes/fundv2/odbc_connect.php');
 			
@@ -28,9 +30,74 @@ class Infos extends Admin_mso_Controller
 			$this->template->append_metadata(js_checkbox('approve'));
 			$this->template->build('admin/index_mso',$data);
 			
-		}
+		}*/
 		
 
+	}
+	
+	function get_intranet_data()
+	{
+		
+				
+			include('themes/fundv2/odbc_connect.php');
+			
+			$this->load->helper('html');
+			
+			$rs_intranet = $db->Execute("select * from WEB_NEWS WHERE ROWNUM <=12 ORDER BY ID DESC");
+			
+			//insert data to db mso
+			
+			$count_news_mso = 0;
+			
+			foreach($rs_intranet as $row){
+			
+				dbConvert($row);
+				
+				//http://intranet.m-society.go.th/upload/newsletters/
+				$intranet_id = $row['id'];
+				$rs_check = new Info();
+				$rs_check->where('intranet_id = "'.$intranet_id.'"')->order_by('id','desc')->get();
+
+				if(!$rs_check->id)
+				{
+					
+					$rs = new Info();
+		
+					$rs->title = $row['title'];
+					$rs->detail = $row['detail'];
+					$rs->image = $row['img_title'];
+					$rs->created = date('Y-m-d H:i:s');
+					$rs->updated = date('Y-m-d H:i:s');
+					$rs->start_date= date('Y-m-d H:i:s');
+					$rs->end_date = date('Y-m-d H:i:s');
+					$rs->module = 'ข่าวประชาสัมพันธ์';
+					$rs->slug = 'mso';
+					$rs->status = 'approve';
+					$rs->user_id = 49;
+					$rs->counter = 0;
+					$rs->intranet_id = $row['id'];
+					
+					
+					$rs->save();
+					$count_news_mso++;
+				}
+								
+			}
+			//set_notify('success', lang('save_data_complete'));
+			//**********
+			
+			$data['count_news_mso'] = $count_news_mso;
+			$data['get_intranet'] = 'mso';
+			
+			$data['rs'] = new Info();
+			$data['rs']->where('module = "ข่าวประชาสัมพันธ์"')->order_by('id','desc')->get();
+		
+			$this->template->append_metadata(js_checkbox('approve'));
+			
+			$this->template->build('admin/index',$data);
+			
+		
+	
 	}
 	
 	function form($id=FALSE)
@@ -110,7 +177,7 @@ class Infos extends Admin_mso_Controller
 			// หาไอดีซ้ำใน db
 			$info = new Info();
 			$info->where('intranet_id = '.$row['ID'])->get();
-			if($info->id == ""){
+			if($info->intranet_id == ""){
 				$_POST['module'] = 'ข่าวประชาสัมพันธ์';
 				$_POST['slug'] = clean_url(iconv('TIS-620','UTF-8', $row['TITLE']));
 				$_POST['title'] = iconv('TIS-620','UTF-8', $row['TITLE']);

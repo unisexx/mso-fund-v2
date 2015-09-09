@@ -1,3 +1,5 @@
+
+
 <div class="sidebar" id="sidebar">
 	<!-- <div class="sidebar-shortcuts" id="sidebar-shortcuts">
 		<div class="sidebar-shortcuts-large" id="sidebar-shortcuts-large">
@@ -31,39 +33,37 @@
 	<!--#sidebar-shortcuts-->
 
 	<ul class="nav nav-list">
-		<?if(permission('user','full')):?>
-        <li <?php echo menu_active('users','users',false,'active open')?><?php echo menu_active('permissions','permissions',FALSE,'active open')?>>
-          <a href="#" class="dropdown-toggle" >
-            <i class="icon-user"></i>
-            <span>ผู้ใช้งาน</span>
-            <b class="arrow icon-angle-down"></b>
-          </a>
-          <ul class="submenu">
-            <li <?php echo menu_active('users','users')?>><a href="users/admin/users"><i class="icon-double-angle-right"></i> สมาชิก</a></li>
-            <li <?php echo menu_active('permissions','permissions')?>><a href="permissions/admin/permissions"><i class="icon-double-angle-right"></i> สิทธ์การใช้งาน</a></li>
-          </ul>
-        </li>
-        <?endif;?>
-        
-        <?if(permission('hilight','full')):?>
+    
+<?php
+  	
+/*	$rs = new Usergroup_permission();
+	$rs->where('menu_id = 1 and usergroup_id = '.$set_data['usergroup_id'])->get();
+	if($rs->can_view == 1){*/
+	if(permission('hilight','full')){
+?>  
+    
 		<li <?=@$this->uri->segment(1) == 'hilights'?'class="active"':'';?>>
 			<a href="hilights/admin/hilights">
 				<i class="fa fa-file-image-o"></i>
 				<span class="menu-text"> ไฮไลท์ </span>
 			</a>
 		</li>
-		<?endif;?>
 		
-		<?if(permission('maquee','full')):?>
+<?php
+	}
+	//}
+	
+?>
+<?php	if(permission('maquee','full')): ?>
 		<li <?=@$_GET['module'] == 'อักษรวิ่ง' && @$_GET['category'] == 'อักษรวิ่ง'?'class="active"':'';?>>
 			<a href="contents/admin/contents/form?module=อักษรวิ่ง&category=อักษรวิ่ง">
 				<i class="fa fa-text-width"></i>
 				<span class="menu-text"> อักษรวิ่ง </span>
 			</a>
 		</li>
-		<?endif;?>
-		
-		<?if(permission('about','full')):?>
+<?php endif;?>
+
+<?php	if(permission('about','full')): ?>
 		<li <?=@$_GET['module'] == 'เกี่ยวกับ กบท.'?'class="active open"':'';?>>
 			<a href="#" class="dropdown-toggle">
 				<i class="fa fa-users"></i>
@@ -93,14 +93,14 @@
 						การดำเนินงานตามนโยบาย
 					</a>
 				</li>
-				
+
 				<li <?=@$_GET['module'] == 'เกี่ยวกับ กบท.' && @$_GET['category'] == 'กฏหมาย/คำสั่งที่เกี่ยวข้อง'?'class="active open"':'';?>>
 					<a href="contents/admin/contents/form?module=เกี่ยวกับ กบท.&category=กฏหมาย/คำสั่งที่เกี่ยวข้อง">
 						<i class="icon-double-angle-right"></i>
 						กฏหมาย/คำสั่งที่เกี่ยวข้อง
 					</a>
 				</li>
-				
+		
 				<li <?=@$_GET['module'] == 'เกี่ยวกับ กบท.' && @$_GET['category'] == 'ติดต่อสอบถาม'?'class="active open"':'';?>>
 					<a href="contents/admin/contents/form?module=เกี่ยวกับ กบท.&category=ติดต่อสอบถาม">
 						<i class="icon-double-angle-right"></i>
@@ -109,29 +109,23 @@
 				</li>
 			</ul>
 		</li>
-		<?endif;?>
-		
-		<?if(permission('news','full')):?>
-		<li <?=@$_GET['module'] == 'mso' || @$_GET['module'] == 'ข่าวประชาสัมพันธ์' || @$_GET['module'] == 'ข่าวจัดซื้อจัดจ้าง' || @$_GET['module'] == 'ข่าวประกาศรับสมัครงาน' ?'class="active open"':'';?>>
+<?php endif;?>
+
+<?php	if(permission('news','full')): ?>	
+	
+		<li <?=@$_GET['module'] == 'ข่าวประชาสัมพันธ์' || @$_GET['module'] == 'ข่าวจัดซื้อจัดจ้าง' || @$_GET['module'] == 'ข่าวประกาศรับสมัครงาน' ?'class="active open"':'';?>>
+        
 			<a href="#" class="dropdown-toggle">
 				<i class="fa fa-file-text-o"></i>
 				<span class="menu-text"> ข้อมูลข่าวสาร </span>
 
 				<b class="arrow icon-angle-down"></b>
 			</a>
-
 			<ul class="submenu">
-				<li <?=@$_GET['module'] == 'mso'?'class="active open"':'';?>>
-					<a href="infos/admin/infos?module=mso">
-						<i class="icon-double-angle-right"></i>
-						ข่าวประชาสัมพันธ์<br>(Auto feed from Intranet)
-					</a>
-				</li>
-				
 				<li <?=@$_GET['module'] == 'ข่าวประชาสัมพันธ์'?'class="active open"':'';?>>
 					<a href="infos/admin/infos?module=ข่าวประชาสัมพันธ์">
 						<i class="icon-double-angle-right"></i>
-						ข่าวประชาสัมพันธ์
+						ข่าวประชาสัมพันธ์<br>(Auto feed from Intranet)
 					</a>
 				</li>
 
@@ -142,6 +136,7 @@
 					</a>
 				</li>
 
+
 				<li <?=@$_GET['module'] == 'ข่าวประกาศรับสมัครงาน'?'class="active open"':'';?>>
 					<a href="infos/admin/infos?module=ข่าวประกาศรับสมัครงาน">
 						<i class="icon-double-angle-right"></i>
@@ -149,28 +144,29 @@
 					</a>
 				</li>
 			</ul>
+            
 		</li>
-		<?endif;?>
-		
-		<?if(permission('download','full')):?>
+<?php endif;?>                		
+
+<?php	if(permission('download','full')): ?>		
 		<li <?=@$this->uri->segment(1) == 'downloads'?'class="active open"':'';?>>
 			<a href="downloads/admin/downloads">
 				<i class="fa fa-download"></i>
 				<span class="menu-text"> ดาวน์โหลดแบบฟอร์ม </span>
 			</a>
 		</li>
-		<?endif;?>
-		
-		<?if(permission('calendar','full')):?>
+<?php endif;?>
+
+<?php	if(permission('calendar','full')): ?>				
 		<li <?=@$this->uri->segment(1) == 'calendars'?'class="active open"':'';?>>
-			<a href="calendars/admin/calendars">
+			<a href="calendars/admin/calendars?module=อบรม">
 				<i class="fa fa-calendar"></i>
 				<span class="menu-text"> ปฎิทินกิจกรรม (Auto feed from Intranet) </span>
 			</a>
 		</li>
-		<?endif;?>
-		
-		<?if(permission('gallery','full')):?>
+<?php endif;?>		
+
+<?php	if(permission('gallery','full')): ?>				
 		<li <?=(@$this->uri->segment(1) == 'galleries') || ($this->uri->segment(1) == 'vdos')?'class="active open"':'';?>>
 			<a href="#" class="dropdown-toggle">
 				<i class="fa fa-photo"></i>
@@ -195,27 +191,27 @@
 				</li>
 			</ul>
 		</li>
-		<?endif;?>
-		
-		<?if(permission('weblink','full')):?>
+<?php endif;?>
+
+<?php	if(permission('weblink','full')): ?>						
 		<li <?=@$this->uri->segment(1) == 'weblinks'?'class="active"':'';?>>
 			<a href="weblinks/admin/weblinks">
 				<i class="fa fa-globe"></i>
 				<span class="menu-text"> เว็บไซต์แนะนำ </span>
 			</a>
 		</li>
-		<?endif;?>
-		
-		<?if(permission('faq','full')):?>
+<?php endif;?>		
+
+<?php	if(permission('faq','full')): ?>						
 		<li>
 			<a href="contents/admin/contents/form?module=สนทนา ถาม - ตอบ&category=สนทนา ถาม - ตอบ">
 				<i class="fa fa-question"></i>
 				<span class="menu-text"> สนทนา ถาม - ตอบ </span>
 			</a>
 		</li>
-		<?endif;?>
-		
-		<?if(permission('law','full')):?>
+<?php endif;?>		
+
+<?php	if(permission('law','full')): ?>								
 		<li <?=@$_GET['module'] == 'พรบ. กฏหมาย ระเบียบ ข้อบังคับ มติ ครม. และหนังสือเวียน'?'class="active open"':'';?>>
 			<a href="#" class="dropdown-toggle">
 				<i class="fa fa-file-pdf-o"></i>
@@ -282,9 +278,9 @@
 				</li>
 			</ul>
 		</li>
-		<?endif;?>
-		
-		<?if(permission('humen','full')):?>
+<?php endif;?>				
+
+<?php	if(permission('humen','full')): ?>		
 		<li <?=@$_GET['module'] == 'กองทุนเพื่อการป้องกันและปราบปรามการค้ามนุษย์'?'class="active open"':'';?>>
 			<a href="#" class="dropdown-toggle">
 				<i class="icon-star"></i>
@@ -300,6 +296,15 @@
 						เกี่ยวกับกองทุน
 					</a>
 				</li>
+                
+                <li <?=@$_GET['module'] == 'กองทุนเพื่อการป้องกันและปราบปรามการค้ามนุษย์' && @$_GET['category'] == 'เกี่ยวกับกองทุน'?'class="active open"':'';?>>
+					<a href="contents/admin/contents/form?module=กองทุนเพื่อการป้องกันและปราบปรามการค้ามนุษย์&category=โครงสร้างการบริหารกองทุนเพื่อการป้องกันและปราบปรามการค้ามนุษย์">
+						<i class="icon-double-angle-right"></i>
+						โครงสร้างการบริหารกองทุนเพื่อการป้องกันและปราบปรามการค้ามนุษย์
+					</a>
+				</li>
+                
+                
 
 				<li <?=@$_GET['module'] == 'กองทุนเพื่อการป้องกันและปราบปรามการค้ามนุษย์' && @$_GET['category'] == 'การขอรับเงินสนับสนุน'?'class="active open"':'';?>>
 					<a href="contents/admin/contents/form?module=กองทุนเพื่อการป้องกันและปราบปรามการค้ามนุษย์&category=การขอรับเงินสนับสนุน">
@@ -344,9 +349,9 @@
 				</li>
 			</ul>
 		</li>
-		<?endif;?>
-		
-		<?if(permission('welfare','full')):?>
+<?php endif;?>				
+
+<?php	if(permission('welfare','full')): ?>				
 		<li <?=@$_GET['module'] == 'กองทุนส่งเสริมการจัดการสวัสดิการสังคม'?'class="active open"':'';?>>
 			<a href="#" class="dropdown-toggle">
 				<i class="icon-star"></i>
@@ -406,9 +411,9 @@
 				</li>
 			</ul>
 		</li>
-		<?endif;?>
-		
-		<?if(permission('child','full')):?>
+<?php endif;?>				
+
+<?php	if(permission('child','full')): ?>				
 		<li <?=@$_GET['module'] == 'กองทุนคุ้มครองเด็ก'?'class="active open"':'';?>>
 			<a href="contents/admin/contents/form?module=กองทุนส่งเสริมการจัดการสวัสดิการ&category=กองทุนคุ้มครองเด็ก" class="dropdown-toggle">
 				<i class="icon-star"></i>
@@ -468,9 +473,9 @@
 				</li>
 			</ul>
 		</li>
-		<?endif;?>
-		
-		<?if(permission('fund','full')):?>
+<?php endif;?>						
+
+<?php	if(permission('fund','full')): ?>	
 		<li <?=@$_GET['module'] == 'เงินอุดหนุนองค์กรสวัสดิการสังคม'?'class="active open"':'';?>>
 			<a href="#" class="dropdown-toggle">
 				<i class="icon-star"></i>
@@ -509,7 +514,24 @@
 				</li>
 			</ul>
 		</li>
-		<?endif;?>
+<?php endif;?>        
+
+<?php	if(permission('user','full')): ?>	        
+        <li <?=@$this->uri->segment(1) == 'usergroup'?'class="active"':'';?>>
+			<a href="permissions/admin/permissions">
+				<i class="fa fa-globe"></i>
+				<span class="menu-text"> ข้อมูลกลุ่มผู้ใช้/สิทธิ์การใช้งาน </span>
+			</a>
+		</li>
+        
+       <li <?=@$this->uri->segment(1) == 'user_permission'?'class="active"':'';?>>
+			<a href="users/admin/users">
+				<i class="fa fa-globe"></i>
+				<span class="menu-text"> ข้อมูลผู้ใช้ </span>
+			</a>
+		</li>
+<?php endif;?>         
+        
 		
 	</ul><!--/.nav-list-->
 
