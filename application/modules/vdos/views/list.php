@@ -6,7 +6,7 @@
 		<div class="vdoplay" style="top:76px;"><a href="vdos/view/<?=$rs->id?>">&nbsp;</a></div>
 		  <div class="media-left media-middle">
 		    <a href="vdos/view/<?=$row->id?>">
-		      <img class="media-object imgvdo" src="uploads/vdo/<?=$row->image?>" width="139" height="96">
+		      <img class="media-object imgvdo" src="media/timthumb/timthumb.php?src=uploads/vdo/<?=$row->image?>&w=139&h=96" width="139" height="96">
 		    </a>
 		  </div>
 		  <div class="media-body">
@@ -25,7 +25,7 @@
 		<div class="media col-lg-6" style="position: relative;">
 		  <div class="media-left media-middle">
 		    <a href="galleries/view/<?=$row->id?>">
-		      <img class="media-object imgvdo" src="uploads/gallery/<?=$row->gallery->image?>" width="139" height="96">
+		      <img class="media-object imgvdo" src="media/timthumb/timthumb.php?src=uploads/gallery/<?=$row->gallery->image?>&w=139&h=96" width="139" height="96">
 		    </a>
 		  </div>
 		  <div class="media-body">

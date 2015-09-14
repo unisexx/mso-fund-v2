@@ -308,11 +308,11 @@ body {
 		    
 		    <p>จำนวนคณะกรรมการ  <input name="director" value="<?php echo @$rs['director']?>" type="text" class="form-control" style="width:70px;" placeholder="จำนวน"> คน</p>
 		    <p>ผู้ปฎิบัติงานประจำ  <input name="worker" value="<?php echo @$rs['worker']?>" type="text" class="form-control" style="width:70px;" placeholder="จำนวน"> คน</p>
-		    <p>ผู้ประสานงานองค์กร (เป็นประธานคณะกรรมการ เลขานุการ หรือตำแหน่งอื่นๆ <input name="coordinate" class="form-control" type="text" style="width:50px;" readonly="readonly" value="1"> <img class="add_coordinate_btn" src="themes/msosocial/images/btn_add.png" width="24" height="24" title="เพิ่มที่ปรึกษา" style="cursor:pointer;"></p>
+		    <p>ผู้ประสานงานองค์กร (เป็นประธานคณะกรรมการ เลขานุการ หรือตำแหน่งอื่นๆ <input name="coordinate" class="form-control" type="text" style="width:50px;" readonly="readonly" value="1"> <img class="add_coordinate_btn" src="themes/fundv2/images/btn_add.png" width="24" height="24" title="เพิ่มที่ปรึกษา" style="cursor:pointer;"></p>
 		    <?if(@is_array($coordinate)):?>
 	    	<?foreach($coordinate as $key=>$row):?>
 	    	<div class="coordinate_addr" style="margin: 15px 0; position: relative;">
-	    		<img class="remove_coordinate_btn" src="themes/msosocial/images/remove2.png" width="16" height="16" title="ลบที่ปรึกษา" style="cursor:pointer; position: absolute; right: 10px; top: 0;" />
+	    		<img class="remove_coordinate_btn" src="themes/fundv2/images/remove2.png" width="16" height="16" title="ลบที่ปรึกษา" style="cursor:pointer; position: absolute; right: 10px; top: 0;" />
 		    	<div> <!--๑)-->
 			    <input class="form-control" type="text" name="c_name[]" value="<?php echo @$row['name']?>" style="width:150px;" placeholder="ชื่อ" />
 			    <input class="form-control" type="text" name="c_surname[]" value="<?php echo @$row['surname']?>" style="width:250px;" placeholder="นามสกุล" />
@@ -358,11 +358,11 @@ body {
 		  
 		  <div class="form-group">
 		    <label class="col-sm-2 control-label">ที่ปรึกษา</label>
-		    <div class="form-inline col-sm-10"><p>ที่มีความรู้เกี่ยวกับสวัสดิการชุมชน <input class="form-control" name="adviser" type="text" style="width:50px;" readonly="readonly" value="1"> คน <img class="add_adviser_btn" src="themes/msosocial/images/btn_add.png" width="24" height="24" class="vtip" title="เพิ่มที่ปรึกษา" style="cursor:pointer;" /></p>
+		    <div class="form-inline col-sm-10"><p>ที่มีความรู้เกี่ยวกับสวัสดิการชุมชน <input class="form-control" name="adviser" type="text" style="width:50px;" readonly="readonly" value="1"> คน <img class="add_adviser_btn" src="themes/fundv2/images/btn_add.png" width="24" height="24" class="vtip" title="เพิ่มที่ปรึกษา" style="cursor:pointer;" /></p>
 		    	<?if(@is_array($adviser)):?>
 		    	<?foreach($adviser as $key=>$row):?>
 		    	<div class="adviser_addr" style="margin: 15px 0; position: relative;">
-		    		<img class="remove_adviser_btn" src="themes/msosocial/images/remove2.png" width="16" height="16" title="ลบที่ปรึกษา" style="cursor:pointer; position: absolute; right: 10px; top: 0;" />
+		    		<img class="remove_adviser_btn" src="themes/fundv2/images/remove2.png" width="16" height="16" title="ลบที่ปรึกษา" style="cursor:pointer; position: absolute; right: 10px; top: 0;" />
 			    	<div> <!--๑)-->
 				    <input class="form-control" type="text" name="a_name[]" value="<?php echo @$row['name']?>" style="width:150px;" placeholder="ชื่อ" />
 				    <input class="form-control" type="text" name="a_surname[]" value="<?php echo @$row['surname']?>" style="width:250px;" placeholder="นามสกุล" />
@@ -430,11 +430,11 @@ body {
 		  
 		<div class="form-group">
 		    <label class="col-sm-2 control-label">บริการสวัสดิการที่จัดให้แก่สมาชิก</label>
-		    <div class="form-inline col-sm-10"><p>จำนวน <input name="service_member" type="text" class="form-control" style="width:50px;" readonly="readonly" value="1" class="valid"> เรื่อง <img class="add_service_member_btn" src="themes/msosocial/images/btn_add.png" width="24" height="24" title="เพิ่มสวัสดีการ" style="cursor:pointer;"></p>
+		    <div class="form-inline col-sm-10"><p>จำนวน <input name="service_member" type="text" class="form-control" style="width:50px;" readonly="readonly" value="1" class="valid"> เรื่อง <img class="add_service_member_btn" src="themes/fundv2/images/btn_add.png" width="24" height="24" title="เพิ่มสวัสดีการ" style="cursor:pointer;"></p>
 		    	<?if(@is_array($service)):?>
 				<?foreach($service as $row):?>
 				<div class="service_member_addr" style="margin: 15px 0; position: relative;">
-		    		<img class="remove_service_member_btn" src="themes/msosocial/images/remove2.png" width="16" height="16" title="ลบที่ปรึกษา" style="cursor:pointer; position: absolute; right: 10px; top: 0;" />
+		    		<img class="remove_service_member_btn" src="themes/fundv2/images/remove2.png" width="16" height="16" title="ลบที่ปรึกษา" style="cursor:pointer; position: absolute; right: 10px; top: 0;" />
 				<input type="text" class="form-control" style="width:350px;" name="m_target[]" value="<?php echo @$row['target']?>" placeholder="กลุ่มเป้าหมาย">
 				<input type="text" class="form-control" style="width:350px;" name="m_receive[]" value="<?php echo @$row['receive']?>" placeholder="สิ่งที่ได้รับ">
 				<input type="text" class="form-control" style="width:350px;" name="m_condition[]" value="<?php echo @$row['condition']?>" placeholder="เงื่อนไข">

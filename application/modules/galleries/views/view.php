@@ -8,7 +8,7 @@
 	<?foreach($rs->gallery->get() as $item):?>
 	<div class="col-md-3" style="margin-bottom: 10px;">
 		<a class="colorbox" href="uploads/gallery/<?=$item->image?>">
-			<img class="img-responsive" src="uploads/gallery/<?=$item->image?>"/>
+			<img class="img-responsive" src="media/timthumb/timthumb.php?src=uploads/gallery/<?=$item->image?>&w=214&h=160"/>
 		</a>
 	</div>
 	<?endforeach;?>
@@ -19,7 +19,11 @@
 <script>
 	$(document).ready(function(){
 		//Examples of how to assign the Colorbox event to elements
-		$(".colorbox").colorbox({rel:'colorbox'});
+		$(".colorbox").colorbox({
+			rel:'colorbox',
+			maxWidth: '75%',
+			maxHeight: '75%'
+		});
 		
 		//Example of preserving a JavaScript event for inline calls.
 		$("#click").click(function(){ 

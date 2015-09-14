@@ -306,11 +306,11 @@ body {
 		    <label class="col-sm-2 control-label">ที่ปรึกษา</label>
 		    <div class="form-inline col-sm-10">
 		    	ที่มีความรู้เกี่ยวกับการจัดสวัสดิการสังคมและสังคมสงเคราะห์ 
-		    	<input name="adviser" class="form-control" type="text" style="width:50px;" readonly="readonly" value="1"> คน <img class="add_adviser_btn" src="themes/msosocial/images/btn_add.png" width="24" height="24" title="เพิ่มที่ปรึกษา" style="cursor:pointer;"> <br><br>
+		    	<input name="adviser" class="form-control" type="text" style="width:50px;" readonly="readonly" value="1"> คน <img class="add_adviser_btn" src="themes/fundv2/images/btn_add.png" width="24" height="24" title="เพิ่มที่ปรึกษา" style="cursor:pointer;"> <br><br>
 		    	<?if(@is_array($adviser)):?>
 		    	<?foreach($adviser as $key=>$row):?>
 		    	<div class="adviser_addr" style="margin: 15px 0; position: relative;">
-		    		<img class="remove_adviser_btn" src="themes/msosocial/images/remove2.png" width="16" height="16" title="ลบที่ปรึกษา" style="cursor:pointer; position: absolute; right: 10px; top: 0;" />
+		    		<img class="remove_adviser_btn" src="themes/fundv2/images/remove2.png" width="16" height="16" title="ลบที่ปรึกษา" style="cursor:pointer; position: absolute; right: 10px; top: 0;" />
 			    	<div> <!--๑)-->
 				    <input class="form-control" type="text" name="a_name[]" value="<?php echo @$row['name']?>" style="width:150px;" placeholder="ชื่อ" />
 				    <input class="form-control" type="text" name="a_surname[]" value="<?php echo @$row['surname']?>" style="width:250px;" placeholder="นามสกุล" />
@@ -333,7 +333,7 @@ body {
 		    	<?endforeach;?>
 		    	<?endif;?>
 		    <div class="adviser_addr" style="margin: 25px 0; position: relative;">
-			<img class="remove_adviser_btn" src="themes/msosocial/images/remove2.png" width="16" height="16" title="ลบที่ปรึกษา" style="cursor:pointer; position: absolute; right: 10px; top: 0;" />
+			<img class="remove_adviser_btn" src="themes/fundv2/images/remove2.png" width="16" height="16" title="ลบที่ปรึกษา" style="cursor:pointer; position: absolute; right: 10px; top: 0;" />
 		    <p>
 		    <input type="text" class="form-control" name="a_name[]" style="width:150px;" placeholder="ชื่อ" />
 		    <input type="text" class="form-control" name="a_surname[]" style="width:250px;" placeholder="นามสกุล" />
@@ -643,7 +643,7 @@ body {
 			    <span id="lo_tumbon">
 			    <?php echo form_dropdown('lo_tumbon_code', (empty($rs['ampor_code'])) ? array() : get_option('tumbon_code', 'tumbon_name', 'act_tumbon', 'where ampor_code = '.$rs['ampor_code'].' order by tumbon_name'), @$rs['tumbon_code'], 'class="form-control"', '- เลือกตำบล -'); ?>
 			    </span>
-				<input type="text" name="mooban" class="form-control" placeholder="หมู่บ้าน" style="width:200px;"> <img class="location_add_btn" src="themes/msosocial/images/btn_add.png" width="24" height="24" style="cursor:pointer;" />
+				<input type="text" name="mooban" class="form-control" placeholder="หมู่บ้าน" style="width:200px;"> <img class="location_add_btn" src="themes/fundv2/images/btn_add.png" width="24" height="24" style="cursor:pointer;" />
 		      
 		      <table id="locationList" class="table tbweblist">
 		        <tr>
@@ -667,7 +667,7 @@ body {
 				    	<input type='hidden' name='location_tumbon_text[]' value='<?php echo $row['tumbon']?>'>
 				    	<input type='hidden' name='location_mooban_text[]' value='<?php echo $row['mooban']?>'>
 				    </td>
-				    <td><img class='remove_location_btn' src='themes/msosocial/images/remove2.png' width='16' height='16' title='ลบพื้นที่ปฏิบัติงาน' style='cursor: pointer;'></td>
+				    <td><img class='remove_location_btn' src='themes/fundv2/images/remove2.png' width='16' height='16' title='ลบพื้นที่ปฏิบัติงาน' style='cursor: pointer;'></td>
 				</tr>
 				<?endforeach;?>
 				<?endif;?>
@@ -941,7 +941,7 @@ $(function(){
 		htmldata1 = "<tr>";
 		htmldata2 = "<td style='width:5%;'>"+order+"</td><td style='width:25%;'>"+location_type_text+"</td>";
 		htmldata3 = "<td style='width:60%;'>"+location_province_text+" "+location_ampor_text+" "+location_tumbon_text+" "+location_mooban_text+"</td>";
-		htmldata4 = "<td style='width:10%;'><img class='remove_location_btn' src='themes/msosocial/images/remove2.png' width='16' height='16' title='ลบพื้นที่ปฏิบัติงาน' style='cursor: pointer;'>";
+		htmldata4 = "<td style='width:10%;'><img class='remove_location_btn' src='themes/fundv2/images/remove2.png' width='16' height='16' title='ลบพื้นที่ปฏิบัติงาน' style='cursor: pointer;'>";
 		htmldata5 = "<input type='hidden' name='location_type[]' value='"+location_type+"'><input type='hidden' name='location_province[]' value='"+location_province+"'><input type='hidden' name='location_ampor[]' value='"+location_ampor+"'><input type='hidden' name='location_tumbon[]' value='"+location_tumbon+"'><input type='hidden' name='location_type_text[]' value='"+location_type_text+"'><input type='hidden' name='location_province_text[]' value='"+location_province_text+"'><input type='hidden' name='location_ampor_text[]' value='"+location_ampor_text+"'><input type='hidden' name='location_tumbon_text[]' value='"+location_tumbon_text+"'><input type='hidden' name='location_mooban_text[]' value='"+location_mooban_text+"'>";
 		htmldata6 = "</td></tr>";
 		var res = htmldata1.concat(htmldata2,htmldata3,htmldata4,htmldata5);

@@ -217,11 +217,11 @@
 		    <label class="col-sm-2 control-label">ที่ปรึกษา</label>
 		    <div class="form-inline col-sm-10">
 		    	ที่มีความรู้เกี่ยวกับการจัดสวัสดิการสังคมและสังคมสงเคราะห์ 
-		    	<input name="adviser" class="form-control" type="text" style="width:50px;" readonly="readonly" value="1"> คน <img class="add_adviser_btn" src="themes/msosocial/images/btn_add.png" width="24" height="24" title="เพิ่มที่ปรึกษา" style="cursor:pointer;"> <br><br>
+		    	<input name="adviser" class="form-control" type="text" style="width:50px;" readonly="readonly" value="1"> คน <img class="add_adviser_btn" src="themes/fundv2/images/btn_add.png" width="24" height="24" title="เพิ่มที่ปรึกษา" style="cursor:pointer;"> <br><br>
 		    	<?php if(@is_array($adviser)):?>
 		    	<?php foreach($adviser as $key=>$row):?>
 		    	<div class="adviser_addr" style="margin: 15px 0; position: relative;">
-		    		<img class="remove_adviser_btn" src="themes/msosocial/images/remove2.png" width="16" height="16" title="ลบที่ปรึกษา" style="cursor:pointer; position: absolute; right: 10px; top: 0;" />
+		    		<img class="remove_adviser_btn" src="themes/fundv2/images/remove2.png" width="16" height="16" title="ลบที่ปรึกษา" style="cursor:pointer; position: absolute; right: 10px; top: 0;" />
 			    	<div> <!--๑)-->
 				    <input class="form-control" type="text" name="a_name[]" value="<?php echo @$row['name']?>" style="width:150px;" placeholder="ชื่อ" />
 				    <input class="form-control" type="text" name="a_surname[]" value="<?php echo @$row['surname']?>" style="width:250px;" placeholder="นามสกุล" />
@@ -244,7 +244,7 @@
 		    	<?php endforeach;?>
 		    	<?php endif;?>
 		    <div class="adviser_addr" style="margin: 25px 0; position: relative;">
-			<img class="remove_adviser_btn" src="themes/msosocial/images/remove2.png" width="16" height="16" title="ลบที่ปรึกษา" style="cursor:pointer; position: absolute; right: 10px; top: 0;" />
+			<img class="remove_adviser_btn" src="themes/fundv2/images/remove2.png" width="16" height="16" title="ลบที่ปรึกษา" style="cursor:pointer; position: absolute; right: 10px; top: 0;" />
 		    <p>
 		    <input type="text" class="form-control" name="a_name[]" style="width:150px;" placeholder="ชื่อ" />
 		    <input type="text" class="form-control" name="a_surname[]" style="width:250px;" placeholder="นามสกุล" />
@@ -477,7 +477,7 @@
 			    <span id="lo_tumbon">
 			    <?php echo form_dropdown('lo_tumbon_code', (empty($rs['ampor_code'])) ? array() : get_option('tumbon_code', 'tumbon_name', 'act_tumbon', 'where ampor_code = '.$rs['ampor_code'].' order by tumbon_name'), @$rs['tumbon_code'], 'class="form-control"', '- เลือกตำบล -'); ?>
 			    </span>
-				<input type="text" name="mooban" class="form-control" placeholder="หมู่บ้าน" style="width:200px;"> <img class="location_add_btn" src="themes/msosocial/images/btn_add.png" width="24" height="24" style="cursor:pointer;" />
+				<input type="text" name="mooban" class="form-control" placeholder="หมู่บ้าน" style="width:200px;"> <img class="location_add_btn" src="themes/fundv2/images/btn_add.png" width="24" height="24" style="cursor:pointer;" />
 		      
 		      <table id="locationList" class="table tbweblist">
 		        <tr>
@@ -501,7 +501,7 @@
 				    	<input type='hidden' name='location_tumbon_text[]' value='<?php echo $row['tumbon']?>'>
 				    	<input type='hidden' name='location_mooban_text[]' value='<?php echo $row['mooban']?>'>
 				    </td>
-				    <td><img class='remove_location_btn' src='themes/msosocial/images/remove2.png' width='16' height='16' title='ลบพื้นที่ปฏิบัติงาน' style='cursor: pointer;'></td>
+				    <td><img class='remove_location_btn' src='themes/fundv2/images/remove2.png' width='16' height='16' title='ลบพื้นที่ปฏิบัติงาน' style='cursor: pointer;'></td>
 				</tr>
 				<?php endforeach;?>
 				<?php endif;?>
@@ -745,11 +745,11 @@
 		    
 		    <p>จำนวนคณะกรรมการ  <input name="director" value="<?php echo @$rs['director']?>" type="text" class="form-control" style="width:70px;" placeholder="จำนวน"> คน</p>
 		    <p>ผู้ปฎิบัติงานประจำ  <input name="worker" value="<?php echo @$rs['worker']?>" type="text" class="form-control" style="width:70px;" placeholder="จำนวน"> คน</p>
-		    <p>ผู้ประสานงานองค์กร (เป็นประธานคณะกรรมการ เลขานุการ หรือตำแหน่งอื่นๆ <input name="coordinate" class="form-control" type="text" style="width:50px;" readonly="readonly" value="1"> <img class="add_coordinate_btn" src="themes/msosocial/images/btn_add.png" width="24" height="24" title="เพิ่มที่ปรึกษา" style="cursor:pointer;"></p>
+		    <p>ผู้ประสานงานองค์กร (เป็นประธานคณะกรรมการ เลขานุการ หรือตำแหน่งอื่นๆ <input name="coordinate" class="form-control" type="text" style="width:50px;" readonly="readonly" value="1"> <img class="add_coordinate_btn" src="themes/fundv2/images/btn_add.png" width="24" height="24" title="เพิ่มที่ปรึกษา" style="cursor:pointer;"></p>
 		    <?php if(@is_array($coordinate)):?>
 	    	<?php foreach($coordinate as $key=>$row):?>
 	    	<div class="coordinate_addr" style="margin: 15px 0; position: relative;">
-	    		<img class="remove_coordinate_btn" src="themes/msosocial/images/remove2.png" width="16" height="16" title="ลบที่ปรึกษา" style="cursor:pointer; position: absolute; right: 10px; top: 0;" />
+	    		<img class="remove_coordinate_btn" src="themes/fundv2/images/remove2.png" width="16" height="16" title="ลบที่ปรึกษา" style="cursor:pointer; position: absolute; right: 10px; top: 0;" />
 		    	<div> <!--๑)-->
 			    <input class="form-control" type="text" name="c_name[]" value="<?php echo @$row['name']?>" style="width:150px;" placeholder="ชื่อ" />
 			    <input class="form-control" type="text" name="c_surname[]" value="<?php echo @$row['surname']?>" style="width:250px;" placeholder="นามสกุล" />
@@ -795,11 +795,11 @@
 		  
 		  <div class="form-group">
 		    <label class="col-sm-2 control-label">ที่ปรึกษา</label>
-		    <div class="form-inline col-sm-10"><p>ที่มีความรู้เกี่ยวกับสวัสดิการชุมชน <input class="form-control" name="adviser" type="text" style="width:50px;" readonly="readonly" value="1"> คน <img class="add_adviser_btn" src="themes/msosocial/images/btn_add.png" width="24" height="24" class="vtip" title="เพิ่มที่ปรึกษา" style="cursor:pointer;" /></p>
+		    <div class="form-inline col-sm-10"><p>ที่มีความรู้เกี่ยวกับสวัสดิการชุมชน <input class="form-control" name="adviser" type="text" style="width:50px;" readonly="readonly" value="1"> คน <img class="add_adviser_btn" src="themes/fundv2/images/btn_add.png" width="24" height="24" class="vtip" title="เพิ่มที่ปรึกษา" style="cursor:pointer;" /></p>
 		    	<?php if(@is_array($adviser)):?>
 		    	<?php foreach($adviser as $key=>$row):?>
 		    	<div class="adviser_addr" style="margin: 15px 0; position: relative;">
-		    		<img class="remove_adviser_btn" src="themes/msosocial/images/remove2.png" width="16" height="16" title="ลบที่ปรึกษา" style="cursor:pointer; position: absolute; right: 10px; top: 0;" />
+		    		<img class="remove_adviser_btn" src="themes/fundv2/images/remove2.png" width="16" height="16" title="ลบที่ปรึกษา" style="cursor:pointer; position: absolute; right: 10px; top: 0;" />
 			    	<div> <!--๑)-->
 				    <input class="form-control" type="text" name="a_name[]" value="<?php echo @$row['name']?>" style="width:150px;" placeholder="ชื่อ" />
 				    <input class="form-control" type="text" name="a_surname[]" value="<?php echo @$row['surname']?>" style="width:250px;" placeholder="นามสกุล" />
@@ -852,11 +852,11 @@
 		  
 		<div class="form-group">
 		    <label class="col-sm-2 control-label">บริการสวัสดิการที่จัดให้แก่สมาชิก</label>
-		    <div class="form-inline col-sm-10"><p>จำนวน <input name="service_member" type="text" class="form-control" style="width:50px;" readonly="readonly" value="1" class="valid"> เรื่อง <img class="add_service_member_btn" src="themes/msosocial/images/btn_add.png" width="24" height="24" title="เพิ่มสวัสดีการ" style="cursor:pointer;"></p>
+		    <div class="form-inline col-sm-10"><p>จำนวน <input name="service_member" type="text" class="form-control" style="width:50px;" readonly="readonly" value="1" class="valid"> เรื่อง <img class="add_service_member_btn" src="themes/fundv2/images/btn_add.png" width="24" height="24" title="เพิ่มสวัสดีการ" style="cursor:pointer;"></p>
 		    	<?php if(@is_array($service)):?>
 				<?php foreach($service as $row):?>
 				<div class="service_member_addr" style="margin: 15px 0; position: relative;">
-		    		<img class="remove_service_member_btn" src="themes/msosocial/images/remove2.png" width="16" height="16" title="ลบที่ปรึกษา" style="cursor:pointer; position: absolute; right: 10px; top: 0;" />
+		    		<img class="remove_service_member_btn" src="themes/fundv2/images/remove2.png" width="16" height="16" title="ลบที่ปรึกษา" style="cursor:pointer; position: absolute; right: 10px; top: 0;" />
 				<input type="text" class="form-control" style="width:350px;" name="m_target[]" value="<?php echo @$row['target']?>" placeholder="กลุ่มเป้าหมาย">
 				<input type="text" class="form-control" style="width:350px;" name="m_receive[]" value="<?php echo @$row['receive']?>" placeholder="สิ่งที่ได้รับ">
 				<input type="text" class="form-control" style="width:350px;" name="m_condition[]" value="<?php echo @$row['condition']?>" placeholder="เงื่อนไข">
@@ -1419,7 +1419,7 @@ function ajax_tumbon($select_name,$target,$province_code,$ampor_code){
 		htmldata1 = "<tr>";
 		htmldata2 = "<td style='width:5%;'>"+order+"</td><td style='width:25%;'>"+location_type_text+"</td>";
 		htmldata3 = "<td style='width:60%;'>"+location_province_text+" "+location_ampor_text+" "+location_tumbon_text+" "+location_mooban_text+"</td>";
-		htmldata4 = "<td style='width:10%;'><img class='remove_location_btn' src='themes/msosocial/images/remove2.png' width='16' height='16' title='ลบพื้นที่ปฏิบัติงาน' style='cursor: pointer;'>";
+		htmldata4 = "<td style='width:10%;'><img class='remove_location_btn' src='themes/fundv2/images/remove2.png' width='16' height='16' title='ลบพื้นที่ปฏิบัติงาน' style='cursor: pointer;'>";
 		htmldata5 = "<input type='hidden' name='location_type[]' value='"+location_type+"'><input type='hidden' name='location_province[]' value='"+location_province+"'><input type='hidden' name='location_ampor[]' value='"+location_ampor+"'><input type='hidden' name='location_tumbon[]' value='"+location_tumbon+"'><input type='hidden' name='location_type_text[]' value='"+location_type_text+"'><input type='hidden' name='location_province_text[]' value='"+location_province_text+"'><input type='hidden' name='location_ampor_text[]' value='"+location_ampor_text+"'><input type='hidden' name='location_tumbon_text[]' value='"+location_tumbon_text+"'><input type='hidden' name='location_mooban_text[]' value='"+location_mooban_text+"'>";
 		htmldata6 = "</td></tr>";
 		var res = htmldata1.concat(htmldata2,htmldata3,htmldata4,htmldata5);

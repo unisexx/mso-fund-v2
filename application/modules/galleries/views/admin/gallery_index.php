@@ -78,7 +78,7 @@
 				<?foreach($galleries as $item):?>
 				<li>
 					<a href="uploads/gallery/<?=$item->image?>" data-rel="colorbox">
-						<img src="uploads/gallery/<?=$item->image?>" style="height:100px;"/>
+						<img src="media/timthumb/timthumb.php?src=uploads/gallery/<?=$item->image?>&h=100"/>
 					</a>
 
 					<div class="tools tools-bottom">

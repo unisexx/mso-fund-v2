@@ -5,7 +5,7 @@
        
        <!--<a href="#">เข้าสู่ระบบ</a>-->
         		<?php if($this->session->userdata('id')==true):?>
-        			<a class="inline" href="org/logout">ออกจากระบบ</a>
+        			<a href="org/logout">ออกจากระบบ</a>
         		<?php else:?>
         			<a class="inline" href="#loginform">เข้าสู่ระบบ</a>
         		<?php endif?>
@@ -115,7 +115,7 @@
 </div>
 
    
-    <script type="text/javascript">
+<script type="text/javascript">
 $(document).ready(function(){
 	$('#lobin_btn').click(function(){
 		$('.login_fail').html('<img src="themes/fundv2/images/loading.gif">');
