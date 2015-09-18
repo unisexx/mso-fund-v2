@@ -15,6 +15,8 @@
   <!-- <script src="themes/fundv2/js/jquery-latest.min.js" type="text/javascript"></script>-->
    <!-- <script type="text/javascript" src="themes/fundv2/js/jquery-1.11.3.min.js"></script> -->
    <script type="text/javascript" src="themes/fundv2/js/jquery.js"></script>
+   <!-- <script type="text/javascript" src="themes/fundv2/js/jquery2.0.0.js"></script> -->
+   
    
    <script src="media/bootstrap-3.3.4/js/bootstrap.js" type="text/javascript"></script>
    
@@ -75,14 +77,14 @@ $(document).ready(function() {
 	$(document).ready(function(){
 
 
-		$(".group3").colorbox({rel:'group3', transition:"none", width:"75%", height:"75%"});
+/*		$(".group3").colorbox({rel:'group3', transition:"none", width:"75%", height:"75%"});
 		$(".group4").colorbox({rel:'group4', slideshow:true});
 		
 		$(".ajax").colorbox();
 		
 		$(".youtube").colorbox({iframe:true, innerWidth:640, innerHeight:390});
 
-		$(".iframe").colorbox({iframe:true, width:"80%", height:"80%"});
+		$(".iframe").colorbox({iframe:true, width:"80%", height:"80%"});*/
 		
 		$(".inline").colorbox({inline:true, width:"50%"});
 
