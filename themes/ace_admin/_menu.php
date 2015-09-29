@@ -107,6 +107,13 @@
 						ติดต่อสอบถาม
 					</a>
 				</li>
+				
+				<li <?=@$_GET['module'] == 'เกี่ยวกับ กบท.' && @$_GET['category'] == 'องค์กรยื่นขอรับการสนับสนุนเงินกองทุนฯ'?'class="active open"':'';?>>
+					<a href="contents/admin/contents/form?module=เกี่ยวกับ กบท.&category=องค์กรยื่นขอรับการสนับสนุนเงินกองทุนฯ">
+						<i class="icon-double-angle-right"></i>
+						องค์กรยื่นขอรับการสนับสนุนเงินกองทุนฯ
+					</a>
+				</li>
 			</ul>
 		</li>
 <?php endif;?>

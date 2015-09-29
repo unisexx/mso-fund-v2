@@ -54,7 +54,7 @@
 	</div>
 <!------------------------------------------------------------END Col1----------------------------------------------------------->  
     <div id="col2"> 
-    	<a href="#"><img src="themes/fundv2/images/banner01.png" width="436" height="149" class="banner01"/></a>
+    	<a href="contents/view?module=เกี่ยวกับ%20กบท.&category=องค์กรยื่นขอรับการสนับสนุนเงินกองทุนฯ"><img src="themes/fundv2/images/banner01.png" width="436" height="149" class="banner01"/></a>
         <br>
         <?=modules::run('vdos/inc_home');?>
       <div class="clearfix">&nbsp;</div>
