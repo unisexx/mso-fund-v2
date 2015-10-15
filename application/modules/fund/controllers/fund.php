@@ -424,6 +424,31 @@ class Fund extends Public_Controller
 			}
 			
 			$sql .= " order by id desc";
+		}elseif($_GET['result_type'] == 5){
+			// กองทุนป้องกันการค้ามนุษย์ รายบุคคล
+			$sql = "SELECT 
+					FP.TITLE PROVINCE_TITLE,
+					FT.ID,
+					FT.PS_HELP_NAME,
+					FT.AGE,
+					FT.REQUEST_DEPT_TITLE,
+					FT.CENTRAL_CHECK_STATUS,
+					FT.CODE_TITLE,
+					FT.STATUS,
+					FT.LEADER_DATE,
+					FT.STATUS_NOTE
+				FROM FUND_TRAFFICKING FT
+				LEFT JOIN FUND_PROVINCE FP ON FT.PROVINCE_ID = FP.ID ";
+			// if (!permission('fund/trafficking/position', 'action_extra1')) { 
+				// $chk_user = $this->ps_dept->where("user_id = '".login_data('id')."'")->get_row();
+				// if (empty($chk_user['id'])) {
+					// set_notify('error', "ท่านไม่มีข้อมูลที่หน่วยงาน");
+					// redirect("fund");
+				// }
+				// $sql .= " where FT.REQUEST_DEPT_ID = '".$chk_user['id']."'";
+			// }
+			$sql .= "ORDER BY FT.ID DESC";
+			// echo $sql;
 		}// endif
 
 		$data['variable'] = $this->ado->GetArray($sql);

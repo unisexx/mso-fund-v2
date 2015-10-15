@@ -9,6 +9,7 @@
 		<option value="http://fund.m-society.go.th/fund/report_result?result_type=2" <?=(@$_GET['result_type']==2)?"selected='selected'":'';?>>กองทุนคุ้มครองเด็กรายโครงการ</option>
 		<option value="http://fund.m-society.go.th/fund/report_result?result_type=3" <?=(@$_GET['result_type']==3)?"selected='selected'":'';?>>กองทุนส่งเสริมการจัดสวัสดิการสังคม</option>
 		<option value="http://fund.m-society.go.th/fund/report_result?result_type=4" <?=(@$_GET['result_type']==4)?"selected='selected'":'';?>>กองทุนเพื่อการป้องกันและปราบปรามการค้ามนุษย์รายโครงการ</option>
+		<option value="http://fund.m-society.go.th/fund/report_result?result_type=5" <?=(@$_GET['result_type']==5)?"selected='selected'":'';?>>กองทุนเพื่อการป้องกันและปราบปรามการค้ามนุษย์รายบุคคล</option>
 	</select>
 	</div>
 	
@@ -209,6 +210,57 @@
 	  		  </td>
 			</tr>
 		<?php } ?>
+	</table>
+	<?elseif($_GET['result_type'] == 5):?>
+	<?$statusArr = array('1'=> 'เห็นควร', '2'=>'ไม่เห็นควร', '3'=>'อื่นๆ');?>
+	<table class="table table-bordered">
+		<thead>
+			<tr>
+				<th align="left" style="width: 15px;" >ลำดับ</th>
+				<th align="left" style="width: 120px;" >รหัส</th>
+				<th align="left" style="width: 200px;" >ชื่อผู้ยื่นคำขอฯ</th>
+				<th align="left" style="width: 20px;">อายุ</th>
+				<th align="left" style="width: 200px;">สถานที่ยื่น</th>
+				<th>วันที่อนุมัตื</th>
+				<th>ผลการพิจารณา</th>
+		  	</tr>
+	  	</thead>
+	  	
+		<tbody>
+			<?php if(empty($variable)):?>
+			<tr>
+				<td colspan="8" class="text-center" >- ไม่มีข้อมูล -</td>
+			</tr>
+			<?php
+				else:
+					foreach ($variable as $key => $value):
+					$page = 0;
+					if(@$_GET["page"]) {
+						$page = ($_GET["page"]-1)*20;
+					}
+					$number = $page+($key+1);
+					
+					if($key%2==0) {
+						$odd = " class=\"odd\"";
+					} else {
+						$odd = null;
+					}
+			?>
+			<tr<?php echo $odd?>>
+				<td><?php echo $number?></td>
+				<td><?php echo $value["code_title"]; ?></td>
+				<td><?php echo $value["ps_help_name"]?></td>
+				<td><?php echo $value["age"]?></td>
+				<td><?php echo $value['request_dept_title']; ?></td>
+				<td><?=db_to_th($value['leader_date'],FALSE)?></td>
+				<td><?=$statusArr[$value['status']]?> <?if($value['status']==3){echo '('.$value['status_note'].')';}?></td>
+			</tr>
+			<?php
+					endforeach;
+				endif;
+			?>
+		</tbody>
+		
 	</table>
 	<?endif;?>
 
