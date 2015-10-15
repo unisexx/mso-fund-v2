@@ -96,13 +96,37 @@ p { word-break: break-all;}
 	.banner01{position:absolute; right:-17px; top:40px; }
 
 	/*VDO*/
-	#vdo{border-bottom:1px dashed #d2d0d0; padding-bottom:30px; }
-	#vdolist{position:relative;  height:116px; overflow:hidden; }
-	.vdotitle{font-family: 'Conv_PGVIM'; font-size:25pt; line-height:27px; color:#d80368; border-bottom:2px solid #f795c3; margin-top:200px; margin-bottom:23px;}
+	#vdo{border-bottom:1px dashed #d2d0d0; padding-bottom:30px; width:200px; float:left;  }
+	#vdolist{position:relative;  height:195px; overflow:hidden; }
+	.vdotitle{font-family: 'Conv_PGVIM'; 
+	font-size:25pt; 
+	line-height:27px; 
+	color:#d80368; 
+	border-bottom:2px solid #f795c3; 
+	margin-top:200px; 
+	margin-bottom:23px;
+	margin-right:10px;
+	}
 	.imgvdo{float:left; width:158px;}
-	a.linkvdo{float:right; width:230px;  word-break: break-word; color:black; }
+	a.linkvdo{float:right; width:200px;  
+	word-break: break-word; color:black; }
 	a.linkvdo:hover{color:#051fa4; text-decoration:none;}
-	.vdoplay{position:absolute; width:48px; height:20px; background-image: url(../images/vdoplay.jpg); background-repeat:no-repeat; cursor:pointer; top:96px; }
+	.vdoplay{position:absolute; width:48px; height:20px; 
+	background-image: url(../images/vdoplay.jpg); 
+	background-repeat:no-repeat; 
+	cursor:pointer; top:96px; }
+	
+	
+		/*galleries*/
+	#galleries{border-bottom:1px dashed #d2d0d0; padding-bottom:30px;  }
+	#gallerieslist{position:relative;  height:116px; overflow:hidden; }
+	.galleriestitle{font-family: 'Conv_PGVIM'; font-size:25pt; line-height:27px; color:#d80368; border-bottom:2px solid #f795c3; margin-top:200px; margin-bottom:23px;}
+	.imggalleries{float:left; width:158px;}
+	a.linkgalleries{float:right; width:230px;  word-break: break-word; color:black; }
+	a.linkgalleries:hover{color:#051fa4; text-decoration:none;}
+	.galleriesplay{position:absolute; width:48px; height:20px; background-image: url(../images/vdoplay.jpg); background-repeat:no-repeat; cursor:pointer; top:96px; }
+	
+	
 	
 	/*JOB*/
 	.jobtitle{font-family: 'Conv_PGVIM'; font-size:25pt; line-height:27px; color:#d80368; border-bottom:2px solid #f795c3; margin-bottom:28px; margin-top:32px;}

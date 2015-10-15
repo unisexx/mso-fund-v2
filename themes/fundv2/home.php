@@ -57,6 +57,7 @@
     	<a href="contents/view?module=เกี่ยวกับ%20กบท.&category=องค์กรยื่นขอรับการสนับสนุนเงินกองทุนฯ"><img src="themes/fundv2/images/banner01.png" width="436" height="149" class="banner01"/></a>
         <br>
         <?=modules::run('vdos/inc_home');?>
+        <?=modules::run('galleries/inc_home');?>
       <div class="clearfix">&nbsp;</div>
         <!---------------------------------------------END VDO------------------------------------------>
         
@@ -93,7 +94,7 @@
          
          <!-------------------END Calendar---------------------> 
    	    <a href="weblinks/lists"><img src="themes/fundv2/images/banner-weblink.jpg" width="287" height="137" /></a>
-        <a href="#"><img src="themes/fundv2/images/banner-contract.jpg" width="287" height="96" style="margin-top:25px;"></a>
+        <a href="fund/report_contact?contact_type=1"><img src="themes/fundv2/images/banner-contract.jpg" width="287" height="96" style="margin-top:25px;"></a>
         
      </div> 
      <!-------------------------------------------------------END Col4-------------------------------------------------------->

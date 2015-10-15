@@ -67,7 +67,7 @@
            <li><a href='downloads/lists'>ดาวน์โหลดแบบฟอร์ม</a></li>
            <!-- <li><a href='contents/act?module=พรบ.%20กฏหมาย%20ระเบียบ%20ข้อบังคับ%20มติ%20ครม.%20และหนังสือเวียน'>พ.ร.บ./กฎหมาย/ระเบียบ</a></li> -->
            <li><a href='contents/view?module=เกี่ยวกับ%20กบท.&category=ติดต่อสอบถาม'>ติดต่อสอบถาม</a></li>
-           <li class='last'><a href='calendars/calendar_mso'>ปฏิทินกิจกรรม</a></li>
+           <li class='last'><a href='calendars/index'>ปฏิทินกิจกรรม</a></li>
         </ul>
     </div>            
 	<div class="clearfix">&nbsp;</div>
