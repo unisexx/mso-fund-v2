@@ -95,6 +95,7 @@
          <!-------------------END Calendar---------------------> 
    	    <a href="weblinks/lists"><img src="themes/fundv2/images/banner-weblink.jpg" width="287" height="137" /></a>
         <a href="fund/report_contact?contact_type=1"><img src="themes/fundv2/images/banner-contract.jpg" width="287" height="96" style="margin-top:25px;"></a>
+        <a href="fund/report_result?result_type=1"><img src="themes/fundv2/images/result-fund2_webfund.jpg" width="287" height="96" style="margin-top:25px;"></a>
         
      </div> 
      <!-------------------------------------------------------END Col4-------------------------------------------------------->
