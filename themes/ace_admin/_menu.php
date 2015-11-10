@@ -437,6 +437,20 @@
 					</a>
 				</li>
 				
+				<li <?=@$_GET['module'] == 'กองทุนคุ้มครองเด็ก' && @$_GET['category'] == 'โครงสร้างคณะกรรมการ'?'class="active open"':'';?>>
+					<a href="contents/admin/contents/form?module=กองทุนคุ้มครองเด็ก&category=โครงสร้างคณะกรรมการ">
+						<i class="icon-double-angle-right"></i>
+						โครงสร้างคณะกรรมการ
+					</a>
+				</li>
+				
+				<li <?=@$_GET['module'] == 'กองทุนคุ้มครองเด็ก' && @$_GET['category'] == 'ภารกิจกองทุนคุ้มครองเด็ก'?'class="active open"':'';?>>
+					<a href="contents/admin/contents/form?module=กองทุนคุ้มครองเด็ก&category=ภารกิจกองทุนคุ้มครองเด็ก">
+						<i class="icon-double-angle-right"></i>
+						ภารกิจกองทุนคุ้มครองเด็ก
+					</a>
+				</li>
+				
 				<li <?=@$_GET['module'] == 'กองทุนคุ้มครองเด็ก' && @$_GET['category'] == 'การขอรับเงินสนับสนุน'?'class="active open"':'';?>>
 					<a href="contents/admin/contents/form?module=กองทุนคุ้มครองเด็ก&category=การขอรับเงินสนับสนุน">
 						<i class="icon-double-angle-right"></i>

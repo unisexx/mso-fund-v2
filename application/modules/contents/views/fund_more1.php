@@ -6,6 +6,8 @@
 	<div id="title-page-colleft">เกี่ยวกับกองทุน</div>
       <ul>
        	  <li><img src="themes/fundv2/images/banner-fund/icon-kid.png" width="27" height="24" /> <a target="_blank" href="contents/view?module=กองทุนคุ้มครองเด็ก&category=เกี่ยวกับกองทุน">เกี่ยวกับกองทุนคุ้มครองเด็ก</a></li>
+       	  <li><img src="themes/fundv2/images/banner-fund/icon-kid.png" width="27" height="24" /> <a target="_blank" href="contents/view?module=กองทุนคุ้มครองเด็ก&category=โครงสร้างคณะกรรมการ">โครงสร้างคณะกรรมการ</a></li>
+       	  <li><img src="themes/fundv2/images/banner-fund/icon-kid.png" width="27" height="24" /> <a target="_blank" href="contents/view?module=กองทุนคุ้มครองเด็ก&category=ภารกิจกองทุนคุ้มครองเด็ก">ภารกิจกองทุนคุ้มครองเด็ก</a></li>
       </ul>
       <br><br>
           <div id="title-page-colleft-2">ข่าวกองทุนคุ้มครองเด็ก</div>
