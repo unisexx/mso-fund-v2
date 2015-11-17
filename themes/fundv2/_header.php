@@ -5,6 +5,8 @@
        
        <!--<a href="#">เข้าสู่ระบบ</a>-->
         		<?php if($this->session->userdata('id')==true):?>
+        			<a href="org/member">ข้อมูลองค์กร</a>
+        			<img src="themes/fundv2/images/line-user.jpg" width="2" height="42"> 
         			<a href="org/logout">ออกจากระบบ</a>
         		<?php else:?>
         			<a class="inline" href="#loginform">เข้าสู่ระบบ</a>
