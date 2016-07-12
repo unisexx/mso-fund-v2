@@ -8,7 +8,7 @@
 				<i class="icon-angle-right arrow-icon"></i>
 			</span>
 		</li>
-		<li class="active">เว็บไซต์แนะนำ</li>
+		<li class="active">ภาพกิจกรรม</li>
 	</ul><!--.breadcrumb-->
 
 	<!-- <div class="nav-search" id="nav-search">
@@ -25,7 +25,7 @@
 <div class="page-content">
 	<div class="page-header position-relative">
 		<h1>
-			เว็บไซต์แนะนำ
+			ภาพกิจกรรม
 			<small>
 				<i class="icon-double-angle-right"></i>
 				ฟอร์ม
@@ -54,6 +54,14 @@
 	
 						<div class="controls">
 							<input class="input-xxlarge" type="text" name="name" value="<?php echo $category->name?>"/>
+						</div>
+					</div>
+					
+					<div class="control-group">
+						<label class="control-label">รายละเอียด</label>
+	
+						<div class="controls">
+							<textarea class="input-xxlarge" name="detail" style="height: 100px;"><?php echo $category->detail?></textarea>
 						</div>
 					</div>
 					
