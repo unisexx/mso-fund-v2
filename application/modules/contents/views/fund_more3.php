@@ -6,8 +6,8 @@
 	<div id="title-page-colleft">เกี่ยวกับกองทุน</div>
       <ul>
        	  <li><img src="themes/fundv2/images/banner-fund/icon-money.png" width="30" height="18" /> <a target="_blank" href="contents/view?module=กองทุนส่งเสริมการจัดการสวัสดิการสังคม&category=เกี่ยวกับกองทุน">เกี่ยวกับกองทุนส่งเสริมการจัดสวัสดิการสังคม</a></li>
-          <li><img src="themes/fundv2/images/banner-fund/icon-money.png" width="30" height="18" /> <a target="_blank" href="contents/view?module=กองทุนส่งเสริมการจัดการสวัสดิการสังคม&category=ทำเนียบพนักงานกองทุน">ทำเนียบพนักงานกองทุน</a></li>
-          <li><img src="themes/fundv2/images/banner-fund/icon-money.png" width="30" height="18" /> <a target="_blank" href="contents/view?module=กองทุนส่งเสริมการจัดการสวัสดิการสังคม&category=ผลการดำเนินงานกองทุน">ผลการดำเนินงานกองทุน</a></li>
+          <li><img src="themes/fundv2/images/banner-fund/icon-money.png" width="30" height="18" /> <a target="_blank" href="contents/view?module=กองทุนส่งเสริมการจัดการสวัสดิการสังคม&category=ทำเนียบพนักงานกองทุนส่วนกลาง">ทำเนียบพนักงานกองทุนส่วนกลาง</a></li>
+          <li><img src="themes/fundv2/images/banner-fund/icon-money.png" width="30" height="18" /> <a target="_blank" href="contents/view?module=กองทุนส่งเสริมการจัดการสวัสดิการสังคม&category=ทำเนียบพนักงานกองทุนส่วนภูมิภาค">ทำเนียบพนักงานกองทุนส่วนภูมิภาค</a></li>
           <li><img src="themes/fundv2/images/banner-fund/icon-money.png" width="30" height="18" /> <a target="_blank" href="contents/view?module=กองทุนส่งเสริมการจัดการสวัสดิการสังคม&category=เอกสารเผยแพร่">เอกสารเผยแพร่</a></li>
       </ul>
 <br><br>

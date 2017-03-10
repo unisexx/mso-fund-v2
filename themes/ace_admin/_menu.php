@@ -375,10 +375,17 @@
 					</a>
 				</li>
 
-				<li <?=@$_GET['module'] == 'กองทุนส่งเสริมการจัดการสวัสดิการสังคม' && @$_GET['category'] == 'ทำเนียบพนักงานกองทุน'?'class="active open"':'';?>>
-					<a href="contents/admin/contents/form?module=กองทุนส่งเสริมการจัดการสวัสดิการสังคม&category=ทำเนียบพนักงานกองทุน">
+				<li <?=@$_GET['module'] == 'กองทุนส่งเสริมการจัดการสวัสดิการสังคม' && @$_GET['category'] == 'ทำเนียบพนักงานกองทุนส่วนกลาง'?'class="active open"':'';?>>
+					<a href="contents/admin/contents/form?module=กองทุนส่งเสริมการจัดการสวัสดิการสังคม&category=ทำเนียบพนักงานกองทุนส่วนกลาง">
 						<i class="icon-double-angle-right"></i>
-						ทำเนียบพนักงานกองทุน
+						ทำเนียบพนักงานกองทุนส่วนกลาง
+					</a>
+				</li>
+
+				<li <?=@$_GET['module'] == 'กองทุนส่งเสริมการจัดการสวัสดิการสังคม' && @$_GET['category'] == 'ทำเนียบพนักงานกองทุนส่วนภูมิภาค'?'class="active open"':'';?>>
+					<a href="contents/admin/contents/form?module=กองทุนส่งเสริมการจัดการสวัสดิการสังคม&category=ทำเนียบพนักงานกองทุนส่วนภูมิภาค">
+						<i class="icon-double-angle-right"></i>
+						ทำเนียบพนักงานกองทุนส่วนภูมิภาค
 					</a>
 				</li>
 
