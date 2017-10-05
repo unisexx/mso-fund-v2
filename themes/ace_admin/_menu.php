@@ -437,6 +437,34 @@
 						เอกสารเผยแพร่
 					</a>
 				</li>
+
+				<li <?=@$_GET['module'] == 'กองทุนส่งเสริมการจัดการสวัสดิการสังคม' && @$_GET['category'] == 'เอกสารเผยแพร่'?'class="active open"':'';?>>
+					<a href="contents/admin/contents/form?module=กองทุนส่งเสริมการจัดการสวัสดิการสังคม&category=โครงสร้างคณะกรรมการกองทุน">
+						<i class="icon-double-angle-right"></i>
+						โครงสร้างคณะกรรมการกองทุน
+					</a>
+				</li>
+
+				<li <?=@$_GET['module'] == 'กองทุนส่งเสริมการจัดการสวัสดิการสังคม' && @$_GET['category'] == 'เอกสารเผยแพร่'?'class="active open"':'';?>>
+					<a href="contents/admin/contents/form?module=กองทุนส่งเสริมการจัดการสวัสดิการสังคม&category=แผนยุทธศาสตร์และแผนปฏิบัติการ">
+						<i class="icon-double-angle-right"></i>
+						แผนยุทธศาสตร์และแผนปฏิบัติการ
+					</a>
+				</li>
+
+				<li <?=@$_GET['module'] == 'กองทุนส่งเสริมการจัดการสวัสดิการสังคม' && @$_GET['category'] == 'เอกสารเผยแพร่'?'class="active open"':'';?>>
+					<a href="contents/admin/contents/form?module=กองทุนส่งเสริมการจัดการสวัสดิการสังคม&category=นโยบายการกำกับองค์กรที่ดี">
+						<i class="icon-double-angle-right"></i>
+						นโยบายการกำกับองค์กรที่ดี
+					</a>
+				</li>
+
+				<li <?=@$_GET['module'] == 'กองทุนส่งเสริมการจัดการสวัสดิการสังคม' && @$_GET['category'] == 'เอกสารเผยแพร่'?'class="active open"':'';?>>
+					<a href="contents/admin/contents/form?module=กองทุนส่งเสริมการจัดการสวัสดิการสังคม&category=รายงานของผู้สอบบัญชี">
+						<i class="icon-double-angle-right"></i>
+						รายงานของผู้สอบบัญชี
+					</a>
+				</li>
 			</ul>
 		</li>
 <?php endif;?>
