@@ -53,7 +53,7 @@
             <ul>
                 <li><a href="uploads/pdf/แนวทางการขอรับการสนับสนุน.pdf" target="_blank"><img src="themes/fundv2/images/banner-fund/icon-megaphone.png" width="22" height="22" /> แนวทางการขอรับการสนับสนุน</a></li>
                 <li><a href="uploads/pdf/แผ่นพับกองทุนเพื่อการป้องกันและปราบปรามการค้ามนุาย์.pdf" target="_blank"><img src="themes/fundv2/images/banner-fund/icon-megaphone.png" width="22" height="22" /> แผ่นพับกองทุนเพื่อการป้องกันและปราบปรามการค้ามนุษย์</a></li>
-                <li><a href="uploads/pdf/วาสารกองทุนเพื่อการป้องกันและปราบปรามการค้ามนุษย์_รอบ_6_เดือน.pdf" target="_blank"><img src="themes/fundv2/images/banner-fund/icon-megaphone.png" width="22" height="22" /> วาสารกองทุนเพื่อการป้องกันและปราบปรามการค้ามนุษย์ รอบ 6 เดือน</a></li>
+                <li><a href="uploads/pdf/วาสารกองทุนเพื่อการป้องกันและปราบปรามการค้ามนุษย์_รอบ_6_เดือน.pdf" target="_blank"><img src="themes/fundv2/images/banner-fund/icon-megaphone.png" width="22" height="22" /> วารสารกองทุนเพื่อการป้องกันและปราบปรามการค้ามนุษย์ รอบ 6 เดือน</a></li>
             </ul>
         </div>
 
