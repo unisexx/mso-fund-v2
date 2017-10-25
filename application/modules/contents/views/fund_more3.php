@@ -10,8 +10,8 @@
         <li><img src="themes/fundv2/images/banner-fund/icon-money.png" width="30" height="18" /> <a target="_blank" href="contents/view?module=กองทุนส่งเสริมการจัดการสวัสดิการสังคม&category=แผนยุทธศาสตร์และแผนปฏิบัติการ">แผนยุทธศาสตร์และแผนปฏิบัติการ</a></li>
         <li><img src="themes/fundv2/images/banner-fund/icon-money.png" width="30" height="18" /> <a target="_blank" href="contents/view?module=กองทุนส่งเสริมการจัดการสวัสดิการสังคม&category=นโยบายการกำกับองค์กรที่ดี">นโยบายการกำกับดูแลองค์กรที่ดี</a></li>
         <li><img src="themes/fundv2/images/banner-fund/icon-money.png" width="30" height="18" /> <a target="_blank" href="contents/view?module=กองทุนส่งเสริมการจัดการสวัสดิการสังคม&category=รายงานของผู้สอบบัญชี">รายงานของผู้สอบบัญชี</a></li>
-          <li><img src="themes/fundv2/images/banner-fund/icon-money.png" width="30" height="18" /> <a target="_blank" href="contents/view?module=กองทุนส่งเสริมการจัดการสวัสดิการสังคม&category=ทำเนียบพนักงานกองทุนส่วนกลาง">ทำเนียบพนักงานกองทุนส่วนกลาง</a></li>
-          <li><img src="themes/fundv2/images/banner-fund/icon-money.png" width="30" height="18" /> <a target="_blank" href="contents/view?module=กองทุนส่งเสริมการจัดการสวัสดิการสังคม&category=ทำเนียบพนักงานกองทุนส่วนภูมิภาค">ทำเนียบพนักงานกองทุนส่วนภูมิภาค</a></li>
+          <li><img src="themes/fundv2/images/banner-fund/icon-money.png" width="30" height="18" /> <a target="_blank" href="contents/view?module=กองทุนส่งเสริมการจัดการสวัสดิการสังคม&category=ทำเนียบพนักงานกองทุน">ทำเนียบพนักงานกองทุน</a></li>
+          <!-- <li><img src="themes/fundv2/images/banner-fund/icon-money.png" width="30" height="18" /> <a target="_blank" href="contents/view?module=กองทุนส่งเสริมการจัดการสวัสดิการสังคม&category=ทำเนียบพนักงานกองทุนส่วนภูมิภาค">ทำเนียบพนักงานกองทุนส่วนภูมิภาค</a></li> -->
           <li><img src="themes/fundv2/images/banner-fund/icon-money.png" width="30" height="18" /> <a target="_blank" href="contents/view?module=กองทุนส่งเสริมการจัดการสวัสดิการสังคม&category=เอกสารเผยแพร่">เอกสารเผยแพร่</a></li>
       </ul>
 <br><br>
