@@ -35,7 +35,7 @@
     </div> -->
 
     <div id="page-colright">
-        <div id="budjet1_banner1"><a href="http://fund.m-society.go.th/contents/view?module=กองทุนส่งเสริมการจัดการสวัสดิการสังคม&category=เกี่ยวกับกองทุน" target="_blank"><img src="themes/fundv2/images/banner-fund/budjet3_banner_mission.png" width="255" height="147" /></a></div>
+        <div id="budjet1_banner1"><a href="http://fund.m-society.go.th/contents/view?module=กองทุนส่งเสริมการจัดการสวัสดิการสังคม&category=ข้อมูลการดำเนินงานตามภารกิจกองทุน" target="_blank"><img src="themes/fundv2/images/banner-fund/budjet3_banner_mission.png" width="255" height="147" /></a></div>
 
         <div id="budjet1_banner2"><a href="contents/view?module=กองทุนส่งเสริมการจัดการสวัสดิการสังคม&category=การขอรับเงินสนับสนุน" target="_blak"><img src="themes/fundv2/images/banner-fund/budjet3_banner1_new.png" width="249" height="143" /></a></div>
 
@@ -47,7 +47,7 @@
 
         <div id="budjet1_banner6"><a target="_blank" href="contents/view?module=กองทุนส่งเสริมการจัดการสวัสดิการสังคม&category=ผลการดำเนินงานกองทุน"><img src="themes/fundv2/images/banner-fund/budjet3_banner6.png" width="248" height="153" /></a></div>
 
-        <div id="budjet1_banner7"><a href="http://fund.m-society.go.th/contents/view?module=กองทุนส่งเสริมการจัดการสวัสดิการสังคม&category=แผนยุทธศาสตร์และแผนปฏิบัติการ" target="_blank"><img src="themes/fundv2/images/banner-fund/budjet3_banner_policy.png" width="255" height="147" /></a></div>
+        <div id="budjet1_banner7"><a href="http://fund.m-society.go.th/contents/view?module=กองทุนส่งเสริมการจัดการสวัสดิการสังคม&category=นโยบายและแผนยุทธศาสตร์" target="_blank"><img src="themes/fundv2/images/banner-fund/budjet3_banner_policy.png" width="255" height="147" /></a></div>
 
     </div>
 

@@ -368,8 +368,8 @@
 			</a>
 
 			<ul class="submenu">
-				<li <?=@$_GET['module'] == 'กองทุนส่งเสริมการจัดการสวัสดิการสังคม' && @$_GET['category'] == 'เกี่ยวกับกองทุน'?'class="active open"':'';?>>
-					<a href="contents/admin/contents/form?module=กองทุนส่งเสริมการจัดการสวัสดิการสังคม&category=เกี่ยวกับกองทุน">
+				<li <?=@$_GET['module'] == 'กองทุนส่งเสริมการจัดการสวัสดิการสังคม' && @$_GET['category'] == 'ข้อมูลการดำเนินงานตามภารกิจกองทุน'?'class="active open"':'';?>>
+					<a href="contents/admin/contents/form?module=กองทุนส่งเสริมการจัดการสวัสดิการสังคม&category=ข้อมูลการดำเนินงานตามภารกิจกองทุน">
 						<i class="icon-double-angle-right"></i>
 						ข้อมูลการดำเนินงานตามภารกิจกองทุน
 					</a>
@@ -452,10 +452,10 @@
 					</a>
 				</li> -->
 
-				<li <?=@$_GET['module'] == 'กองทุนส่งเสริมการจัดการสวัสดิการสังคม' && @$_GET['category'] == 'แผนยุทธศาสตร์และแผนปฏิบัติการ'?'class="active open"':'';?>>
-					<a href="contents/admin/contents/form?module=กองทุนส่งเสริมการจัดการสวัสดิการสังคม&category=แผนยุทธศาสตร์และแผนปฏิบัติการ">
+				<li <?=@$_GET['module'] == 'กองทุนส่งเสริมการจัดการสวัสดิการสังคม' && @$_GET['category'] == 'นโยบายและแผนยุทธศาสตร์'?'class="active open"':'';?>>
+					<a href="contents/admin/contents/form?module=กองทุนส่งเสริมการจัดการสวัสดิการสังคม&category=นโยบายและแผนยุทธศาสตร์">
 						<i class="icon-double-angle-right"></i>
-						แผนยุทธศาสตร์และแผนปฏิบัติการ
+						นโยบายและแผนยุทธศาสตร์
 					</a>
 				</li>
 
