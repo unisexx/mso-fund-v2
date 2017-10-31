@@ -371,7 +371,7 @@
 				<li <?=@$_GET['module'] == 'กองทุนส่งเสริมการจัดการสวัสดิการสังคม' && @$_GET['category'] == 'เกี่ยวกับกองทุน'?'class="active open"':'';?>>
 					<a href="contents/admin/contents/form?module=กองทุนส่งเสริมการจัดการสวัสดิการสังคม&category=เกี่ยวกับกองทุน">
 						<i class="icon-double-angle-right"></i>
-						เกี่ยวกับกองทุน
+						ข้อมูลการดำเนินงานตามภารกิจกองทุน
 					</a>
 				</li>
 
@@ -445,31 +445,38 @@
 					</a>
 				</li>
 
-				<li <?=@$_GET['module'] == 'กองทุนส่งเสริมการจัดการสวัสดิการสังคม' && @$_GET['category'] == 'เอกสารเผยแพร่'?'class="active open"':'';?>>
+				<!-- <li <?=@$_GET['module'] == 'กองทุนส่งเสริมการจัดการสวัสดิการสังคม' && @$_GET['category'] == 'โครงสร้างคณะกรรมการกองทุน'?'class="active open"':'';?>>
 					<a href="contents/admin/contents/form?module=กองทุนส่งเสริมการจัดการสวัสดิการสังคม&category=โครงสร้างคณะกรรมการกองทุน">
 						<i class="icon-double-angle-right"></i>
 						โครงสร้างคณะกรรมการกองทุน
 					</a>
-				</li>
+				</li> -->
 
-				<li <?=@$_GET['module'] == 'กองทุนส่งเสริมการจัดการสวัสดิการสังคม' && @$_GET['category'] == 'เอกสารเผยแพร่'?'class="active open"':'';?>>
+				<li <?=@$_GET['module'] == 'กองทุนส่งเสริมการจัดการสวัสดิการสังคม' && @$_GET['category'] == 'แผนยุทธศาสตร์และแผนปฏิบัติการ'?'class="active open"':'';?>>
 					<a href="contents/admin/contents/form?module=กองทุนส่งเสริมการจัดการสวัสดิการสังคม&category=แผนยุทธศาสตร์และแผนปฏิบัติการ">
 						<i class="icon-double-angle-right"></i>
 						แผนยุทธศาสตร์และแผนปฏิบัติการ
 					</a>
 				</li>
 
-				<li <?=@$_GET['module'] == 'กองทุนส่งเสริมการจัดการสวัสดิการสังคม' && @$_GET['category'] == 'เอกสารเผยแพร่'?'class="active open"':'';?>>
+				<li <?=@$_GET['module'] == 'กองทุนส่งเสริมการจัดการสวัสดิการสังคม' && @$_GET['category'] == 'นโยบายการกำกับองค์กรที่ดี'?'class="active open"':'';?>>
 					<a href="contents/admin/contents/form?module=กองทุนส่งเสริมการจัดการสวัสดิการสังคม&category=นโยบายการกำกับองค์กรที่ดี">
 						<i class="icon-double-angle-right"></i>
 						นโยบายการกำกับองค์กรที่ดี
 					</a>
 				</li>
 
-				<li <?=@$_GET['module'] == 'กองทุนส่งเสริมการจัดการสวัสดิการสังคม' && @$_GET['category'] == 'เอกสารเผยแพร่'?'class="active open"':'';?>>
+				<!-- <li <?=@$_GET['module'] == 'กองทุนส่งเสริมการจัดการสวัสดิการสังคม' && @$_GET['category'] == 'เอกสารเผยแพร่'?'class="active open"':'';?>>
 					<a href="contents/admin/contents/form?module=กองทุนส่งเสริมการจัดการสวัสดิการสังคม&category=รายงานของผู้สอบบัญชี">
 						<i class="icon-double-angle-right"></i>
 						รายงานของผู้สอบบัญชี
+					</a>
+				</li> -->
+
+				<li <?=@$_GET['module'] == 'กองทุนส่งเสริมการจัดการสวัสดิการสังคม' && @$_GET['category'] == 'จัดซื้อจัดจ้าง'?'class="active open"':'';?>>
+					<a href="contents/admin/contents/form?module=กองทุนส่งเสริมการจัดการสวัสดิการสังคม&category=จัดซื้อจัดจ้าง">
+						<i class="icon-double-angle-right"></i>
+						จัดซื้อจัดจ้าง
 					</a>
 				</li>
 			</ul>
